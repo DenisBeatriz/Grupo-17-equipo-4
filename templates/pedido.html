@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/estiloPedido.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/normalize.min.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/icon/fontsAwesome/css/all.css') }}>
+</head>
+<body>
+    <header>
+        <div class="barraNaranja">
+            <div class="titulo">
+                <h1>MIS PEDIDOS</h1>
+            </div>
+
+            <a href="">
+                <div class="icono">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </a>
+            
+        </div>
+
+        <div class="blanca1">
+            <label for="numeroPedido">N°Pedido</label>
+            <input type="text">
+            <div class="lupa">
+                <button>
+                    <i class="fas fa-search"></i> Buscar
+                </button>
+            </div>
+            
+            <button class="exp">Exportar pedido</button>
+        </div>
+
+        <div class="blanca2">
+            <input type="date" name="inicio" id="finicio">
+            <input type="date" name="fin" id="ffin">
+        </div>
+                
+        
+
+        <div class="lista">
+            <nav>
+                <ul>
+                    <li><a href="#">Fecha</a></li>
+                    <li><a href="#">Pedido</a></li>
+                    <li><a href="#">Producto</a></li>
+                    <li><a href="#">Estado</a></li>
+                    <li><a href="#">Cantidad</a></li>
+                    <li><a href="#">Total</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <section >
+        <div id = "fondo">
+            <div class="contenido">
+                <h1>Aqui se colocaran los pedidos buscados</h1> 
+             </div>
+        </div>
+        
+    </section>
+    <footer>
+        <p><span>Grupo 17 equipo 4 Univesidad del norte</span></p>
+    </footer>    
+</body>
+</html>

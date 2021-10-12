@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carritos de Compras</title>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/estiloCarritoDeCompras.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/normalize.min.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/icon/fontsAwesome/css/all.css') }}>
+</head>
+<body>
+    <header>
+        <div class="barraNaranja">
+            <div class="iz">
+                <a href=""><i class="fas fa-bars"></i> Menu</a>
+            </div>
+
+            <div class="de">
+                <a href=""><i class="fas fa-user-circle"></i> Ingresar</a>
+                <a href=""><i class="far fa-heart"></i> Lista de deseos</a>
+                <a href=""><i class="fas fa-shopping-cart"></i> Carrito de compras</a>
+            </div>              
+        </div>
+
+        <div class="barraBlanca">
+            <h1><span>Carrito de compras</span> <i class="fas fa-shopping-cart"></i> </h1>
+        </div>
+    </header>
+
+    <section>
+        <div id="fondo">
+            <div class="general">
+                <div class="producto">
+                    <a href="">
+                        <img src="static/img/donaOreo.jpg" alt="">
+                        <p>Donut de chocolate relleno de chocolate blanco, cubierta con chocolate negro y ...</p>
+                    </a>
+
+                    <div class="cantidad">
+                        <div class="agregar">
+                            <button>+</button>
+                            <input type="button" value="" size="1">
+                            <button>-</button>
+                        </div>
+                        <button>Eliminar</button>
+                    </div>
+
+                    <h2>$4000</h2>     
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <footer>
+        <p><span>Grupo 17 equipo 4 Univesidad del norte</span></p>
+    </footer> 
+</body>
+</html>

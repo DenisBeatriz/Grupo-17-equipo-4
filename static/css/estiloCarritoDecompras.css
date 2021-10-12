@@ -1,0 +1,60 @@
+header .barraNaranja{
+    background: #ff581a;
+    overflow: hidden;
+    display: block;
+    padding: 9px 0px 9px 0px;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+header .barraNaranja .de i, header .barraNaranja .de a{
+    color: black;
+    padding-left: 20px;
+    font-size: 25px;
+    float: right;
+    margin-right: 18px;
+
+}
+
+header .barraNaranja .iz i, header .barraNaranja .iz a{
+    color: black;
+    margin-left: 18px;
+    font-size: 25px;
+    float: left;
+}
+
+section #fondo {
+	background-image: url(https://static9.depositphotos.com/1066655/1106/i/950/depositphotos_11062315-stock-photo-donuts.jpg);
+	padding: 50px 50px 50px 50px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+#fondo:before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.6);
+}
+
+#fondo .general{
+	color: #fff;
+	position: relative;
+    overflow: hidden;
+    
+}
+
+
+
+footer{
+    text-align: center;
+    background: #ff581a;
+    padding: 10px 0px 10px 0px;
+}
