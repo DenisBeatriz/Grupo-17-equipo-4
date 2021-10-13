@@ -25,6 +25,10 @@ header .barraNaranja .iz i, header .barraNaranja .iz a{
     float: left;
 }
 
+header .barraNaranja .iz i{
+    padding-right: 15px;
+}
+
 section #fondo {
 	background-image: url(https://static9.depositphotos.com/1066655/1106/i/950/depositphotos_11062315-stock-photo-donuts.jpg);
 	padding: 50px 50px 50px 50px;

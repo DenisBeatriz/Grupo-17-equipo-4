@@ -18,6 +18,10 @@ header .barraNaranja .de i, header .barraNaranja .de a{
 
 }
 
+header .barraNaranja .iz i{
+    padding-right: 15px;
+}
+
 header .barraNaranja .iz i, header .barraNaranja .iz a{
     color: black;
     margin-left: 18px;
@@ -207,10 +211,6 @@ section #fondo {
 #fondo .general .contenido2 .lderecho .publicidad .p2 a h1{
     color: white;
 }
-
-
-
-
 
 footer{
     text-align: center;

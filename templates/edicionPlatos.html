@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar platos</title>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/estiloEdicionPlatos.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/normalize.min.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/icon/fontsAwesome/css/all.css') }}>
+</head>
+<body>
+    <header>
+        <div class="barraNaranja">
+            <div class="iz">
+                <a href=""><i class="fas fa-bars"></i> Menu</a>
+            </div>
+    
+            <div class="de">
+                <a href=""><i class="fas fa-user-circle"></i></a>
+            </div>              
+        </div>
+    
+        <div class="barraBlanca">
+            <h1>Edicion de platos</span></h1>
+        </div>
+    </header>
+
+    <section>
+        <div id="edicion">
+            <div class="añadirMenu">
+                <div class="imagenPlato">
+                    <h1>Foto del plato</h1>
+                    <img src="static/img/DONA.jpg" alt="">
+                </div>
+    
+                <div class="descripcicionM">
+                    <h2>Nombre del plato</h2>
+                    <input type="text" id="nombrePlato">
+                    <h2>Descripcion del plato</h2>
+                    <input type="text" id="descripcionPlato">
+                </div>
+    
+                <div class="añadir">
+                    <input type="text">
+                    <button>Añadir al menu</button>
+                </div>
+            </div>
+    
+            <div class="modificarPlato">
+                <div class="imagenPlato2">
+                    <h1>Foto del plato</h1>
+                    <img src="static/img/DONA.jpg" alt="">
+                </div>
+    
+                <div class="descripcicionP">
+                    <h2>Nombre del plato</h2>
+                    <input type="text" id="nombrePlato2">
+                    <h2>Descripcion del plato</h2>
+                    <input type="text" id="descripcionPlato2">
+                </div>
+    
+                <div class="añadir2">
+                    <input type="text">
+                    <button>Modificar plato</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p><span>Grupo 17 equipo 4 Univesidad del norte</span></p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,114 @@
+header .barraNaranja{
+    background: #ff581a;
+    overflow: hidden;
+    display: block;
+    padding: 9px 0px 9px 0px;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+header .barraNaranja .de i, header .barraNaranja .de a{
+    color: black;
+    padding-left: 20px;
+    font-size: 40px;
+    float: right;
+    margin-right: 18px;
+
+}
+
+header .barraNaranja .iz i, header .barraNaranja .iz a{
+    color: black;
+    margin-left: 18px;
+    font-size: 35px;
+    float: left;
+}
+
+header .barraNaranja .iz i{
+    padding-right: 15px;
+}
+
+header .barraBlanca h1{
+    text-align: center;
+}
+
+section #edicion{
+    margin-left: 10px
+}
+
+section #edicion .añadirMenu{
+    display: flex;
+    border-bottom: dotted;
+    padding-bottom: 100px;
+    border-color: #ff581a;
+}
+
+section #edicion .añadirMenu, section #edicion .modificarPlato{
+    display: flex;
+}
+
+section #edicion .añadirMenu .imagenPlato img{
+    width: 250px;
+    border-radius: 25px;
+   
+}
+
+section #edicion .añadirMenu .imagenPlato{
+    margin-right: 100px;
+}
+
+section #edicion .añadirMenu .añadir{
+    margin-left: 100px;
+    padding-top: 100px;
+}
+
+section #edicion .añadirMenu #nombrePlato, section #edicion .añadirMenu #descripcionPlato{
+    padding: 20px 50px 30px 20px;
+    border-color: black;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+section #edicion .modificarPlato{
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+
+section #edicion .modificarPlato .imagenPlato2 img{
+    width: 250px;
+    border-radius: 25px;
+   
+}
+
+section #edicion .modificarPlato .imagenPlato2{
+    margin-right: 100px;
+}
+
+section #edicion .modificarPlato .añadir2{
+    margin-left: 100px;
+    padding-top: 100px;
+}
+
+section #edicion .modificarPlato #nombrePlato2, section #edicion .modificarPlato #descripcionPlato2{
+    padding: 20px 50px 30px 20px;
+    border-color: black;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
+footer{
+    text-align: center;
+    background: #ff581a;
+    padding: 10px 0px 10px 0px;
+}

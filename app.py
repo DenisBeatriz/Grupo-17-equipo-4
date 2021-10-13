@@ -23,3 +23,8 @@ def funcion_descripcionProducto():
 def funcion_carritoDeCompras():
     return render_template('carritoDecompras.html')
 
+@app.route("/edicionPlatos")
+def funcion_edicionPlatos():
+    return render_template('edicionPlatos.html')
+
+
