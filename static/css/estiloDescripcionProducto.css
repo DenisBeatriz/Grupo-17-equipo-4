@@ -79,6 +79,22 @@ section #fondo {
 
 #fondo .general .contenido .imagen img{
     width: 400px;
+    
+    border-radius: 20px;
+}
+
+#fondo .general .contenido {
+    margin: 0px 30px 30px 30px;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color: #ffeaca;
+    border-radius: 15px;
+}
+
+#fondo .general .contenido .descripcion p{
+    font-size: 25px;
 }
 
 #fondo .general  .contenido{
@@ -88,6 +104,10 @@ section #fondo {
 #fondo .general  .contenido .imagen, #fondo .general  .contenido .descripcion{
     padding: 40px 40px 40px 40px;
     
+}
+
+#fondo .general  .contenido .descripcion h1{
+    font-family: 'Raleway Heavy';
 }
 
 #fondo .general  .contenido .descripcion h1, #fondo .general  .contenido .descripcion p, 
@@ -109,6 +129,10 @@ section #fondo {
     
 }
 
+#fondo .general .contenido2 #publib{
+    margin-top: 10px;
+}
+
 
 #fondo .general .contenido2 .lizquierdo .anadir{
     display: flex;
@@ -128,7 +152,9 @@ section #fondo {
 } 
 
 #fondo .general .contenido2 .lizquierdo #comentarios{
-    padding: 20px 20px 50px 20px;
+    padding: 20px 50px 100px 20px;
+    border-color: black;
+    border-radius: 15px;
 }
 
 #fondo .general .contenido2 .lderecho{
@@ -146,11 +172,13 @@ section #fondo {
 
 #fondo .general .contenido2 .lderecho #donaFresa{
     width: 300px;
+    border-radius: 15px;
     
 }
 
 #fondo .general .contenido2 .lderecho #donaVainilla{
     width: 200px;
+    border-radius: 15px;
     
 }
 

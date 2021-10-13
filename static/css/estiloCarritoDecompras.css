@@ -51,7 +51,44 @@ section #fondo {
     
 }
 
+#fondo .general .producto1{
+    border-style: dotted;
+    border-color: #ff581a;
+    border-width: 8px;
+    display: flex;
+}
 
+#fondo .general .producto1{
+    padding: 10px 10px 10px 10px;
+    overflow: hidden;
+}
+
+#fondo .general .producto1 a p{
+    color: white;
+    padding-left: 20px;
+    font-size: larger;
+}
+
+#fondo .general .producto1 a img{
+    width: 100px;
+}
+
+#fondo .general .producto1 a{
+    display: flex;
+    padding-left: 15px;
+}
+
+#fondo .general .producto1 .cantidad{
+    padding-left: 80px;
+}
+
+#fondo .general .producto1 h1{
+    padding-left: 80px;
+}
+
+#fondo .general #bpagar{
+    float: right;
+}
 
 footer{
     text-align: center;
