@@ -3,6 +3,26 @@ from flask import Flask, render_template
 
 app= Flask(__name__)
 
+@app.route("/")
+def funcion_home():
+    return render_template('home1.html')
+
+@app.route("/home2")
+def funcion_home2():
+    return render_template('home2.html')
+
+@app.route("/login")
+def funcion_login():
+    return render_template('login.html')
+
+@app.route("/menu")
+def funcion_menu():
+    return render_template('menu.html')
+
+@app.route("/perfinlUsuario")
+def funcion_perfil():
+    return render_template('perfil_usuario.html')
+
 
 @app.route("/pedido")
 def funcion_pedido():
@@ -31,6 +51,10 @@ def funcion_revision_de_comentarios():
 @app.route("/pagosUsuario")
 def funcion_pagos_usuario():
     return render_template('pagosUsuario.html')
+
+
+
+
 
 
 
