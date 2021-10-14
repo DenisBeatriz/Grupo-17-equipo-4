@@ -27,4 +27,10 @@ def funcion_carritoDeCompras():
 def funcion_edicionPlatos():
     return render_template('edicionPlatos.html')
 
+@app.route("/revisionComentarios")
+def funcion_revision_de_comentarios():
+    return render_template('revisionComentarios.html')
+
+
+
 
