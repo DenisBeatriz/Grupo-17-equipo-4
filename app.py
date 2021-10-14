@@ -3,9 +3,6 @@ from flask import Flask, render_template
 
 app= Flask(__name__)
 
-@app.route("/")
-def funcion():
-    return render_template('prueba.html')
 
 @app.route("/pedido")
 def funcion_pedido():
@@ -30,6 +27,10 @@ def funcion_edicionPlatos():
 @app.route("/revisionComentarios")
 def funcion_revision_de_comentarios():
     return render_template('revisionComentarios.html')
+
+@app.route("/pagosUsuario")
+def funcion_pagos_usuario():
+    return render_template('pagosUsuario.html')
 
 
 

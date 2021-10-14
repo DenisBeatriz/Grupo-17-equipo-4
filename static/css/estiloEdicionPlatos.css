@@ -33,37 +33,61 @@ header .barraBlanca h1{
     text-align: center;
 }
 
-section #edicion{
+section #fondo {
+	background-image: url(https://static9.depositphotos.com/1066655/1106/i/950/depositphotos_11062315-stock-photo-donuts.jpg);
+	padding: 50px 50px 50px 50px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+#fondo:before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.6);
+}
+
+#fondo .contenido {
+	color: #fff;
+	position: relative
+}
+
+#fondo .contenido #edicion{
     margin-left: 10px
 }
 
-section #edicion .añadirMenu{
+#fondo .contenido #edicion .añadirMenu{
     display: flex;
     border-bottom: dotted;
     padding-bottom: 100px;
     border-color: #ff581a;
 }
 
-section #edicion .añadirMenu, section #edicion .modificarPlato{
+#fondo .contenido #edicion .añadirMenu, section #edicion .modificarPlato{
     display: flex;
 }
 
-section #edicion .añadirMenu .imagenPlato img{
+#fondo .contenido #edicion .añadirMenu .imagenPlato img{
     width: 250px;
     border-radius: 25px;
    
 }
 
-section #edicion .añadirMenu .imagenPlato{
+#fondo .contenido #edicion .añadirMenu .imagenPlato{
     margin-right: 100px;
 }
 
-section #edicion .añadirMenu .añadir{
+#fondo .contenido #edicion .añadirMenu .añadir{
     margin-left: 100px;
     padding-top: 100px;
 }
 
-section #edicion .añadirMenu #nombrePlato, section #edicion .añadirMenu #descripcionPlato{
+#fondo .contenido #edicion .añadirMenu #nombrePlato, section #edicion .añadirMenu #descripcionPlato{
     padding: 20px 50px 30px 20px;
     border-color: black;
     border-radius: 15px;
@@ -74,28 +98,28 @@ section #edicion .añadirMenu #nombrePlato, section #edicion .añadirMenu #descr
 
 
 
-section #edicion .modificarPlato{
+#fondo .contenido #edicion .modificarPlato{
     padding-top: 20px;
     padding-bottom: 100px;
 }
 
 
-section #edicion .modificarPlato .imagenPlato2 img{
+#fondo .contenido #edicion .modificarPlato .imagenPlato2 img{
     width: 250px;
     border-radius: 25px;
    
 }
 
-section #edicion .modificarPlato .imagenPlato2{
+#fondo .contenido #edicion .modificarPlato .imagenPlato2{
     margin-right: 100px;
 }
 
-section #edicion .modificarPlato .añadir2{
+#fondo .contenido #edicion .modificarPlato .añadir2{
     margin-left: 100px;
     padding-top: 100px;
 }
 
-section #edicion .modificarPlato #nombrePlato2, section #edicion .modificarPlato #descripcionPlato2{
+#fondo .contenido #edicion .modificarPlato #nombrePlato2, section #edicion .modificarPlato #descripcionPlato2{
     padding: 20px 50px 30px 20px;
     border-color: black;
     border-radius: 15px;

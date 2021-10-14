@@ -1,0 +1,42 @@
+header .barraNaranja{
+    background: #ff581a;
+    overflow: hidden;
+    display: block;
+    padding: 9px 0px 9px 0px;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+header .barraNaranja .de i, header .barraNaranja .de a{
+    color: black;
+    padding-left: 20px;
+    font-size: 25px;
+    float: right;
+    margin-right: 18px;
+
+}
+
+section .pagos{
+    display: flex;
+}
+
+
+
+footer{
+    text-align: center;
+    background: #ff581a;
+    padding: 10px 0px 10px 0px;
+}
+
+header .barraNaranja .iz i{
+    padding-right: 15px;
+}
+
+header .barraNaranja .iz i, header .barraNaranja .iz a{
+    color: black;
+    margin-left: 18px;
+    font-size: 25px;
+    float: left;
+}
