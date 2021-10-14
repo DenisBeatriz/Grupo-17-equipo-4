@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunk Donuts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="../static/img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles_home2.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <nav class="menu">
+                    <div>
+                        <a href="#"><i class="fas fa-bars"></i>Menú</a>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#carrito_compras" class="link_shopping_cart">Carrito de compras<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#lista_deseos" class="link_wish_list">Lista de deseos<i class="fa fa-heart" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#mi_cuenta" class="my_account">Mi cuenta<i class="fas fa-user-circle"></i></a>
+                        </li>
+                        <li>
+                            <a href="#carrito_compras" class="link_shopping_cart">Salir<i class="fas fa-sign-in-alt"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+                <hr>
+            </div>
+        </header>
+        <main>
+            <section>
+                <nav class="menu2">
+                    <ul>
+                        <li>
+                            <a href="#donas" class="link_donas">DONUTS</a>
+                        </li>
+                        <li>
+                            <a href="#panaderia" class="link_panaderia">PANADERIA</a>
+                        </li>
+                        <li>
+                            <a href="#reposteria" class="link_reposteria">REPOSTERIA</a>
+                        </li>
+                        <li>
+                            <a href="#ponques" class="link_ponques">PONQUÉS</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section>
+                <div class="hero">
+                    <div class="hero_image">
+                        <div class="hero_image_text">
+                            <p>DESDE <br /> 2021</p>
+                        </div>
+                    </div>
+                    <div class="hero_text">
+                        <p>Déjanos endulzar tu día con los más variados y exquisitos sabores, despertando siempre el
+                            <span class="umami">umami</span> en tu paladar.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="offer_title">
+                    <h2 class="matahambre_text_title">MATAHAMBRE</h2>
+                    <H2>OFERTA DEL DIA</H2>
+                </div>
+                <div class="offer">
+                    <div>
+                        <figure class="offer_images">
+                            <img src="../static/img/matahambre1.jpg" alt="Matahambre1">
+                        </figure>
+                        <div class="offer_text">
+                            <h3>Super Donut de Chocolate</h3>
+                            <p>Deliciosa donut repleta de chocolate, maní y frutos rojos.</p>
+                            <a href="#">Lo quiero<i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                    <div>
+                        <figure class="offer_images">
+                            <img src="../static/img/matahambre2.jpg" alt="Matahambre2">
+                        </figure>
+                        <div class="offer_text">
+                            <h3>Croissant recien salido del horno</h3>
+                            <p>Delicioso Croissant con jamón y queso al mejor estilo francés.</p>
+                            <a href="#">Lo quiero<i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                    <div>
+                        <figure class="offer_images">
+                            <img src="../static/img/oferta1.jpg" alt="Oferta1">
+                        </figure>
+                        <div class="offer_text">
+                            <h3>Mega combo de galletas</h3>
+                            <p>Mega combo de 12 galletas rellenas de colores para cualquier ocasión.</p>
+                            <a href="#">Lo quiero<i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                    <div>
+                        <figure class="offer_images">
+                            <img src="../static/img/oferta2.jpg" alt="Oferta2">
+                        </figure>
+                        <div class="offer_text">
+                            <h3>Para iniciar el día</h3>
+                            <p>Empieza el día con este espectacular combo que te dará toda la energía.</p>
+                            <a href="#">Lo quiero<i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contact">
+                <div class="container">
+                    <div class="contact_div_tittles">
+                        <div>
+                            <h3 id="contact" class="contact_tittle">
+                                Contáctanos
+                            </h3>
+                        </div>
+                        <div class="contact_div_followme">
+                            <h3 id="contact" class="contact_tittle">
+                                Síguenos
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="contact_block">
+                        <form class="form">
+                            <input name="name" placeholder="Nombre" type="text" required class="input_name" /><br />
+                            <input name="email" placeholder="Email" type="email" required class="input_email" /><br />
+                            <textarea name="message" placeholder="Mensaje" required class="textarea_message"></textarea>
+                            <input type="submit" value="Enviar" class="submit" />
+                        </form>
+                        <div class="social">
+                            <a href="#" class="icon-twitter" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="icon-facebook" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="icon-instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer">
+                <p>Grupo 17 Equipo 4 - Universidad del Norte</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
