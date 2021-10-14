@@ -13,11 +13,11 @@
     <header>
         <div class="barraNaranja">
             <div class="iz">
-                <a href=""><i class="fas fa-bars"></i> Menu</a>
+                <a href="/menu"><i class="fas fa-bars"></i> Menu</a>
             </div>
 
             <div class="de">
-                <a href=""><i class="fas fa-user-circle"></i> Ingresar</a>
+                <a href="/home2"><i class="fas fa-user-circle"></i> Mi cuenta</a>
                 <a href=""><i class="far fa-heart"></i> Lista de deseos</a>
                 <a href="/carritoDecompras"><i class="fas fa-shopping-cart"></i> Carrito de compras</a>
             </div>             
@@ -49,23 +49,33 @@
 
             <div class="productos">
                 <div class="descripcion">
-                    <h3>descripcion</h3>
-                    <h3>Cant</h3>
-                    <h3>Valor</h3>
+                    <h3 id="d">descripcion</h3>
+                    <h3 id="c">Cant</h3>
+                    <h3 id="v">Valor</h3>
                 </div>
                 <div class="producto1">
-                    <img src="" alt="">
-                    <p>Donut de chocolate
-                    relleno con arequipe
-                    </p>
-                    <h2>2</h2>
-                    <h2>$ 4000</h2>
+                    <div class="descrip">
+                        <img src="static\img\donaOreo.jpg" alt="" id="dona">
+                        <p>Donut de chocolate
+                        relleno con arequipe
+                        </p>
+                    </div>
+                   
+                    
+                    <h2 id="cant">2</h2>
+                    <h2 id="preci">$ 4000</h2>
+
+                    
+                </div>
+
+                <div id="total">
+                    <h1>En total pagas $4000</h1>
                 </div>
             </div>
         </div>
 
-        <div>
-            <img src="" alt="">
+        <div id="publicidad">
+            <img src="static\img\donaOreo.jpg" alt="" id="donaPublicidad">
             <p>Nueva Oferta de Productos No promocional OREO: Donuts Premium con trozos de galleta Oreo por $4000, 
             Iced Dunkalatte (16 Oz) con trozos de galleta Oreo por $6.000 y Dunkaccino (10 Oz) por $6.000, precios 
             con impuestos incluidos...</p>
