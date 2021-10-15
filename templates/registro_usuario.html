@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Perfil Usuario</title>
+        <link rel="stylesheet" href="static\css\style_perfil_usuario.css">
+    </head>
+    <body id="cuerpo">
+
+        <!--Parte Superior-->
+        <header id="encabezado">
+            <div id="DIV_CUENTA">
+                <h1 id="T_mi_cuenta">REGISTRO</h1>
+            </div>
+            <br>
+            <br>
+            
+        </header>
+
+                
+        <!--Creacion Formato para visualizar y para editar la informacion del Usuario-->
+        <form action="" id="cuerpo">
+            <div id="columna1">
+                <label for="Nombre">
+                    <span>Nombre:</span>
+                    <input type="text" id="Nombre" placeholder="Pepito" name="Nombre" autocomplete="name" required>
+                </label>
+                <br>
+                <br>
+                <label for="Cedula">
+                    <span>Cedula:</span>
+                    <input type="number" id="Cedula" placeholder="000058126" name="Cedula" required>
+                </label>
+
+                <label for="Email">
+                    <span>Email:</span>
+                    <input type="email" id="Email" placeholder="rperez844284611@prueba.com" name="Email" autocomplete="email" required>
+                </label>
+                <br>
+                <br>
+                <label for="direccion">
+                    <span>Dirección:</span>
+                    <input type="text" id="direccion" placeholder="Calle libertad12385 Carrera 84513" name="direccion" autocomplete="address-level1" required>
+                </label>
+                <br>
+                <br>
+                <label for="contraseña">
+                    <span>Contraseña</span>
+                    <input type="password" id="contraseña" name="contraseña">
+                </label>
+            </div>
+
+            <div id="columna2">
+                <label for="Apellido">
+                    <span>Apellido:</span>
+                    <input type="text" id="Apellido" placeholder="Perez" name="Apellido" required>
+                </label>
+                <br>
+                <br>
+                <label for="nickname">
+                    <span>Nickname</span>
+                    <input type="text" id="nickname" placeholder="Raton_Perez65" name="nickname" required>
+                </label>
+                <br>
+                <br>
+                <label for="celular">
+                    <span>Celular:</span>
+                    <input type="number" id="celular" placeholder="000058916" name="celular" required>
+                </label>
+                <br>
+                <br>
+                <label for="especificaciones">
+                    <span>Especificaciones</span>
+                    <input type="text" id="especificaciones" placeholder="Casa de color magenta, con puertas blancas" name="Especificaciones" size="50px" required>
+                </label>
+                <br>
+                <br>
+                <label for="confirm_contraseña">
+                    <span>Confirmar Contraseña</span>
+                    <input type="password" id="confirm_contraseña" name="confirm_contraseña">
+                </label>
+            </div>  
+        </form>
+        <br>
+        <br>
+        <!--Parte Inferior-->
+        <div style="margin:0 auto; width: 55%; float: right;" >
+            <button id="Boton_guardar_cambios">Guardar Información</button><!--Poner la relacion con la base de datos-->
+        </div>
+        <footer id="PARTE_INFERIOR">
+            <nav id="creditos">
+                <p id="creditos_footer">Grupo 17 Equipo 4 Universdiad del Norte</p>
+            </nav>
+        </footer>
+    </body>
+</html>
