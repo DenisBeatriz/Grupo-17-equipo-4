@@ -56,6 +56,11 @@ def funcion_pagos_usuario():
 def funcion_admin():
     return render_template('admin.html')
 
+@app.route("/listaDeseos")
+def funcion_listaDeseos():
+    return render_template('listaDeseos.html')
+
+
 
 
 
