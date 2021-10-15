@@ -52,6 +52,10 @@ def funcion_revision_de_comentarios():
 def funcion_pagos_usuario():
     return render_template('pagosUsuario.html')
 
+@app.route("/admin")
+def funcion_admin():
+    return render_template('admin.html')
+
 
 
 
