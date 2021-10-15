@@ -1,0 +1,95 @@
+#cuerpo{/*Estilo para cuerpo*/
+    background-image: url(./DISEÑO_PAGINA_WEB/mancha_naranja.jpg);
+    background-size: 45%;
+}
+/*De general a especifico*/
+
+#T_mi_cuenta, #T2_informacion_basica{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#Nombre, #Apellido, #Cedula, #nickname, #Email, #celular, #direccion, #especificaciones, #contraseña, #confirm_contraseña {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#eliminar, #desbloquear, #Boton_guardar_cambios{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    border-color: #ff581a;
+    border-top: none;
+    border-left: none;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 50px;
+    border-width: 5px;
+}
+
+
+#T_mi_cuenta{
+    float: right;
+    margin-top: 0%;
+    font-size:90px;
+    color: black;
+    margin-left: 400px;
+}
+
+/*estilo botones*/
+
+
+#Boton_guardar_cambios{
+    margin-top: 80px;
+}
+
+
+/*TITULO DE MI CUENTA*/
+#DIV_CUENTA{
+    padding: 50px;
+}
+
+
+#T2_informacion_basica{
+    margin-top: 0px;
+    padding-left: 10px;
+}
+
+#cuerpo{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#T2_informacion_basica{
+    font-size: 30px;
+}
+
+
+/*Columnas de información*/
+#columna1{
+    float: left;
+    margin-right: 150px;
+}
+#columna2{
+    float: right;
+}
+
+#columna1, #columna2{
+    font-size: 25px;
+}
+
+/*Estilo Footer*/
+
+
+#creditos_footer{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12.4px;
+    color: white;
+    margin-left: 650px;
+}
+#creditos{
+    background-color: #ff581a;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#PARTE_INFERIOR{
+    margin-top: 350px;
+}
