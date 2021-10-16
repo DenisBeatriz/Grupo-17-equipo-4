@@ -1,0 +1,136 @@
+header .barraNaranja{
+    background: #ff581a;
+    overflow: hidden;
+    display: block;
+    padding: 9px 0px 9px 0px;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+header .barraNaranja .de i, header .barraNaranja .de a{
+    color: black;
+    padding-left: 20px;
+    font-size: 25px;
+    float: right;
+    margin-right: 18px;
+
+}
+
+section .pagos{
+    display: flex;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+section .pagos .tiposPagos{
+    border-bottom: solid;
+    border-right: solid;
+    border-color: #f9ad30;
+    border-width: 5px;
+}
+
+section .pagos .tiposPagos div{
+    margin-bottom: 30px;
+}
+
+section .pagos .tiposPagos button{
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+section .pagos .tiposPagos H1{
+    margin-right: 20px;
+}
+
+section .pagos .productos{
+    margin-left: 150px;
+}
+section .pagos .productos .descripcion{
+    display: flex;
+}
+
+section .pagos .productos .descripcion #d{
+    padding: 0px 175px 0px 175px;
+    
+    
+}
+
+section .pagos .productos .descripcion #c{
+    padding: 0px 20px 0px 20px;
+       
+}
+
+section .pagos .productos .descripcion #v{
+    padding: 0px 40px 0px 40px;
+    
+       
+}
+
+section .pagos .productos #dona{
+     width: 70px;
+}
+
+section .productos #total{
+    margin-left: 340px;
+    margin-top: 200px;
+}
+
+section #donaPublicidad{
+    width: 100px;
+}
+
+section #publicidad{
+    display: flex;
+    margin-top: 50px;
+}
+
+section #publicidad p{
+    display: flex;
+    margin-left: 15px;
+}
+
+section .pagos .productos .producto1 .descrip{
+    display: flex;
+    padding: 0px 100px 0px 0px;
+    
+}
+
+section .pagos .productos .producto1 .descrip p{
+    margin-left: 10px;
+}
+
+section .pagos .productos .producto1 {
+    display: flex;
+}
+
+section .pagos .productos .producto1 h2{
+    display: flex;
+    padding: 0px 30px 0px 30px;
+    
+}
+
+
+
+
+
+
+
+footer{
+    text-align: center;
+    background: #ff581a;
+    padding: 10px 0px 10px 0px;
+}
+
+header .barraNaranja .iz i{
+    padding-right: 15px;
+}
+
+header .barraNaranja .iz i, header .barraNaranja .iz a{
+    color: black;
+    margin-left: 18px;
+    font-size: 25px;
+    float: left;
+}

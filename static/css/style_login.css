@@ -1,0 +1,68 @@
+/*GENERAL*/
+
+#T1_pagina_G, #T2_Login{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*Formulario Ingreso*/
+#cuestionario_ingreso, #Mensaje_usuario{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+#cred_footer{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12.4px;
+    color: black;
+    margin-left: 650px;
+}
+
+#creditos{
+    background-color: white;
+    margin-top: 120px;
+    margin-left: 0px;
+
+
+}
+#Boton_ingreso, #Boton_Registro{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12.4px;
+}
+/*Especifico*/
+
+#T1_pagina_G{
+    font-size: 70px;
+    background-color: white;
+    margin-top: -110px;
+    max-width: 700px;
+    height: 400px;
+}
+
+#T2_Login{
+    font-size: 40px;
+}
+/*Fondo del Documento*/
+
+#imagen{
+    margin-left: 700px;
+    transform: rotate(-90deg);
+    margin-top: -500px;
+    margin-right: 0%;
+    
+}
+#T2_Login{
+    background-color: #ff581a;
+}
+
+#cuerpo{
+    background-color: #ff581a;
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+#cuestionario_ingreso{
+    margin-top: -350px;
+    font-size: 25px;
+}
+#cred_footer{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 12.4px;
+}
