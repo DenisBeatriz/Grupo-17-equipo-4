@@ -25,7 +25,7 @@ body{
 }
 
 .logo figure img{
-    width: 50%;
+    width: 20%;
 }
 
 .logo figure a:hover{
@@ -94,4 +94,15 @@ input[type="password"]{
 p{
     text-align: center;
 }
+
+.link_login{
+    text-decoration: none;
+    color: #1a2537;
+    font-weight: 600;
+}
+
+.link_login:hover{
+    color: cadetblue;
+}
+
 

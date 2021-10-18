@@ -18,7 +18,7 @@ def funcion_login():
 def funcion_menu():
     return render_template('menu.html')
 
-@app.route("/perfinlUsuario")
+@app.route("/perfilUsuario")
 def funcion_perfil():
     return render_template('perfil_usuario.html')
 
@@ -57,6 +57,10 @@ def funcion_admin():
 @app.route("/listaDeseos")
 def funcion_listaDeseos():
     return render_template('listaDeseos.html')
+
+@app.route("/registroUsuario")
+def funcion_registro_usuario():
+    return render_template('registro_usuario.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
