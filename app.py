@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 
-
 app= Flask(__name__)
 
 @app.route("/")
@@ -22,7 +21,6 @@ def funcion_menu():
 @app.route("/perfinlUsuario")
 def funcion_perfil():
     return render_template('perfil_usuario.html')
-
 
 @app.route("/pedido")
 def funcion_pedido():
@@ -60,7 +58,8 @@ def funcion_admin():
 def funcion_listaDeseos():
     return render_template('listaDeseos.html')
 
-
+if __name__ == '__main__':
+    app.run(debug=True)
 
 
 
