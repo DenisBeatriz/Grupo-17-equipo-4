@@ -1,0 +1,22 @@
+CREATE TABLE USUARIO_FINAL (
+    CEDULA        STRING PRIMARY KEY ASC
+                         NOT NULL
+                         UNIQUE,
+    NICKNAME      STRING NOT NULL
+                         UNIQUE,
+    NOMBRE_USER   STRING NOT NULL,
+    APELLIDO_USER STRING NOT NULL,
+    DIRECCION     STRING NOT NULL,
+    CELULAR       STRING NOT NULL,
+    EMAIL         STRING NOT NULL
+                         UNIQUE
+);
+
+CREATE TABLE LISTA_DESEOS (
+    CEDULA_USER          PRIMARY KEY
+                         UNIQUE
+                         NOT NULL,
+    PRODUCTO      STRING NOT NULL,
+    PRECIO               NOT NULL,
+    FECHA_INGRESO        NOT NULL
+);
