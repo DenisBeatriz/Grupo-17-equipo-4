@@ -5,17 +5,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HOME ADMIN</title>
-        <link rel="stylesheet" href="static\css\style_admin.css">
-    </head>
+        <link rel="stylesheet" href="/static/css/style_admin.css">
+    </head>1
     <body>
         <nav>
             <ul>
                 <li id="principal">
-                <img src="static\img\DISEÑO_PAGINA_WEB\menu copia.png" alt="" width="25" height="25">
+                <img src="/static/img/DISEÑO_PAGINA_WEB/menu copia.png" alt="" width="25" height="25">
                     TIPO DE VISTA ADMINISTRADOR
                 </li>
-                <li>REVISION COMENTARIOS</li>
-                <li>REVISION PAGOS</li>
+                <a href="/revisionComentarios">REVISION COMENTARIOS</a>
+                <a href="/pagosAdmin">REVISION PAGOS</a>
+                
             </ul>
         </nav>
         <!--Creacion Calendarios que son usados como filtro para las graficas que se necesitan
@@ -32,7 +33,7 @@
                 </label>
                 <input type="submit">
                 <br><br>
-                <img src="static\img\DISEÑO_PAGINA_WEB\grafica_lineas.png" alt="" width="350" height="350">
+                <img src="/static/img/DISEÑO_PAGINA_WEB/grafica_lineas.png" alt="" width="350" height="350">
                 <button id="primer_boton">GENERAR RESULTADOS</button>
             </div>
             <br>
@@ -48,7 +49,7 @@
                 </label>
                 <input type="submit"><!--Sirve para enviar informacion a la base de datos-->
                 <br><br>
-                <img src="static\img\DISEÑO_PAGINA_WEB\grafica-de-barras.png" alt="" width="350" height="350">
+                <img src="/static/img/DISEÑO_PAGINA_WEB/grafica-de-barras.png" alt="" width="350" height="350">
                 <button id="segundo_boton">GENERAR RESULTADOS</button>
             </div>
             <div id="eliminar_usuario">
@@ -61,14 +62,19 @@
                 <button>Desbloquear</button>
             </div>
             <div id="editar_plato">
-                <h1>Editar Plato</h1>
+                <h1>EDITAR PLATOS</a>
+                </h1>
                 <label for="Nombre">
                     <span>Nombre:</span>
                     <input type="name" id="nombre" placeholder="Felipe" name="nombre" required>
                 </label>
-                <button>Eliminar</button>
-                <button>Modificar</button>
-                <button>Añadir</button>
+                <button>Eliminar</button> <!--CONEXION A BASE DE DATOS-->
+                <button>
+                    <a href="/edicionPlatos">Modificar</a>
+                </button> 
+                <button>
+                    <a href="/edicionPlatos">Añadir</a>
+                </button> 
             </div>
             <div id="descargar_info">
                 <h1>Descargar Información Lista de Deseos</h1>

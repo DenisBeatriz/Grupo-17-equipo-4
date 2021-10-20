@@ -1,5 +1,5 @@
 body{
-    background-image: url(./DISEÑO_PAGINA_WEB/MENUbac.jpg) ;
+    background-image: url(/static/img/DISEÑO_PAGINA_WEB/MENUbac.jpg) ;
     background-size: 100%;
 }
 /*Barra de navegación*/
