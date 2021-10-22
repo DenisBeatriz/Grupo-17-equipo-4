@@ -1,5 +1,9 @@
 body{
-    background-image: url(./DISEÑO_PAGINA_WEB/MENUbac.jpg) ;
+<<<<<<< Updated upstream
+    background-image: url(static\img\DISEÑO_PAGINA_WEB\backmenu.jpg);
+=======
+    background-image: url(/static/img/DISEÑO_PAGINA_WEB/MENUbac.jpg) ;
+>>>>>>> Stashed changes
     background-size: 100%;
 }
 /*Barra de navegación*/
@@ -115,4 +119,14 @@ pre{
 }
 #T2_Te_manzanilla{
     margin-top: -50px;
+}
+#footer{
+    font-size: 12.4px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ff581a;
+    margin-top: 10px;
+    padding-left: 650px;
+    margin-left: 0px;
+    color: white;
+
 }
