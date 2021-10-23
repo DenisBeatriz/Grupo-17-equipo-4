@@ -1,5 +1,7 @@
+from types import MethodDescriptorType
 from flask import Flask, render_template, request
-
+import smtplib
+from templates import base_datos
 
 app= Flask(__name__)
 
@@ -44,6 +46,7 @@ def funcion_carritoDeCompras():
 def funcion_edicionPlatos():
     return render_template('edicionPlatos.html')
 
+
 @app.route("/revisionComentarios")
 def funcion_revision_de_comentarios():
     return render_template('revisionComentarios.html')
@@ -56,15 +59,51 @@ def funcion_pagos_usuario():
 def funcion_admin():
     return render_template('admin.html')
 
+
 @app.route("/listaDeseos")
 def funcion_listaDeseos():
     return render_template('listaDeseos.html')
 
+@app.route("/edicion_platos", methods=["POST"])#como insertar una imagen desde el ordenador
+def prueba():
+    print(request.form)
+    return 'HOLA MUNDO'
+
+@app.route("/resultados", methods =["POST"])
+def resultados():
+    print(request.form['cedula'])
+    return "INGRESO CEDULA"
+
+@app.route("/conexion_bd")
+def conexion_bd():
+    base_datos.conexion_sql
+    return "HOLA"
 
 
 
 
 
 
+""" envio correo eliminacion y debloqueo de una cuenta
+def enviarCorreo_El(correo_Usu, correo_admin, contraseña_admin):
+    mensaje = -'Le notificamos que su cuenta se elimino de la pagina Duck Donuts, para mayor información, dirigirse a un punto de atención'
+    asunto= 'Cuenta Eliminada'
 
+    mensaje='Subject: {}\n\n{}'.format(asunto, mensaje)
+    server = smtplib.SMTP('smtp.uninortes.com',587)
+    server.starttls()
+    server.login(correo_admin,contraseña_admin)
+    server.sendmail(correo_admin, correo_Usu, mensaje)
+    server.quit()
 
+def enviarCorreo_Des(correo_Usu, correo_admin, contraseña_admin):
+    mensaje = -'Le notificamos que su cuenta se desbloqueara actomaticamente en 1 día, para mayor información, dirigirse a un punto de atención'
+    asunto= 'Cuenta Desbloqueada'
+
+    mensaje='Subject: {}\n\n{}'.format(asunto, mensaje)
+    server = smtplib.SMTP('smtp.uninortes.com',587)
+    server.starttls()
+    server.login(correo_admin,contraseña_admin)
+    server.sendmail(correo_admin, correo_Usu, mensaje)
+    server.quit()
+"""

@@ -17,7 +17,7 @@
             </div>
     
             <div class="de">
-                <a href="/admin"><i class="fas fa-user-circle"></i></a><!--se coloca el home de admin-->
+                <a href="/admin"><i class="fas fa-user-circle"></i></a>
             </div>              
         </div>
     
@@ -28,12 +28,14 @@
 
     <section>
         <div id = "fondo">
-            <div class="contenido">
+            <form class="contenido" action="/edicion_platos" method="post">
                 <div id="edicion">
                     <div class="añadirMenu">
                         <div class="imagenPlato">
                             <h1>Foto del plato</h1>
                             <img src="static/img/DONA.jpg" alt="">
+                            <br><br>
+                            <button>Subir Imagen</button>
                         </div>
             
                         <div class="descripcicionM">
@@ -52,7 +54,8 @@
                     <div class="modificarPlato">
                         <div class="imagenPlato2">
                             <h1>Foto del plato</h1>
-                            <img src="static/img/DONA.jpg" alt="">
+                            <img src="static/img/DONA.jpg" alt=""><!--mostra la foto del plato correspondiente-->
+                            
                         </div>
             
                         <div class="descripcicionP">
@@ -68,7 +71,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </section>
 

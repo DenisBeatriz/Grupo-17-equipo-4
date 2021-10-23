@@ -1,5 +1,14 @@
 body{
+<<<<<<< Updated upstream
     background-image: url(/static/img/DISEÑO_PAGINA_WEB/MENUbac.jpg) ;
+=======
+    background-image: url(static\img\DISEÑO_PAGINA_WEB\backmenu.jpg);
+
+    background-image: url(/static/img/DISEÑO_PAGINA_WEB/MENUbac.jpg) ;
+
+    background-image: url(/static/img/DISEÑO_PAGINA_WEB/MENUbac.jpg) ;
+
+>>>>>>> Stashed changes
     background-size: 100%;
 }
 /*Barra de navegación*/

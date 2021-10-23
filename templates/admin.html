@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HOME ADMIN</title>
         <link rel="stylesheet" href="/static/css/style_admin.css">
-    </head>1
+    </head>
     <body>
         <nav>
             <ul>
@@ -21,7 +21,7 @@
         </nav>
         <!--Creacion Calendarios que son usados como filtro para las graficas que se necesitan
         mostrar al Admin-->
-        <form action=""><!--Diagrama Parte Izquierda-->
+        <form action="" id="Calendario_P"><!--Diagrama Parte Izquierda-->
             <div id="primero">
                 <label for="Calendario_Pedidos">
                     <span>Fecha Inicio</span>
@@ -29,15 +29,17 @@
                 </label>
                 <label for="Calendario_Pedidos_salida">
                     <span>Fecha Fin</span>
-                    <input type="date" id="Calndario_Pedidos_salida" name="Calendario_Pedidos_salida">
+                    <input type="date" id="Calendario_Pedidos_salida" name="Calendario_Pedidos_salida">
                 </label>
-                <input type="submit">
+                <input type="submit"><!--enviar info a la base de datos-->
                 <br><br>
                 <img src="/static/img/DISEÑO_PAGINA_WEB/grafica_lineas.png" alt="" width="350" height="350">
                 <button id="primer_boton">GENERAR RESULTADOS</button>
             </div>
             <br>
             <br><br><br>
+        </form>
+        <form action="" id="Calendario_V">
             <div id="segundo">
                 <label for="Calendario_Ventas"><!--Diagrama Parte Dercha-->
                     <span>Fecha Inicio</span>
@@ -52,35 +54,39 @@
                 <img src="/static/img/DISEÑO_PAGINA_WEB/grafica-de-barras.png" alt="" width="350" height="350">
                 <button id="segundo_boton">GENERAR RESULTADOS</button>
             </div>
+        </form>
+        <form action="/resultados" method="post" id="Usuario_final"><!--ACA SE ENERA EL PROBLEMA-->
             <div id="eliminar_usuario">
                 <h1>Eliminar Usuario</h1>
                 <label for="cedula">
                     <span>Cedula:</span>
-                    <input type="number" id="cedular" placeholder="000058916" name="cedula" required>
+                    <input type="number" name="cedula" id="cedula" placeholder="000058916" name="cedula" required>
                 </label>
                 <button>Eliminar</button>
                 <button>Desbloquear</button>
             </div>
+        </form>
+        <form action="" id="Edicion_Pla">
             <div id="editar_plato">
-                <h1>EDITAR PLATOS</a>
+                <h1>
+                    Editar Platos
                 </h1>
-                <label for="Nombre">
-                    <span>Nombre:</span>
-                    <input type="name" id="nombre" placeholder="Felipe" name="nombre" required>
-                </label>
-                <button>Eliminar</button> <!--CONEXION A BASE DE DATOS-->
-                <button>
-                    <a href="/edicionPlatos">Modificar</a>
-                </button> 
-                <button>
-                    <a href="/edicionPlatos">Añadir</a>
-                </button> 
+                    <label for="ID_PRODUCTO">
+                        <span>Id Producto</span>
+                        <input type="name" id="ID_PRODUCTO1" placeholder="125336" required>
+                    </label>
+                    <button>Eliminar</button> <!--CONEXION A BASE DE DATOS-->
+                    <button id="Modificar_Plato">
+                        <a href="/edicionPlatos">Modificar</a>
+                    </button> 
+
             </div>
+        </form>
+
             <div id="descargar_info">
                 <h1>Descargar Información Lista de Deseos</h1>
                 <button>Descargar</button>
             </div>
-        </form>
-
+    
     </body>
 </html>
