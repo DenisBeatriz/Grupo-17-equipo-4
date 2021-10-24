@@ -43,12 +43,12 @@
         <div id = "fondo" >
             <div class="general">
                 <div class="contenido">
-                    <div class="imagen">
-                        <img src="static\img\donaOreo.jpg" alt="">
-                    </div>
+                    
+                        <img class="imagen" src="static\img\donaOreo.jpg" alt="">
+                    
     
                     <div class="descripcion">
-                        <h1><strong>Donut de chocolate</strong> </h1>
+                        <h1 class="titulo"><strong>Donut de chocolate</strong> </h1>
                         <p>Donut relleno de chocolate blanco, cubierta
                          con chocolate negro y trozos de galleta Oreo</p>
                          <p>Nueva Oferta de Productos No promocional OREO:
@@ -56,7 +56,7 @@
                         $4000, Iced Dunkalatte (16 Oz) con trozos de
                         galleta Oreo por $6.000 y Dunkaccino (10 Oz) por 
                         $6.000, precios con impuestos incluidos...</p>
-                        <h2> $ 4000 </h2>
+                        <h2 class="precioProducto"> $ 4000 </h2>
     
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                         
                         <div class="pagar">
                             <button>Pagar</button>
-                            <button>Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
+                            <button id="agregarCarrito">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
                         </div>
         
                        
@@ -99,24 +99,50 @@
                                     <img src="static/img/donasFresa.jpg" alt="" id="donaFresa">
                                     <h1> Dona de fresa </h1>
                                  </a>
-                             </div>
+                             </div>       
+                        </div>  
+                    </div>
+                </div>
+
+
+                <div class="productosElegidos">
+                    <div class="tituloCarrito"><h1>CARRITO DE COMPRAS</h1></div>
+                    <hr>
+                    <div class="hilera">
+
+                        <div class="columna1">
                             
-                             
+                                <h1 class="colum1">Productos</h1>
+                            
                         </div>
+
+                        <div class="columna2">
                             
-                                 
+                                <h1 class="colum2">Cantidad</h1>
+                            
+                        </div>
+
+                        <div class="columna3">
+                            
+                                <h1 class="colum3">Precio</h1>
+                            
+                        </div>
                         
+                        <!--aqui se van colocando los productos al carrito de compras-->
 
                     </div>
-                    
-        
                 </div>
-            </div>
-            
-        </div>            
+                <div class="total">
+                    <div class="total1"><h3>Total</h3><p class="tiendaCarritoTotal">$0</p></div>
+                     
+                    <button class="botonPagar">pagar</button>
+                </div>
+            </div>    
+        </div>           
     </section>
     <footer>
         <p><span>Grupo 17 equipo 4 Univesidad del norte</span></p>
-    </footer>    
+    </footer> 
+    <script src='static/js/carrito.js'></script>   
 </body>
 </html>
