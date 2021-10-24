@@ -23,44 +23,44 @@
                 </figure>
             </div>
             <div>
-                <form class="formulario">
+                <form class="formulario" action="" method="post" onsubmit="return validar_formulario_registro()">
                     <h2>REGÍSTRATE</h2>
                     <div class="form_container">
                         <div class="input_container">
                             <i class="fa-solid fa-user icon"></i>
-                            <input type="text" placeholder="Nombres">
+                            <input type="text" placeholder="Nombres" name="nombres" id="nombres">
                         </div>
                         <div class="input_container">
                             <i class="fa-solid fa-user icon"></i>
-                            <input type="text" placeholder="Apellidos">
+                            <input type="text" placeholder="Apellidos" name="apellidos" id="apellidos">
                         </div>
                         <div class="input_container">
                             <i class="fa-solid fa-id-card icon"></i>
-                            <input type="text" placeholder="Cédula">
+                            <input type="text" placeholder="Cédula" name="cedula" id="cedula">
                         </div>
                         <div class="input_container">
                             <i class="fa-solid fa-envelope icon"></i>
-                            <input type="text" placeholder="Correo electrónico">
+                            <input type="text" placeholder="Correo electrónico" name="email" id="email">
                         </div>
                         <div class="input_container">
                             <i class="fa-solid fa-phone icon"></i>
-                            <input type="text" placeholder="Número celular">
+                            <input type="text" placeholder="Número celular" name="celular" id="celular">
                         </div>
                         <div class="input_container">
                             <i class="fa-solid fa-map icon" ></i>
-                            <input type="text" placeholder="Dirección">
+                            <input type="text" placeholder="Dirección" name="direccion" id="direccion">
                         </div>
                         <div class="input_container">
                             <i class="fa-solid fa-map-location icon"></i>
-                            <input type="text" placeholder="Complemento (Barrio, apto, bloque, entrada, etc.)">
+                            <input type="text" placeholder="Complemento (Barrio, apto, bloque, entrada, etc.)" name="complemento" id="complemento">
                         </div>
                         <div class="input_container">
                             <i class="fa-solid fa-key icon"></i>
-                            <input type="password" placeholder="Contraseña">
+                            <input type="password" placeholder="Contraseña" name="contrasena" id="contrasena">
                         </div>
                         <div class="input_container">
                             <i class="fa-solid fa-key icon"></i>
-                            <input type="password" placeholder="Confirme su contraseña">
+                            <input type="password" placeholder="Confirme su contraseña" name="conf_contrasena" id="conf_contrasena">
                         </div>
                         <div>
                             <input type="submit" value="Regístrate" class="button">
@@ -78,6 +78,6 @@
             </figure>
         </div>
     </div>
-    
+    <script src="{{url_for('static', filename='js/registro.js')}}"></script>    
 </body>
 </html>

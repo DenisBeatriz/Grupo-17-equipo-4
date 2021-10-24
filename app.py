@@ -1,6 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+import werkzeug.security as ws, db
 
 app= Flask(__name__)
+app.secret_key = 'mi_llave_secreta'
 
 @app.route("/")
 def funcion_home():
@@ -10,9 +12,13 @@ def funcion_home():
 def funcion_home2():
     return render_template('home2.html')
 
-@app.route("/login")
+@app.route("/login", methods=['GET', 'POST'])
 def funcion_login():
-    return render_template('login.html')
+    if request.method == 'GET':
+        return render_template('login.html')
+    else:
+        print(request.form)
+        return render_template('home2.html')
 
 @app.route("/menu")
 def funcion_menu():
@@ -58,9 +64,24 @@ def funcion_admin():
 def funcion_listaDeseos():
     return render_template('listaDeseos.html')
 
-@app.route("/registroUsuario")
+@app.route("/registroUsuario", methods=['GET', 'POST'])
 def funcion_registro_usuario():
-    return render_template('registro_usuario.html')
+    if request.method == 'GET':
+        return render_template('registro_usuario.html')
+    else:
+        nombres = request.form('nombres')
+        apellidos = request.form('apellidos')
+        cedula = request.form('cedula')
+        email = request.form('email')
+        celular = request.form('celular')
+        direccion = request.form('direccion')
+        complemento = request.form('complemento')
+        contrasena = request.form('contrasena')
+        conf_contrasena = request.form('conf_contrasena')
+        db.insertar_usuario(nombres, apellidos, cedula, email, celular, direccion, complemento, ws.generate_password_hash(contrasena))
+
+        return render_template('home2.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
