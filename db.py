@@ -25,13 +25,13 @@ def obtener_registro(tabla, condicion):
 
     return datos
 
-def insertar_usuario(nombres, apellidos, id, email, celular, direccion, complemento, contrasena):
+def insertar_usuario(nombres, apellidos, cedula, email, celular, direccion, complemento, contrasena):
     conexion = obtener_conexion()
     cursor = conexion.cursor()
 
-    strsql = "INSERT INTO usuario (nombres, apellidos, id, email, celular, direccion, complemento, contrasena) VALUES('{}','{}','{}','{}','{}','{}','{}','{}')".format(nombres, apellidos, id, email, celular, direccion, complemento, contrasena)
+    strsql = "INSERT INTO usuario (nombres, apellidos, cedula, email, celular, direccion, complemento, contrasena) VALUES('{}','{}','{}','{}','{}','{}','{}','{}')".format(nombres, apellidos, cedula, email, celular, direccion, complemento, contrasena)
 
     cursor.execute(strsql)
     conexion.commit()
-    conexion.close
+    conexion.close()
 

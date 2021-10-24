@@ -69,15 +69,15 @@ def funcion_registro_usuario():
     if request.method == 'GET':
         return render_template('registro_usuario.html')
     else:
-        nombres = request.form('nombres')
-        apellidos = request.form('apellidos')
-        cedula = request.form('cedula')
-        email = request.form('email')
-        celular = request.form('celular')
-        direccion = request.form('direccion')
-        complemento = request.form('complemento')
-        contrasena = request.form('contrasena')
-        conf_contrasena = request.form('conf_contrasena')
+        nombres = request.form['nombres']
+        apellidos = request.form['apellidos']
+        cedula = request.form['cedula']
+        email = request.form['email']
+        celular = request.form['celular']
+        direccion = request.form['direccion']
+        complemento = request.form['complemento']
+        contrasena = request.form['contrasena']
+        conf_contrasena = request.form['conf_contrasena']
         db.insertar_usuario(nombres, apellidos, cedula, email, celular, direccion, complemento, ws.generate_password_hash(contrasena))
 
         return render_template('home2.html')
