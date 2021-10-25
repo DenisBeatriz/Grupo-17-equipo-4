@@ -32,10 +32,6 @@ def funcion_pedido():
 def funcion_pagoAdmin():
     return render_template('pagosAdmin.html')
 
-@app.route("/descripcionProducto")
-def funcion_descripcionProducto():
-    return render_template('descripcionProducto.html')
-
 @app.route("/carritoDecompras")
 def funcion_carritoDeCompras():
     return render_template('carritoDecompras.html')
@@ -59,6 +55,123 @@ def funcion_admin():
 @app.route("/listaDeseos")
 def funcion_listaDeseos():
     return render_template('listaDeseos.html')
+
+######
+######
+######
+######
+######
+######
+######
+######
+######
+######
+######
+######
+##descripciones de los productos
+@app.route("/descripcionProducto")
+def funcion_descripcionProducto():
+    return render_template('descripcionProductos/descripcionProducto.html')
+
+@app.route("/descripcionProducto/TORTA_DE_CHOCOLATE")
+def funcion_descripcionProducto_TORTA_DE_CHOCOLATE():
+    return render_template('descripcionProductos/TORTA_DE_CHOCOLATE.html')
+
+@app.route("/descripcionProducto/TORTA_DE_VAINILLA")
+def funcion_descripcionProducto_TORTA_DE_VAINILLA():
+    return render_template('descripcionProductos/TORTA_DE_VAINILLA.html')
+
+@app.route("/descripcionProducto/TORTA_ESPECIAL")
+def funcion_descripcionProducto_TORTA_ESPECIAL():
+    return render_template('descripcionProductos/TORTA_ESPECIAL.html')
+
+@app.route("/descripcionProducto/PIE_DE_MARACUYA")
+def funcion_descripcionProducto_PIE_DE_MARACUYA():
+    return render_template('descripcionProductos/PIE_DE_MARACUYA.html')
+
+@app.route("/descripcionProducto/PAN_FRANCES")
+def funcion_descripcionProducto_PAN_FRANCES():
+    return render_template('descripcionProductos/PAN_FRANCES.html')
+
+@app.route("/descripcionProducto/PAN_ARTESANAL")
+def funcion_descripcionProducto_PAN_ARTESANAL():
+    return render_template('descripcionProductos/PAN_ARTESANAL.html')
+
+@app.route("/descripcionProducto/PONQUESITOS")
+def funcion_descripcionProducto_PONQUESITOS():
+    return render_template('descripcionProductos/PONQUESITOS.html')
+
+@app.route("/descripcionProducto/MOFFIN_DE_CHOCOLATE")
+def funcion_descripcionProducto_MOFFIN_DE_CHOCOLATE():
+    return render_template('descripcionProductos/MOFFIN_DE_CHOCOLATE.html')
+
+
+@app.route("/descripcionProducto/MACARRONS")
+def funcion_descripcionProducto_MACARRONS():
+    return render_template('descripcionProductos/MACARRONS.html')
+
+@app.route("/descripcionProducto/PANQUEQUES")
+def funcion_descripcionProducto_PANQUEQUES():
+    return render_template('descripcionProductos/PANQUEQUES.html')
+
+@app.route("/descripcionProducto/DONAS_RELLENAS")
+def funcion_descripcionProducto_DONAS_RELLENAS():
+    return render_template('descripcionProductos/DONAS_RELLENAS.html')
+
+@app.route("/descripcionProducto/DONA_DE_CHOCOLATE")
+def funcion_descripcionProducto_DONAS_DE_CHOCOLATE():
+    return render_template('descripcionProductos/DONA_DE_CHOCOLATE.html')
+
+@app.route("/descripcionProducto/LIMONADA_NATURAL")
+def funcion_descripcionProducto_LIMONADA_NATURAL():
+    return render_template('descripcionProductos/LIMONADA_NATURAL.html')
+
+@app.route("/descripcionProducto/JUGOS_EN_AGUA")
+def funcion_descripcionProducto_JUGOS_EN_AGUA():
+    return render_template('descripcionProductos/JUGOS_EN_AGUA.html')
+
+@app.route("/descripcionProducto/ICE_COFFEE")
+def funcion_descripcionProducto_ICE_COFFEE():
+    return render_template('descripcionProductos/ICE_COFFEE.html')
+
+@app.route("/descripcionProducto/MALTEADA")
+def funcion_descripcionProducto_MALTEADA():
+    return render_template('descripcionProductos/MALTEADA.html')
+
+@app.route("/descripcionProducto/CAFE_EN_LECHE")
+def funcion_descripcionProducto_CAFE_EN_LECHE():
+    return render_template('descripcionProductos/CAFE_EN_LECHE.html')
+
+@app.route("/descripcionProducto/TE_DE_MANZANILLA")
+def funcion_descripcionProducto_TE_DE_MANZANILLA():
+    return render_template('descripcionProductos/TE_DE_MANZANILLA.html')
+
+@app.route("/descripcionProducto/AROMATICA")
+def funcion_descripcionProducto_AROMATICA():
+    return render_template('descripcionProductos/AROMATICA.html')
+
+@app.route("/descripcionProducto/CHOCOLATE_CALIENTE")
+def funcion_descripcionProducto_CHOCOLATE_CALIENTE():
+    return render_template('descripcionProductos/CHOCOLATE_CALIENTE.html')
+
+######
+######
+######
+######
+######
+######
+######
+######
+######
+######
+######
+######
+
+
+
+
+
+    
 
 
 

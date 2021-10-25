@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descripcion del producto</title>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/estiloDescripcionProducto.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/normalize.min.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/icon/fontsAwesome/css/all.css') }}>
+</head>
+<body>
+    <header>
+        <div class="barraNaranja">
+            <div class="iz">
+                <a href="/menu"><i class="fas fa-bars"></i> Menu</a>
+            </div>
+
+            <div class="de">
+                <a href="/login"><i class="fas fa-user-circle"></i> Ingresar</a>
+                <a href="/listaDeseos"><i class="far fa-heart"></i> Lista de deseos</a>
+                <a href="/carritoDecompras"><i class="fas fa-shopping-cart"></i> Carrito de compras</a>
+            </div>
+                    
+                      
+        </div>
+
+        <div class="barraBlanca">
+            <nav>
+                <ul>
+                    <li><a href="#">DONAS</a></li>
+                    <li><a href="#">PANADERIA</a></li>
+                    <li><a href="#">REPOSTERIA</a></li>
+                    <li><a href="#">TORTAS</a></li>
+                    <li><a href="#">PONQUES</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+
+        <div id = "fondo" >
+            <div class="general">
+                <div class="contenido">
+                    
+                        <img class="imagen" src="/static/img/MENU/TORTAS/pexels-dmitry-zvolskiy-1721934.jpg" alt="">
+                    
+    
+                    <div class="descripcion">
+                        <h1 class="titulo"><strong>TORTA DE VAINILLA</strong> </h1>
+                        <p>Torta de vainilla en cuatro capas</p>
+                        
+                        <h2 class="precioProducto"> $ 6500 </h2>
+    
+                    </div>
+                </div>
+                
+                <div class="contenido2">
+                    <div class="lizquierdo">
+                        <div class="anadir">
+                            <button>Añadir a lista de deseos <i class="far fa-heart"></i> </button>
+        
+                            <div class="agregar">
+                                <input type="number" name="" id="" size="1">
+                            </div>
+                        </div>
+
+                        <h1><strong>Comentarios</strong></h1>
+                        <input type="text" size="35" id="comentarios">
+                        <button id="publib">Publicar</button>
+                    </div>
+        
+                    <div class="lderecho">
+                        
+                        <div class="pagar">
+                            <button>Pagar</button>
+                            <button id="agregarCarrito">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>    
+        </div>           
+    </section>
+    <footer>
+        <p><span>Grupo 17 equipo 4 Univesidad del norte</span></p>
+    </footer> 
+    <script src='static/js/carrito.js'></script>   
+</body>
+</html>
