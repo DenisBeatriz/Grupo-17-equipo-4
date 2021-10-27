@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dunk Donuts</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-    <link rel="icon" type="image/png" href="../static/img/icon.png">
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='img/icon.png')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/style_login.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style_login.css')}}">
 </head>
 <body>
     <div class="container">
@@ -18,7 +18,7 @@
             <div class="logo">
                 <figure>
                     <a href="/">
-                        <img src="../static/img/logo.png" alt="logo">
+                        <img src="{{url_for('static', filename='img/logo.png')}}" alt="logo">
                     </a>                    
                 </figure>
             </div>
@@ -46,7 +46,7 @@
         </section>
         <div class="imagen">
             <figure>
-                <img src="../static/img/DONA.jpg" alt="Imagen principal">
+                <img src="{{url_for('static', filename='img/DONA.jpg')}}" alt="Imagen principal">
             </figure>
         </div>
     </div>
