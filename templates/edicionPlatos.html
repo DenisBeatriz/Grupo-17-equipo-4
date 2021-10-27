@@ -28,47 +28,47 @@
 
     <section>
         <div id = "fondo">
-            <form class="contenido" action="/edicion_platos" method="post">
-                <div id="edicion">
-                    <div class="añadirMenu">
-                        <div class="imagenPlato">
-                            <h1>Foto del plato</h1>
-                            <img src="static/img/DONA.jpg" alt="">
-                            <br><br>
-                            <button>Subir Imagen</button>
-                        </div>
-            
-                        <div class="descripcicionM">
-                            <h2>Nombre del plato</h2>
-                            <input type="text" id="nombrePlato">
-                            <h2>Descripcion del plato</h2>
-                            <input type="text" id="descripcionPlato">
-                        </div>
-            
-                        <div class="añadir">
-                            <input type="text" placeholder="Precio" size="13">
-                            <button>Añadir al menu</button>
+            <form id="formulario_añadir" class="contenido" action="/edicion_platos" method="post">
+                <div class="añadirMenu" id="añadirMenu">
+                    <div id="alerta_nombreP"></div>
+                    
+                    <div class="imagenPlato" id="imagenPlato">
+                        <h1>Foto del plato</h1>
+                        <img id="imagen12" src="static/img/DONA.jpg" alt="">
+                        <br><br>
+                        <button type="button">Subir Imagen</button>
+                    </div>
+
+                    <div class="descripcicionM">
+                        <label for="nombrePlato">Nombre del plato</label> 
+                        <input type="text" class="form-control" id="nombrePlato" name="nombrePlato">
+                        <h2>Descripcion del plato</h2>
+                        <input type="text" id="descripcionPlato" name="descripcionPlato">
+                    </div>
+
+                    <div class="añadir" id="añadir">
+                        <input type="text" placeholder="Precio" size="13" id="Precio">
+                        
                         </div>
                     </div>
+                    <button type="button" onclick="añadir_plato();">Añadir al menu</button>
+            </form>
+            <form id="formulario_modificar" class="contenido2" action="/edicion_platos" method="post">
+                <div class="modificarPlato" id="modificar_plato">
+                    <div class="imagenPlato2" id="imagen2">
+                        <h1>Foto del plato</h1>
+                        <img id="imagen" src="static/img/DONA.jpg" alt=""><!--mostra la foto del plato correspondiente-->                            
+                    </div>
+                    <div class="descripcicionP" id="descripcionP">
+                        <h2>Nombre del plato</h2>
+                        <input type="text" id="nombrePlato2">
+                        <h2>Descripcion del plato</h2>
+                        <input type="text" id="descripcionPlato2">
+                    </div>
             
-                    <div class="modificarPlato">
-                        <div class="imagenPlato2">
-                            <h1>Foto del plato</h1>
-                            <img src="static/img/DONA.jpg" alt=""><!--mostra la foto del plato correspondiente-->
-                            
-                        </div>
-            
-                        <div class="descripcicionP">
-                            <h2>Nombre del plato</h2>
-                            <input type="text" id="nombrePlato2">
-                            <h2>Descripcion del plato</h2>
-                            <input type="text" id="descripcionPlato2">
-                        </div>
-            
-                        <div class="añadir2">
-                            <input type="text" placeholder="Precio" size="13">
-                            <button>Modificar plato</button>
-                        </div>
+                    <div class="añadir2" id="añadir2">
+                        <input type="text" placeholder="Precio" size="13">
+                        <button type="button">Modificar plato</button>
                     </div>
                 </div>
             </form>
@@ -78,6 +78,7 @@
     <footer>
         <p><span>Grupo 17 equipo 4 Univesidad del norte</span></p>
     </footer>
-    
+    <script src="/static/js/edicion_platos.js"></script>
+
 </body>
 </html>

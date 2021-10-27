@@ -64,10 +64,14 @@ def funcion_admin():
 def funcion_listaDeseos():
     return render_template('listaDeseos.html')
 
-@app.route("/edicion_platos", methods=["POST"])#como insertar una imagen desde el ordenador
+@app.route("/edicion_platos", methods=["GET","POST"])#como insertar una imagen desde el ordenador
 def prueba():
-    print(request.form)
-    return 'HOLA MUNDO'
+    if request.method == 'GET':
+        return render_template('edicion_Platos.htm')
+    else:
+
+        print(request.form)
+    return 'edicion plato exitoso'
 
 @app.route("/resultados", methods =["POST"])
 def resultados():
@@ -76,8 +80,16 @@ def resultados():
 
 @app.route("/conexion_bd")
 def conexion_bd():
-    base_datos.conexion_sql
-    return "HOLA"
+    conec= base_datos.conexion_sql
+    
+    strsql='select * from PRODUCTOS'
+    
+    cursorObj= conec.cursor()
+
+    cursorObj.execute(strsql)
+    productos= cursorObj.fetchall()
+
+    return str(productos)
 
 
 
