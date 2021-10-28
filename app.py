@@ -35,10 +35,10 @@ def login():
                 session['email'] = email
                 return redirect('/home2')
             else:
-                return 'Usuario o contraseña incorrectos' 
+                return redirect('/login')
 
         else:
-            return 'El usuario no existe'
+            return redirect('/login')
 
 @app.route("/registroUsuario", methods=['GET', 'POST'])
 def registroUsuario():
