@@ -18,7 +18,7 @@ function añadir_plato(){
 
     input_plato= document.getElementById('nombrePlato')
     input_descri=document.getElementById('descripcionPlato')
-    input_precio=document.getElementById('Precio')
+    input_precio=document.getElementById('precio')
 
     if (input_plato.value == ""){
         alert ("Por favor ingresar nombre del plato")
@@ -48,15 +48,14 @@ function añadir_plato(){
         alert("Por favor ingrese el precio del plato")
         input_precio.focus()
         return false
-    }else{
-        if(validar_numero(input_precio.value)== false){
-            alert("Para el precio solo se permiten valores numericos")
+    }if (validar_numero(input_precio.value)== false) {
+        alert("Para el precio solo se permiten valores numericos")
             input_precio.focus()
             return false
-        }
+    } else {
+        alert ("Validacion Exitosa")
+        return true        
     }
-
-    formulario.submit()
-
+    
 }
 

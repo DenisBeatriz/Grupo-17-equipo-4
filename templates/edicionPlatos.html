@@ -28,7 +28,7 @@
 
     <section>
         <div id = "fondo">
-            <form id="formulario_añadir" class="contenido" action="/edicion_platos" method="post">
+            <form id="formulario_añadir" class="contenido" action="/edicion_platos" method="POST">
                 <div class="añadirMenu" id="añadirMenu">
                     <div id="alerta_nombreP"></div>
                     
@@ -44,14 +44,13 @@
                         <input type="text" class="form-control" id="nombrePlato" name="nombrePlato">
                         <h2>Descripcion del plato</h2>
                         <input type="text" id="descripcionPlato" name="descripcionPlato">
+                        <input type="text" placeholder="Precio Producto" id="precio" name="precio">
                     </div>
 
-                    <div class="añadir" id="añadir">
-                        <input type="text" placeholder="Precio" size="13" id="Precio">
-                        
-                        </div>
                     </div>
-                    <button type="button" onclick="añadir_plato();">Añadir al menu</button>
+                    <button type="submit">Añadir al menu</button>
+                    <button type="button" onclick="añadir_plato();">Comprobar datos</button>
+                    
             </form>
             <form id="formulario_modificar" class="contenido2" action="/edicion_platos" method="post">
                 <div class="modificarPlato" id="modificar_plato">

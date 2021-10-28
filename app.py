@@ -1,10 +1,10 @@
 from types import MethodDescriptorType
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 import smtplib
 from templates import base_datos
 
 app= Flask(__name__)
-
+"""rutas de las pestañas"""
 @app.route("/")
 def funcion_home():
     return render_template('home1.html')
@@ -17,13 +17,18 @@ def funcion_home2():
 def funcion_login():
     return render_template('login.html')
 
-@app.route("/menu")
-def funcion_menu():
-    return render_template('menu.html')
+@app.route("/registro")
+def funcion_registro():
+    return render_template('registro_usuario.html')
+
 
 @app.route("/perfinlUsuario")
 def funcion_perfil():
     return render_template('perfil_usuario.html')
+
+@app.route("/menu")
+def funcion_menu():
+    return render_template('menu.html')
 
 
 @app.route("/pedido")
@@ -47,6 +52,15 @@ def funcion_edicionPlatos():
     return render_template('edicionPlatos.html')
 
 
+@app.route("/listaDeseos")
+def funcion_listaDeseos():
+    return render_template('listaDeseos.html')
+
+
+@app.route("/admin")
+def funcion_admin():
+    return render_template('admin.html')
+
 @app.route("/revisionComentarios")
 def funcion_revision_de_comentarios():
     return render_template('revisionComentarios.html')
@@ -55,29 +69,36 @@ def funcion_revision_de_comentarios():
 def funcion_pagos_usuario():
     return render_template('pagosUsuario.html')
 
-@app.route("/admin")
-def funcion_admin():
-    return render_template('admin.html')
+@app.route("/super_admin")
+def funcion_super_admin():
+    return render_template('super_admin.html')
 
 
-@app.route("/listaDeseos")
-def funcion_listaDeseos():
-    return render_template('listaDeseos.html')
 
-@app.route("/edicion_platos", methods=["GET","POST"])#como insertar una imagen desde el ordenador
-def prueba():
-    if request.method == 'GET':
-        return render_template('edicion_Platos.htm')
-    else:
+"""RUTAS DE COMPROBACION"""
+@app.route("/edicion_platos", methods=["POST"])#como insertar una imagen desde el ordenador
+def edicionplato():
+    if request.method =='POST':
+        nombre= request.form['nombrePlato']
+        descripcion= request.form['descripcionPlato']
+        precioPlato= request.form['precio']
+        print(nombre, descripcion, precioPlato)
+        return 'EXITO'
 
-        print(request.form)
-    return 'edicion plato exitoso'
+@app.route("/editar_plato", methods =["POST"])
+def edicion_plato_admin():
+    if request.method == 'POST':
+        id_producto=request.form['ID_PRODUCTO1']
+        print(id_producto.value)
 
 @app.route("/resultados", methods =["POST"])
 def resultados():
-    print(request.form['cedula'])
+    if(request.method == "POST"):
+        cedula_user=request.form['cedula']
+    print(cedula_user)
     return "INGRESO CEDULA"
 
+"""
 @app.route("/conexion_bd")
 def conexion_bd():
     conec= base_datos.conexion_sql
@@ -90,9 +111,30 @@ def conexion_bd():
     productos= cursorObj.fetchall()
 
     return str(productos)
+"""
+def consultas(tabla):
+    conec= base_datos.conexion_sql()
+    
+    strsql='select * from' + tabla
+    
+    cursorObj= conec.cursor()
 
+    cursorObj.execute(strsql)
+    datos= cursorObj.fetchall()
+    conec.close()
 
+    return str(datos)   
+    
+def adicionar_datos(id, nombre,precio):
+    conec=base_datos.conexion_sql()
+    strsql='insert into Producto (id, nombre, precio) value'({},{},
+    {}).format(id, nombre, precio)
 
+    cursoObj =conec.cursor()
+    cursoObj.execute(strsql)
+    cursoObj.commit()
+    conec.close()
+    return True
 
 
 

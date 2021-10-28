@@ -9,3 +9,6 @@ def conexion_sql():
     except Error:
         
         print(Error)
+
+def cerrar_conexion(con):
+    con.close()
