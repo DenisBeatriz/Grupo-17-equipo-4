@@ -9,9 +9,17 @@ def antes_peticion():
     if 'email' not in session and request.endpoint in ['home2']:
         return redirect('/login')
 
-@app.route("/")
-def home():
-    return render_template('home1.html')
+@app.route("/", methods=['GET', 'POST'])
+def home1():
+    if request.method == 'GET':
+        return render_template('home1.html')
+    else:
+        nombre = request.form['nombre']
+        email = request.form['email']
+        mensaje = request.form['mensaje']
+        db.insertar_contacto2(nombre, email, mensaje)
+
+        return render_template('home1.html')
 
 @app.route("/home2")
 def home2():

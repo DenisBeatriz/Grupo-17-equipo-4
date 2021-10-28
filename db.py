@@ -35,3 +35,13 @@ def insertar_usuario(nombres, apellidos, cedula, email, celular, direccion, comp
     conexion.commit()
     conexion.close()
 
+def insertar_contacto2(nombre, email, mensaje):
+    conexion = obtener_conexion()
+    cursor = conexion.cursor()
+
+    strsql = "INSERT INTO contacto (nombre, email, mensaje) VALUES('{}','{}','{}')".format(nombre, email, mensaje)
+
+    cursor.execute(strsql)
+    conexion.commit()
+    conexion.close()
+
