@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import db
 
 
 app= Flask(__name__)
@@ -6,6 +7,23 @@ app= Flask(__name__)
 @app.route("/")
 def funcion_home():
     return render_template('home1.html')
+
+
+@app.route("/comentario", method=["POST"])
+def comentario():
+    comentario = request.form['comentarios']
+    fecha = "20/10/2021"
+
+    conec= db.sql_connection()
+    cursorObj= conec.cursor()
+    sqlite1= 'INSERT INTO COMENTARIOS (FECHA, COMENTARIO) VALUES (?,?)'
+
+    cursorObj.execute(sqlite1, [fecha,comentario])
+    conec.commit()
+    conec.close()
+    print(comentario)
+    print(fecha)
+    return "exito"
 
 @app.route("/home2")
 def funcion_home2():
@@ -31,6 +49,10 @@ def funcion_pedido():
 @app.route("/pagosAdmin")
 def funcion_pagoAdmin():
     return render_template('pagosAdmin.html')
+
+@app.route("/carritoDecompras2")
+def funcion_carritoDeCompras2():
+    return render_template('carritoDecompras2.html')
 
 @app.route("/carritoDecompras")
 def funcion_carritoDeCompras():
@@ -72,6 +94,8 @@ def funcion_listaDeseos():
 @app.route("/descripcionProducto")
 def funcion_descripcionProducto():
     return render_template('descripcionProductos/descripcionProducto.html')
+
+
 
 @app.route("/descripcionProducto/TORTA_DE_CHOCOLATE")
 def funcion_descripcionProducto_TORTA_DE_CHOCOLATE():
