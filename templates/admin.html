@@ -58,7 +58,6 @@
         </form>
         
         <form action="/resultados" method="POST" id="Usuario_final"><!--ACA SE ENERA EL PROBLEMA-->
-            <script src="/static/js/edicion_admin.js"></script>
             <div id="eliminar_usuario">
                 <h1>Eliminar Usuario</h1>
                 <label for="cedula">
@@ -78,14 +77,12 @@
                 </h1>
                     <label for="ID_PRODUCTO">
                         <span>Id Producto</span>
-                        <input type="name" id="ID_PRODUCTO1" name="ID_PRODUCTO1" placeholder="125336" required>
+                        <input type="name" id="IDproducto1" name="IDproducto1" placeholder="125336" required>
                     </label>
 
-                    <button type="submit">Eliminar</button> <!--CONEXION A BASE DE DATOS-->
-                    <button id="Modificar_Plato" type="submit" >
-                        <a href="/edicionPlatos">Modificar</a>
-                    </button> 
-
+                    <button type="submit" onclick="eliminar_plato()">Eliminar</button> <!--CONEXION A BASE DE DATOS-->
+                    <button id="Modificar_Plato" type="submit">Modificar</button> 
+                    <script src="/static/js/edicion_admin.js"></script>
             </div>
             
         </form>

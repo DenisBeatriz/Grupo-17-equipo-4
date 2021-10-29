@@ -1,10 +1,15 @@
 from types import MethodDescriptorType
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for, flash
 import smtplib
 from templates import base_datos
+import sqlite3
 
 app= Flask(__name__)
 """rutas de las pestañas"""
+
+#iniciar una sesion
+app.secret_key='mysecretkey'
+
 @app.route("/")
 def funcion_home():
     return render_template('home1.html')
@@ -77,21 +82,52 @@ def funcion_super_admin():
 
 """RUTAS DE COMPROBACION"""
 @app.route("/edicion_platos", methods=["POST"])#como insertar una imagen desde el ordenador
-def edicionplato():
+def edicionplato():#añadir plato a la base de datos
+    
     if request.method =='POST':
         nombre= request.form['nombrePlato']
         descripcion= request.form['descripcionPlato']
         precioPlato= request.form['precio']
         print(nombre, descripcion, precioPlato)
-        return 'EXITO'
+    
+    conec= base_datos.conexion_sql()
+    cursorObj= conec.cursor()
+    sqlite1= 'INSERT INTO PRODUCTOS (PRODUCTO, DESCRIPCION, PRECIO) VALUES (?,?,?)'
+    cursorObj.execute(sqlite1, [nombre,descripcion,precioPlato])
+    conec.commit()
+    conec.close()
+    return ("exito")
 
-@app.route("/editar_plato", methods =["POST"])
+
+@app.route("/editar_plato", methods =["GET","POST"])#para modificar el plato
 def edicion_plato_admin():
-    if request.method == 'POST':
-        id_producto=request.form['ID_PRODUCTO1']
-        print(id_producto.value)
+    if request.method =='GET' or request.method =='POST':
+        id_producto= request.form['IDproducto1']
+    #tengo que poner una busqueda del producto con el ID, retornar un valor si existe, y modificarlo
+        conec= base_datos.conexion_sql()
+        cursorObj= conec.cursor()
+        #Busqueda del producto
+        sqlitea='SELECT * FROM PRODUCTOS WHERE (?)'#pendiente
+        cursorObj.execute(sqlitea, [id_producto])
+        conec.commit()
+        conec.close()
+        a=True
+        if (a==True):
+            flash('Revision exitosa')
+            return render_template('edicionPlatos.html')
+        
+@app.route("/eliminar_plato")
+def eliminar_platoa():
+    id_producto=eliminar_plato()#pendiente
+    conec= base_datos.conexion_sql()
+    cursorObj= conec.cursor()
+    #Busqueda del producto
+    sqlitea='SELECT * FROM PRODUCTOS WHERE (?)'
+    cursorObj.execute(sqlitea, [id_producto])
+    conec.commit()
+    conec.close()
 
-@app.route("/resultados", methods =["POST"])
+@app.route("/resultados", methods =["POST"])#liminar y/o desbloquear usuario
 def resultados():
     if(request.method == "POST"):
         cedula_user=request.form['cedula']
@@ -124,7 +160,7 @@ def consultas(tabla):
     conec.close()
 
     return str(datos)   
-    
+    """
 def adicionar_datos(id, nombre,precio):
     conec=base_datos.conexion_sql()
     strsql='insert into Producto (id, nombre, precio) value'({},{},
@@ -135,7 +171,7 @@ def adicionar_datos(id, nombre,precio):
     cursoObj.commit()
     conec.close()
     return True
-
+"""
 
 
 """ envio correo eliminacion y debloqueo de una cuenta

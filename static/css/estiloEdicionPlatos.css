@@ -1,3 +1,4 @@
+/*
 header .barraNaranja{
     background: #ff581a;
     overflow: hidden;
@@ -78,7 +79,7 @@ section #fondo {
    
 }
 
-#imagenPlato, #imagen{
+#imagenPlato2, #imagen{
     margin-right: 100px;
 }
 
@@ -87,14 +88,25 @@ section #fondo {
     padding-top: 100px;
 }
 
-#nombrePlato, #descripcionPlato{
+#nombre_plato-arr, #descripcionPlato{
     padding: 20px 50px 30px 20px;
     border-color: black;
     border-radius: 15px;
 }
 
 
-
+button{
+    background-color: white;
+    border-color: black;
+    border-radius: 15px;
+    border-top: none;
+    border-left: none;
+    font-size: 15px;
+}
+#añadir_menu1, #comprobar_datos1{
+    size: 10px;
+    
+}
 
 #modificarPlato{
     padding-top: 20px;
@@ -136,3 +148,4 @@ footer{
     background: #ff581a;
     padding: 10px 0px 10px 0px;
 }
+*/

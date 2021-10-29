@@ -25,49 +25,63 @@
             <h1>Edicion de platos</span></h1>
         </div>
     </header>
-
+    {% with mensajes= get_flashed_messages() %}
+    {% if mensajes %}
+    {% for mensaje in mensajes %}
+        <p>{{ mensaje }}</p>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
     <section>
-        <div id = "fondo">
+        <div id = "fondo">|
             <form id="formulario_añadir" class="contenido" action="/edicion_platos" method="POST">
                 <div class="añadirMenu" id="añadirMenu">
                     <div id="alerta_nombreP"></div>
+                    <!--Revision urgente para sincroniza con el menu-->
+                        <div class="imagenPlato" id="imagenPlato">
+                            <h1>Foto del plato</h1>
+                            <img id="imagen12" src="static/img/DONA.jpg" alt="">
+                            <br><br>
+                            <button type="button">Subir Imagen</button>
+                        </div>
+                        <div class="descripcicionM">
+                            <label id="nombre_plato-arr" for="nombrePlato">Nombre del plato</label> 
+                            <input type="text" class="form-control" id="nombrePlato" name="nombrePlato">
+                            <h2>Descripcion del plato</h2>
+                            <input type="text" id="descripcionPlato" name="descripcionPlato">
+                            <input type="text" placeholder="Precio Producto" id="precio" name="precio">
+                        </div>
+                        <button id="comprobar_datos1" type="button" onclick="añadir_plato();">Comprobar datos</button>
+                        <button id="añadir_menu1" type="submit">Añadir al menu</button>
+                        
                     
-                    <div class="imagenPlato" id="imagenPlato">
-                        <h1>Foto del plato</h1>
-                        <img id="imagen12" src="static/img/DONA.jpg" alt="">
-                        <br><br>
-                        <button type="button">Subir Imagen</button>
                     </div>
-
-                    <div class="descripcicionM">
-                        <label for="nombrePlato">Nombre del plato</label> 
-                        <input type="text" class="form-control" id="nombrePlato" name="nombrePlato">
-                        <h2>Descripcion del plato</h2>
-                        <input type="text" id="descripcionPlato" name="descripcionPlato">
-                        <input type="text" placeholder="Precio Producto" id="precio" name="precio">
-                    </div>
-
-                    </div>
-                    <button type="submit">Añadir al menu</button>
-                    <button type="button" onclick="añadir_plato();">Comprobar datos</button>
                     
             </form>
-            <form id="formulario_modificar" class="contenido2" action="/edicion_platos" method="post">
+            <form id="formulario_modificar" class="contenido2" action="/editar_plato" method="post">
                 <div class="modificarPlato" id="modificar_plato">
                     <div class="imagenPlato2" id="imagen2">
                         <h1>Foto del plato</h1>
                         <img id="imagen" src="static/img/DONA.jpg" alt=""><!--mostra la foto del plato correspondiente-->                            
                     </div>
                     <div class="descripcicionP" id="descripcionP">
-                        <h2>Nombre del plato</h2>
-                        <input type="text" id="nombrePlato2">
-                        <h2>Descripcion del plato</h2>
-                        <input type="text" id="descripcionPlato2">
+                        <label for="">Nombre del Plato
+                            <input type="text" id="nombrePlato2" name="nombrePlato2">
+                        </label>
+                        <label for="">Descripcion del Producto
+                            <input type="text" id="descripcionPlato2" name="descripcionPlato2">
+                        </label>
+                        <label for="">ID Producto
+                            <input type="text" id="Id_Producto" name="Id_Producto" placeholder="10254">
+                        </label>
                     </div>
             
                     <div class="añadir2" id="añadir2">
-                        <input type="text" placeholder="Precio" size="13">
-                        <button type="button">Modificar plato</button>
+                        <label for="">Precio
+                            <input type="text" placeholder="Precio Producto" size="13" id="precio2" name="precio2">
+                        </label>
+                        <button>Validar</button>
+                        <button type="submit">Modificar plato</button>
                     </div>
                 </div>
             </form>
