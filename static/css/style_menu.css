@@ -1,8 +1,19 @@
 body{
 <<<<<<< Updated upstream
+<<<<<<< HEAD
     background-image: url(static\img\DISEÑO_PAGINA_WEB\backmenu.jpg);
 =======
     background-image: url(/static/img/DISEÑO_PAGINA_WEB/MENUbac.jpg) ;
+=======
+    background-image: url(/static/img/DISEÑO_PAGINA_WEB/MENUbac.jpg) ;
+=======
+    background-image: url(static\img\DISEÑO_PAGINA_WEB\backmenu.jpg);
+
+    background-image: url(/static/img/DISEÑO_PAGINA_WEB/MENUbac.jpg) ;
+
+    background-image: url(/static/img/DISEÑO_PAGINA_WEB/MENUbac.jpg) ;
+
+>>>>>>> Gina
 >>>>>>> Stashed changes
     background-size: 100%;
 }

@@ -1,3 +1,4 @@
+/*
 header .barraNaranja{
     background: #ff581a;
     overflow: hidden;
@@ -57,69 +58,78 @@ section #fondo {
 	position: relative
 }
 
-#fondo .contenido #edicion{
+#fondo .contenido{
     margin-left: 10px
 }
 
-#fondo .contenido #edicion .añadirMenu{
+#añadirMenu, #modificar_plato{
     display: flex;
     border-bottom: dotted;
     padding-bottom: 100px;
     border-color: #ff581a;
 }
 
-#fondo .contenido #edicion .añadirMenu, section #edicion .modificarPlato{
+#añadirMenu, #modificarPlato{
     display: flex;
 }
 
-#fondo .contenido #edicion .añadirMenu .imagenPlato img{
+#imagen12{
     width: 250px;
     border-radius: 25px;
    
 }
 
-#fondo .contenido #edicion .añadirMenu .imagenPlato{
+#imagenPlato2, #imagen{
     margin-right: 100px;
 }
 
-#fondo .contenido #edicion .añadirMenu .añadir{
+#añadir, #añadir2{
     margin-left: 100px;
     padding-top: 100px;
 }
 
-#fondo .contenido #edicion .añadirMenu #nombrePlato, section #edicion .añadirMenu #descripcionPlato{
+#nombre_plato-arr, #descripcionPlato{
     padding: 20px 50px 30px 20px;
     border-color: black;
     border-radius: 15px;
 }
 
 
+button{
+    background-color: white;
+    border-color: black;
+    border-radius: 15px;
+    border-top: none;
+    border-left: none;
+    font-size: 15px;
+}
+#añadir_menu1, #comprobar_datos1{
+    size: 10px;
+    
+}
 
-
-
-
-#fondo .contenido #edicion .modificarPlato{
+#modificarPlato{
     padding-top: 20px;
     padding-bottom: 100px;
 }
 
 
-#fondo .contenido #edicion .modificarPlato .imagenPlato2 img{
+#imagen{
     width: 250px;
     border-radius: 25px;
    
 }
 
-#fondo .contenido #edicion .modificarPlato .imagenPlato2{
+#imagen2{
     margin-right: 100px;
 }
 
-#fondo .contenido #edicion .modificarPlato .añadir2{
+#añadir2{
     margin-left: 100px;
     padding-top: 100px;
 }
 
-#fondo .contenido #edicion .modificarPlato #nombrePlato2, section #edicion .modificarPlato #descripcionPlato2{
+#nombrePlato2, #descripcionPlato2{
     padding: 20px 50px 30px 20px;
     border-color: black;
     border-radius: 15px;
@@ -127,7 +137,9 @@ section #fondo {
 
 
 
-
+#descripcionP{
+    margin-left: -100px;
+}
 
 
 
@@ -136,3 +148,4 @@ footer{
     background: #ff581a;
     padding: 10px 0px 10px 0px;
 }
+*/
