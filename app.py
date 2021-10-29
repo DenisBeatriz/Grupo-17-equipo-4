@@ -21,9 +21,17 @@ def home1():
 
         return render_template('home1.html')
 
-@app.route("/home2")
+@app.route("/home2", methods=['GET', 'POST'])
 def home2():
-    return render_template('home2.html')
+    if request.method == 'GET':
+        return render_template('home1.html')
+    else:
+        nombre = request.form['nombre']
+        email = request.form['email']
+        mensaje = request.form['mensaje']
+        db.insertar_contacto2(nombre, email, mensaje)
+
+        return render_template('home2.html')
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():

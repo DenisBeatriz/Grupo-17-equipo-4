@@ -74,6 +74,16 @@ ul {
     font-size: 25px;
 }
 
+.titulo_div{
+    padding-right: 200px;
+}
+
+.titulo{
+    color: #fff;
+    font-size: 35px;
+    font-weight: bolder;
+}
+
 /* Menu 2 */
 
 .menu2{
