@@ -35,30 +35,39 @@
                     
                         <img class="imagen" src="/static/img/MENU/BEBIDAS_CALIENTES/pexels-olia-danilevich-5760189.jpg" alt="">
                     
-    
-                    <div class="descripcion">
-                        <h1 class="titulo"><strong>AROMATICA</strong> </h1>
-                        <p>Deliciosa aromtica de frutas, hay desde las que tienen sabores suaves y relajante hasta las que tienen sabore más intensos.
-                            se encuentran muchas variedades para que le cliente puede elegir el que sea más de su agrada.
-                            Se vende unicamente de tamaño grande que corresponde a 25oz
-                        </p>
-                        <h2 class="precioProducto"> $ 2000 </h2>
-    
-                    </div>
+        
+                        <div class="descripcion">
+                            <h1 class="titulo"><strong id="producto"> AROMATICA</strong> </h1>
+                            <p >Deliciosa aromtica de frutas, hay desde las que tienen sabores suaves y relajante hasta las que tienen sabore más intensos.
+                                se encuentran muchas variedades para que le cliente puede elegir el que sea más de su agrada.
+                                Se vende unicamente de tamaño grande que corresponde a 25oz
+                            </p>
+                            <h2 class="precioProducto" id="precio"> $ 2000 </h2>
+                            
+                        </div>
+                    
+                    
                 </div>
                 
                 <div class="contenido2">
                     <div class="lizquierdo">
                         <h1><strong>Comentarios</strong></h1>
                         <form method="POST" action="/comentario">
-                            <input type="text" size="35" id="comentarios" name="comentarios" placeholder="Ingrese su comentario"></input>
+                            <input type="text" size="35" id="comentarios" name="comentarios" placeholder="Ingrese un comentario"></input>
                             <button id="publib" type="submit"  class="btn btn-success">Publicar</button>
                         </form>
+                    </div>
+
+                    <div class="lderecho">
+                        <form action="/compraAROMATICA" method="POST">
+                            <button class="btn btn-success comprarCarrito" type="submit" id="compraBoton" onclick="alert('Su pago a sido realizado con exito!')">Comprar</button>
+                        </form>        
                     </div>
         
                     
                 </div>
-            <!--<button class="btn btn-success comprarCarrito" type="submit">Comprar</button>-->    
+                
+                    
 
                 
             </div>    
@@ -76,6 +85,6 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
         
-    <!--<script src="../static/js/descripcionDelProducto.js"></script>-->
+        <script src="./static/js/descripcionDelProducto.js"></script>
 </body>
 </html>

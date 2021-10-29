@@ -50,14 +50,16 @@
                 <div class="contenido2">
                     <div class="lizquierdo">
                         <h1><strong>Comentarios</strong></h1>
-                        <form action="" method="POST">
-                            <input type="text" size="35" id="comentarios" placeholder="Ingrese su comentario">
-                            <input id="publib" type="submit" value="Publicar" class="btn btn-success">
+                        <form method="POST" action="/comentario">
+                            <input type="text" size="35" id="comentarios" name="comentarios" placeholder="Ingrese un comentario"></input>
+                            <button id="publib" type="submit"  class="btn btn-success">Publicar</button>
                         </form>
                     </div>
         
                     <div class="lderecho">
-                            <button class="btn btn-success comprarCarrito" >Comprar</button>
+                        <form action="/compraCAFE_EN_LECHE" method="POST">
+                            <button class="btn btn-success comprarCarrito" type="submit" id="compraBoton">Comprar</button>
+                        </form>        
                     </div>
                 </div>
 
