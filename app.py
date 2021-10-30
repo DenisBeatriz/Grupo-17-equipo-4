@@ -24,7 +24,7 @@ def home1():
 @app.route("/home2", methods=['GET', 'POST'])
 def home2():
     if request.method == 'GET':
-        return render_template('home1.html')
+        return render_template('home2.html')
     else:
         nombre = request.form['nombre']
         email = request.form['email']
