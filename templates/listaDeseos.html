@@ -1,112 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>listaDeseos</title>
-        <link rel="stylesheet" href={{ url_for('static', filename='css/estiloDeseos.css') }}>
-        <link rel="stylesheet" href={{ url_for('static', filename='css/normalize.min.css') }}>
-        <link rel="stylesheet" href={{ url_for('static', filename='css/icon/fontsAwesome/css/all.css') }}>
 
-        </script>
-        <script src="{{ url_for('static', filename='js/jquery-3.2.1.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href={{ url_for('static', filename='css/estiloDeseos.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/normalize.min.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/bootstrap.min.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/icon/fontsAwesome/css/all.css') }}>
+    <link rel="icon" type="image/png" href="../static/img/icon.png">
+
+    </script>
+    <script src="{{ url_for('static', filename='js/jquery-3.2.1.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <link rel="stylesheet" href={{ url_for('static', filename='css/sweetalert2.min.css') }}>
+
+
+    <title>listaDeseos</title>
+
+</head>
 
 <body>
+    <header>
+       <div class="menu">
+            <a href="/menu"><i class="fas fa-bars"></i> Menú</a>
+       </div>
+       <div class="login">
+             <a href="/login" class="link_login">Ingresa <i class="fa fa-user-circle"aria-hidden="true"></i></a>
+       </div>
+       <div class="deseos">
+             <a href="#listaDeseos" class="link_wish_list">Lista de deseos <i class="fa fa-heart"aria-hidden="true"></i></a>
+       </div>
+       <div class="carrito">
+             <a href="/carritoDeCompras" class="link_shopping_cart">Carrito de compras <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+       </div>         
+    </header>
 
-            <header>
-                <div class="menu">
-                    <a href="/menu"><i class="fas fa-bars"></i> Menú</a>
-                    </div>
-                <div class="login">
-                    <a href="/login" class="link_login">Ingresa <i class="fa fa-user-circle"
-                    aria-hidden="true"></i></a>
-                </div>
-                <div class="deseos">
-                    <a href="#lista_deseos" class="link_wish_list">Lista de deseos <i class="fa fa-heart"
-                    aria-hidden="true"></i></a>
-                </div>
-                <div class="carrito">
-                    <a href="/carritoDecompras" class="link_shopping_cart">Carrito de compras <i
-                    class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-                </div>            
-            </header>
+    <br>
+    <main>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col">
+                    <div class="barraBlanca">
+            		    <h1><span>Mi lista de Deseos</span> <i class="fa fa-heart"></i> </h1>
+        	        </div>
+                    
+                   
 
-        <section>
-            <div class="titulo">
-                <h1>TU LISTA DE DESEOS</h1>
-            </div>
-         
-	        <div class="store-wrapper"> 
-			    <div class="category_list">
-				    <li><a href="#" class="category_item" category="donuts">Donut de chocolate</a></li>
-				    <li><a href="#" class="category_item" category="macarrons">Macarrons</a></li>
-				    <li><a href="#" class="category_item" category="donas_rellenas">Donut de rellena</a></li>
-				    <li><a href="#" class="category_item" category="pan_artesanal">Pan artesanal</a></li>
-				    <li><a href="#" class="category_item" category="moffin_chocolate">Moffin de Chocolate</a></li>
-			    </div>
-		        <div class="products-list">
-		            <div class="product-item" category="donuts">
-			            <h2><strong>Donut de chocolate</strong> </h2>
-			            <img src="static\img\donaOreo.png" alt=""width="200" height="200">
-                        <p> Donut relleno de chocolate blanco, cubierta
-                        con chocolate negro y trozos de galleta Oreo</p>
-                        <h2> $ 4.000 </h2>
-		            </div>
-		            <div class="product-item" category="macarrons">
-			            <h2><strong>Macarrons</strong></h2>
-                        <img src="static\img\MENU\REPOSTERIA\pexels-valeria-boltneva-7474290.jpg" alt="" width="200" height="200">
-                        <p> Deliciosos macarrons sabor a fresa, chocolate y vanilla</p>
-                        <h2> $ 4.000 </h2>
-                    </div>
-		            <div class="product-item" category="donas_rellenas">
-			            <h2><strong>Donut de vainilla</strong> </h2>
-			            <img src="static\img\MENU\DONUTS\pexels-adam-kontor-420308.jpg" alt="" width="200" height="200">
-                        <p> Deliciosa Donut Rellena de salsa de vainilla</p>
-                        <h2> $ 4.000 </h2>
-		            </div>
-		            <div class="product-item" category="pan_artesanal">
-			            <h2><strong>Pan artesanal</strong> </h2>
-			            <img src="static\img\MENU\PANADERIA\pexels-marta-dzedyshko-7175448.jpg" alt=""width="200" height="200">
-                        <p> Delicioso pan artesanal con uvas pasas</p>
-                        <h2> $ 3.000 </h2>
-		            </div>
-		            <div class="product-item" category="moffin_chocolate">
-			            <h2 src="T2_moffin_chocolate">Mofin de chocolate</h2>
-                        <img src="static\img\MENU\REPOSTERIA\pexels-drake-nicolls-9291128.jpg" alt=""width="200" height="200">
-                        <p>Delicioso moffin de chocolate con una cereza</p>
-                        <h2> $ 2.500 </h2>
-		            </div>
+                    <form id="procesar-pago" action="#" method="post">
+                        <div id="carrito" class="form-group table-responsive" >
+                            <table class="table" id="lista-compra" >
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Eliminar</th>
+                                    </tr>
+                                </thead> 
+                                <tbody >   
+                            
+                                </tbody>
+                           
+                                <!-- LINEA PARA AGREGAR subtotal NO QUISE COMPLICARME MAS
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right"></th>
+                                        <th scope="col">
+                                            <p id="subtotal"></p>
+                                        </th>
+                                    </th>    
+                                </tr> 
+                                           LINEA PARA AGREGAR IVA NO QUISE COMPLICARME MAS   
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">IVA :</th>
+                                        <th scope="col">
+                                            <p id="iva"></p>
+                                        </th>
+                                    <th scope="col"></th> 
+                                </tr>   
+                            
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">TOTAL :</th>
+                                    <th scope="col">
+                                    <input id="total" name="monto" size=10 class="font-weight-bold border-0" readonly style="background-color: white;"></input>
+                                    </th>                                    
+                                </tr>       -->
+                            </table>
+                        </div>
+                                 <!-- ESTA ANIMACION SE DETIENE 
+                        <div class="row justify-content-center" id="loaders">
+                            <img id="cargando" src="static/img/cargando.gif" width="220">
+                        </div>  -->
+
+                        <div class="row justify-content-between">
+                            <div class="col-md-4 mb-2">
+                                <a href="/menu" class="btn btn-info btn-block">Volver al menú</a>
+                            </div>
+                        <!--    <div class="col-xs-12 col-md-4">
+                                    <button href="#" class="btn btn-success btn-block" id="procesar-compra">Pagar</button>
+                                </div>  -->
+                        </div>    
+                    </form>
                 </div>
             </div>
-        <div class="compra">
-            <div class="pagar">
-                <a href=""><img src="static/img/pagar.png"  alt="Lleva a la opcion de pago"></a>
-            </div> 
-            <div class="agregar">
-                <a href=""><img src="static/img/agregar.png"  alt="Agrega producto al carrito"></a>
-            </div>
-            <div class="cantidad"> 
-                <button>+ </button>
-                <input type="text" size="1" id="cantidad">
-                <button> -</button>
-                <div><button>Eliminar</button></div>
-            </div> 
-            <div class="comentarios">
-                <div></h2><strong>Comentarios</strong></h2></div>
-                <textarea name="comentarios" rows="4" cols="52"></textarea>
-                <div><button id="publib">Enviar</button></div>
-            </div>                             
-        </div> 
+        </div>
+    </main>
 
-    </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/sweetalert2.min.js') }}"></script>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+
+
+    <script src="{{ url_for('static', filename='js/carrito.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/compra.js') }}"></script>
+
     <footer>
-        <p>
-            Grupo 17 Equipo 4 Universidad del Norte
-        </p>
+        <p>Grupo 17 Equipo 4 Universidad del Norte</p>
     </footer>
-
+      
 </body>
+   
 </html>

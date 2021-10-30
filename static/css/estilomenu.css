@@ -1,0 +1,258 @@
+header {
+    background: #FF581A;
+    padding: 7px 0px 10px 0px;
+    max-width: 1376px;
+    width: 100%;
+}
+
+header {
+    list-style: none;
+    text-decoration: none;
+}
+
+    .menu a {
+    text-shadow: 1px 1px 2px rgb(5, 5, 5);
+    font-size: x-large;
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+    color: #fcfbf8;
+}
+
+    .login a {
+    text-shadow: 1px 1px 0px rgb(5, 5, 5);
+    font-size: x-large;
+    list-style: none;
+    text-decoration: none;
+    color: #fcfbf8;
+}
+
+    .deseos a {
+    text-shadow: 1px 1px 2px rgb(5, 5, 5);
+    font-size: x-large;
+    list-style: none;
+    text-decoration: none;
+    color: #fcfbf8;
+}
+
+    .carrito a {
+    text-shadow: 1px 1px 0px rgb(5, 5, 5);
+    font-size: x-large;
+    list-style: none;
+    text-decoration: none;
+    color: #fcfbf8;
+}
+
+    .menu i {
+    color: #000000;
+}
+
+    .login i {
+    color: #000000;
+}
+
+    .deseos i {
+    color: #000000;
+}
+
+    .carrito i {
+    color: #000000;
+}
+
+   .menu {
+    padding: 0px 575px 0px 20px;
+    display: inline-block;
+}
+
+   .login {
+    padding: 0px 40px 5px 0px;
+    display: inline-block;
+}
+
+    .deseos {
+    padding: 0px 40px 5px 0px;
+    display: inline-block;
+}
+
+    .carrito {
+    padding: 0px 0px 5px 0px;
+    display: inline-block;
+}
+
+    .menu a:hover { 
+    text-shadow: 1px 1px 7px rgb(253, 249, 249);
+    border-bottom: 2px solid #fff;
+    color: black;                
+}
+
+    .login a:hover { 
+    text-shadow: 1px 1px 7px rgb(253, 249, 249);
+    border-bottom: 2px solid #fff;
+    color: black;         
+}
+
+    .deseos a:hover { 
+    text-shadow: 1px 1px 7px rgb(253, 249, 249);
+    border-bottom: 2px solid #fff;
+    color: black;                 
+} 
+
+    .carrito a:hover { 
+    text-shadow: 1px 1px 7px rgb(253, 249, 249); 
+    border-bottom: 2px solid #fff;
+    color: black;        
+} 
+
+
+
+section {
+    padding: 0px 0px 40px 0px;
+    background: #fab9b0;
+    
+    max-width: 1376px;
+    width: 100%;
+        
+}
+
+main {
+    padding: 0px 1px 35px 40px;
+    background: #f7f1f1;
+    max-width: 1100px;
+    width: 95%;
+    margin: 30px 0px 30px 120px;
+    box-shadow: 0px 0px 3px 3px rgba(131, 110, 105, 0.5);
+}
+
+
+
+ .titulo {
+    font-family: Geneva, Tahoma, sans-serif;
+    font-size: large;
+    color-interpolation-filters: initial;
+    text-align-last: center;
+    max-width: 1376px;
+    width: 100%;
+    text-shadow: 0px 0px 8px rgb(66, 66, 66);
+    text-decoration:solid;
+
+}    
+
+/* Lista de categorias */
+
+
+.category_list{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    max-width: 1376px;
+    width: 100%;
+    padding: 60px 0px 45px 0px;
+    margin: 0px 0px 20px 0px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 3px 1px rgba(12, 12, 12, 0.5);
+  
+}
+
+.category_list ul{
+    display: flex;
+}
+
+.category_list ul li a{
+    color: #000;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;    
+}
+
+.category_list ul li{
+    padding: 50px;
+    list-style: none;
+   
+}
+
+.category_list ul li a:hover{
+    border-bottom: 2px solid #000;
+    color: #ff581a;
+    font-weight: bold;
+}
+
+.category_list .ct_item-active{
+    box-shadow: 0px 0px 0px 0px rgb(37, 150, 243);
+    
+}
+
+.container{
+	padding: 0px 0px 0px 0px;
+    margin: -100px 0px 0px 0px;
+    
+}
+
+
+.products-list{
+	width: 72%;
+	flex-wrap: wrap;
+    
+}
+
+    .products-list .product-item{
+	width: 21%;
+
+}
+
+    .products-list .product-item img{
+	width: 100%;
+    margin-top: 0px;
+    padding: 0px 20px 0px 20px;
+}
+
+    .products-list .product-item h2{
+	width: 100%;
+	background: #2592f7;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+
+
+h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: #000;
+    padding: 30px 0px 10px 0px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 30px;
+    color: #2592f7;
+    text-shadow: 2px 1px 3px rgb(5, 5, 5);
+    padding: 20px 15px 0px 15px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+h2 {
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    text-align: center;
+  
+}
+
+footer {
+    background: #FF581A;
+    padding: 10px 0px 0.3px 0px;
+    text-align: center;
+    max-width: 1376px;
+    margin: 0px 0px 0px 0px;
+}
+    footer p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+    color: rgb(255, 255, 255);
+
+}       

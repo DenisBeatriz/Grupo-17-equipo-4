@@ -1,268 +1,386 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <!--Para metodos practicos, deje los titulos sin lin, apenas tenga toda la info, genero los links para la navegacion-->
-        <meta charset="UTF-8">
-        <meta name="viewpot" content="width=device-width,initial-scale= 1.0">
-        <title>Menú</title>
-        <link rel="stylesheet" href="/static/css/style_menu.css">
-    </head>
-    <body id="cuerpo">
-        <header>
-            <nav>
-                <h1 id="titulo_menu">Menu</h1> <!--FALTA PONER LA INTERACTIVIDAD CON JAVASCRIPT, DESPLEGAR E MENU DIRECTO DE LA IMAGEN-->
-                
-                <figure id="Menu">
-                    <img src="/static/img/DISEÑO_PAGINA_WEB/menu copia.png" alt="" width="30" height="30" id="menu">
-                </figure>
-                
-                <a href="./login" id="">Ingresa
-                    <figure>
-                        <img src="/static/img/DISEÑO_PAGINA_WEB/Login_icono.png" alt="" width="30" height="30" id="login">
-                    </figure>
-                </a>
-                <h1 id="titulo_lista_deseos">
-                    <a href="./listaDeseos.html">Lista de deseos</a>
-                </h1>
-                <figure>
-                        <img src="/static/img/DISEÑO_PAGINA_WEB/CORAZON_LISTA_DESEOS..jpg" alt="" width="30" height="30" id="lista_deseos">
-                    </figure>
-                <h1 id="titulo_carrito_compra">Carrito de compra</h1>
-                <figure>             
-                    <img src="static\img\DISEÑO_PAGINA_WEB\carrito_compras.png" alt="" width="30" height="30" id="carrito_compras">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <link rel="stylesheet" href={{ url_for('static', filename='css/estilomenu.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/normalize.min.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/bootstrap.min.css') }}>
+    
+    </script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
 
-                </figure>
-                <figure>
-                    <img src="/static/img/DISEÑO_PAGINA_WEB/Imagen1.jpg" alt="" width="30" height="30" id="salida">
-                </figure>
-            </nav>
-        </header>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href={{ url_for('static', filename='css/icon/fontsAwesome/css/all.css') }}>
+    <link rel="icon" type="image/png" href="../static/img/icon.png">
 
+    <link rel="stylesheet" href={{ url_for('static', filename='css/sweetalert2.min.css') }}>
+   
+</head>
+
+<body>
+
+    <header>
+        <div class="barramenu">
+            <div class="menu">
+                <a href="#menu"><i class="fas fa-bars"></i> Menú</a>
+            </div>
+             <div class="login">
+                <a href="/login" class="link_login">Ingresa <i class="fa fa-user-circle"aria-hidden="true"></i></a>
+            </div>
+            <div class="deseos">
+                <a href="/listaDeseos" class="link_wish_list">Lista de deseos <i class="fa fa-heart"aria-hidden="true"></i></a>
+            </div>
+            <div class="carrito">
+                <a href="/carritoDeCompras" class="link_shopping_cart">Carrito de compras <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            </div> 
+        </div>
+    </header>
+               
+    <section>                    
+        <div class="category_list">
+            <ul>
+                <li><a href="menu" class="">TODO</a></li>
+                    <li><a href="#" class="category_item" category="donuts">DONUTS</a></li>
+                    <li><a href="#" class="category_item" category="panaderia">PANADERIA</a></li>
+                    <li><a href="#" class="category_item" category="reposteria">REPOSTERIA</a></li>
+                    <li><a href="#" class="category_item" category="tortas">TORTAS</a></li>
+                    <li><a href="#" class="category_item" category="bebidas">BEBIDAS</a></li>
+                <li><a href="#" class="category_item" category="combos">COMBOS</a></li>
+            <ul>
+        </div> 
+
+        <div class="titulo">
+            <h1>LISTADO DE PRODUCTOS DEL MENU</h1>
+        </div>
+                       
+        <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+            <table id="lista-carrito" class="table">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Pagar</a>
+        </div> 
 
         <main>
-            <section id="TORTAS">
-                <h1 id="T1_TORTAS">TORTAS</h1>
-
-
-                <div id="Columna_1">
-
-                    <figure id="torta_chocolate">
-                        <h2 id="T2_torta_chocolate">TORTA DE CHOCOLATE</h2>
-                        <img src="/static/img/MENU/TORTAS/pexels-abhinav-goswami-291528.jpg" alt="Torta de Chocolate" width="150" height="150" id="torta_chocolate">
-                        <p id="precio_torta_chocolate">$ 5.000</p>
-                    </figure>
-                    <pre id="descripcion_torta_chocolate">Torta de Chocolate con dos capas
-de torta de Vainilla</pre>
-                    <figure id="vainilla">
-                        <h2 id="T_torta_vainilla">TORTA DE VAINILLA</h2>
-                        <img src="/static/img/MENU/TORTAS/pexels-dmitry-zvolskiy-1721934.jpg" alt="Torta de Vainilla" width="150" height="150" id="torta_vainilla">
-                        <p id="precio_torta_vainilla">$6.500</p>
-                    </figure>
-                    <pre id="descripcion_torta_vainilla">Torta de vainilla en cuatro capas</pre>
-                </div>
-
-
-                <div id="Columna_2">    
-
-                    <figure id="T_especial">
-                        <h2 id="T2_pedido_especial">TORTA ESPECIAL</h2>
-                        <img id="Img_pedido_especial" src="/static/img/MENU/TORTAS/pexels-pixabay-265801.jpg" alt="" width="150" height="150">
-                        <br>
-                        <p id="precio_t_especial"> $30.000</p>
-                    </figure>
-                    <pre id="Des_pedido_especial">Torta de San Valentine para 15 personas</pre>
-                    <br>
-                    <figure id="T_maracuya">
-                        <h2 id="T2_maracuya"> PIE DE MARACUYA</h2>
-                        <img id="Img_maracuya" src="/static/img/MENU/TORTAS/pexels-solodsha-7664402.jpg" alt="" width="150" height="150">
-                        <br>
-                        <br>
-                        <p id="precio_maracuya">$3.500</p>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <pre id="Des_maracuya">Delicioso Pie de Maracuya en salsa de maracuya</pre>
-                    </figure>
+            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+                <h1 class="display-4 mt-4"></h1>
+            </div>
                     
-                </div>
-            </section>
-
-            
-            
-            <section id="PANADERIA">
-                <h1 id="T2_PANADERIA">PANADERIA</h1>
-                <div id="Columna_1">
-                    <br><br><br><br>
-                    <figure id="Pan_frances">
-                        <h2 id="T2_oan_frances">PAN FRANCES</h2>
-                        <img id="Img_pan_frances" src="/static/img/MENU/PANADERIA/pexels-ivan-j-long-1387070.jpg" alt="" width="150" height="150">
-                        <br>
-                        <br>
-                        <p id="precio_pan_frances">$2.500</p>
-                    </figure>
-                    <pre id="Des_pan_frances">Pan frances relleno de queso</pre>
-                </div>
-                <br><br>
-                <div id="Columna_2">
-                    <figure id="Pan_artesanal">
-                        <h2 id="T2_Pan_artesanal">PAN ARTESANAL</h2>
-                        <img id="img_pan_artesanal" src="/static/img/MENU/PANADERIA/pexels-marta-dzedyshko-7175448.jpg" alt="" width="150" height="150">
-                        <br><br>
-                        <p id="precio_pan_artesanal">$3.000</p>
-                    </figure>
-                    <pre id="Des_pan_artesanal">Delicioso pan artesanal con unvas pasas</pre>
-                </div>         
-            </section>
-
-
-            <section id="REPOSTERIA">
-                <h1 id="T1_REPOSTERIA">REPOSTERIA</h1>
-                <div id="Columna_1">
-                    <figure id="Ponques">
-                        <h2 id="T2_ponquesitos">PONQUESITOS</h2>
-                        <img id="img_ponques" src="/static/img/MENU/REPOSTERIA/pexels-david-jakab-959079.jpg" alt="" width="160" height="160">
-                        <p id="precio_ponquesitos">$2.500</p>
-                    </figure>
-                    <pre id="Des_Ponques"> Deliciosos mini Ponques de vainilla, chocolate, y fresa</pre>
-                    <br><br><br><br><br><br>
-                    <figure id="Moffin Chocolate">
-                        <h2 id="T2_moffin_chocolate">MOFFIN DE CHOCOLATE</h2>
-                        <img src="/static/img/MENU/REPOSTERIA/pexels-drake-nicolls-9291128.jpg" alt="" width="150" height="150">
-                        <p id="precio_moffin">$2.500</p>
-                    </figure>
-                    <pre id="Des_moffin">Delicioso moffin de chocolate con una cereza </pre>
+            <div class="container" id="lista-productos">
+                <div class="card-deck mb-3 text-center">
                     
-                </div>
+                    <div class="donuts">
+                        <div class="card mb-4 shadow-sm">   
+                            <div class="product-item" category="donuts">
+                                <h4 class="my-0 font-weight-bold">DONA  DE  VAINILLA</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\1.1 dona rellena vainilla.jpg" alt="" width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">4000</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Deliciosas Donas Rellenas</li>
+                                        <li>de salsa de vainilla...</li>
+                                    </ul> 
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="1">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div> 
 
+                        <div class="card mb-4 shadow-sm">
+                            <div class="product-item" category="donuts">
+                                <h4 class="my-0 font-weight-bold">DONA CHOCOLATE</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\1.2 dona rellena.jpg" alt="" width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">4500</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Deliciosa Dona rellena</li>
+                                        <li> de Chocolate</li>
+                                    </ul> 
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="2">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div>
+                     
+                        <div class="card mb-4 shadow-sm">
+                            <div class="product-item" category="donuts">
+                                <h4 class="my-0 font-weight-bold">DONUT DE COCO</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\1.3 coco donut.jpg" alt="" width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">3500</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Cremoso glaseado de leche </li>
+                                        <li>de coco saludable...</li>
+                                    </ul> 
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="3">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div>
+                    </div>
 
-                <div id="Columna_2">
-                
-                    <figure id="Macorrons">
-                        <h2 id="T2_macarrons">MACARRONS</h2>
-                        <img id="img_macarrons" src="/static/img/MENU/REPOSTERIA/pexels-valeria-boltneva-7474290.jpg" alt="" width="150" height="150">
-                        <p id="Des_macarrons">$2.500</p>
-                    </figure>
-                    <pre id="Des_macarrons">Deliciosos macarrons sabor a fresoa, chocolate y vanilla</pre>
-                
-                    <figure id="">
-                        <br><br><br><br><br><br><br>
-                        <h2>PANQUEQUES</h2>
-                        <img src="/static/img/MENU/REPOSTERIA/pexels-vlada-karpovich-6947293.jpg" alt="" width="150" height="150">
-                        <p id="precio_panqueques">$5.000</p>
-                    </figure>
-                    <pre id="Des_panqueques">Deliciosos panqueque con fresa y salsa de chocolate</pre>
-                </div>
-            </section>
-
-
-            <section id="DONUTS">
-            
-                <h1 id="DONAS">DONUTS</h1>
-
-                <div id="Columna_1">
-                    <figure id="donas_rellenas">
-                        <h2 id="T2_Donas_rellenas">DONAS RELLENAS</h2>
-                        <img src="/static/img/MENU/DONUTS/pexels-adam-kontor-420308.jpg" alt="" width="150" height="150">
-                        <br>
-                        <p id="precio_dona_rellena">$4.000</p>
-                    </figure>
-                    <pre id="Des_donas_rellenas">Deliciosas Donas Rellenas de salsa de vainilla, 
-mora, fresa, entre otros.</pre>
+                    <div class="panaderia">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="product-item" category="panaderia">
+                                <h4 class="my-0 font-weight-bold">PAN ARTESANAL</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\2.1 pan artesanal.jpg" alt="" width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">2500</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Delicioso pan artesanal </li>
+                                        <li>con uvas pasas...</li>
+                                    </ul> 
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="4">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div> 
                     
-                </div>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br>
-                <div id="Columna_2">
-                    <figure id="Dona_choclate">
-                        <h2 id="T2_Dona_chocolate">DONA DE CHOCOLATE</h2>
-                        <img id="img_dona_chocolate" src="/static/img/MENU/DONUTS/pexels-nishant-aneja-2955820.jpg" alt="" width="150" height="150">
-                        <br>
-                        <p id="precio_dona_chocolate">$4.500</p>
-                    </figure>
-                    <pre id="Des_dona_chocolate">Deliciosa Dona de Cocolate</pre>
-                </div>
-            </section>
+                        <div class="card mb-4 shadow-sm">
+                            <div class="product-item" category="panaderia">
+                                <h4 class="my-0 font-weight-bold">PAN FRANCES</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\2.2 pan frances.jpg" alt="" width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">2500</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Deliciosos mini Ponques de</li>
+                                        <li>vainilla, chocolate, y fresa...</li>
+                                    </ul> 
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="5">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div> 
 
-            <br>
-            <section id="Bebidas_frias">
-            
-                <h1 id="T1_Bebidas_frias">BEBIDAS FRIAS</h1>
-                <div id="Columna_1">
-                    <br><br><br>
-                    <figure id="img_limonanda">
-                        <h2 id="T2_limonada">LIMONADA NATURAL</h2>
-                        <img src="/static/img/MENU/BEBIDAS_FRIAS/pexels-geraud-pfeiffer-6542749.jpg" alt="" width="150" height="150">
-                        <p id="precio_limonada_natural">$2.500</p>
-                    </figure>
-                    <pre id="Des_limonada"> Deliciosa limonada natural con hielo</pre>
-                    <figure>
-                        <br><br>
-                        <h2 id="Jugos">JUGOS EN AGUA</h2>
-                        <img id="img_jugo" src="/static/img/MENU/BEBIDAS_FRIAS/pexels-kindel-media-8181548.jpg" alt="" width="150" height="150">
-                        <p id="precio_jugos">$3.500</p>
-                    </figure>
-                    <pre id="Des_jugos">Deliciosos jugos de mora, 
-lulo, naranja y guanabana en agua con leche</pre>
+                        <div class="card mb-4 shadow-sm">
+                            <div class="product-item" category="panaderia">
+                                <h4 class="my-0 font-weight-bold">PAN INTEGRAL</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\2.3 pan integral.jpg" alt="" width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">2500</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Delicioso moffin de chocolate</li>
+                                        <li>con una cereza...</li>
+                                    </ul> 
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="6">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="reposteria">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="product-item" category="reposteria">
+                                <h4 class="my-0 font-weight-bold">MACARRONS</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\3.1 macarons.jpg" alt="" width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">2500</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Deliciosos macarrons sabor a</li>
+                                        <li>fresa, chocolate y vanilla...</li>
+                                    </ul> 
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="7">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div>
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="product-item" category="reposteria">
+                                <h4 class="my-0 font-weight-bold">PANQUEQUES</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\3.2 panqueques.jpg" alt="" width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">5000</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Deliciosos panqueque con</li>
+                                        <li>fresa y salsa de chocolate...</li>
+                                    </ul> 
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="8">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div>
+                    
+                        <div class="card mb-4 shadow-sm">
+                            <div class="product-item" category="reposteria">
+                                <h4 class="my-0 font-weight-bold">MOFFIN CHOCOLATE</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\3.3 mofin de chocolate.jpg" alt=""width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">6500</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Delicioso moffin de chocolate</li>
+                                        <li>con una cereza...</li>
+                                    </ul> 
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="9">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="tortas">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="product-item" category="tortas">
+                                <h4 class="my-0 font-weight-bold">TORTA ESPECIAL</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\4.1 torta especial.jpg" alt="" width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">30000</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Torta de San Valentine</li>
+                                        <li> para 15 personas...</li>
+                                    </ul> 
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="10">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div>
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="product-item" category="tortas">
+                                <h4 class="my-0 font-weight-bold">PIE MARACUYA</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\4.2 pie de maracuya.jpg" alt="" width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">2500</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Delicioso Pie de Maracuya</li>
+                                        <li>en salsa de maracuya...</li>
+                                    </ul> 
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="11">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div>
+                    
+                        <div class="card mb-4 shadow-sm">
+                            <div class="product-item" category="tortas">
+                                <h4 class="my-0 font-weight-bold">TORTA DE CHOCOLATE</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\4.3 torta de chocolate.jpg" alt="" width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">3500</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Torta de Chocolate con</li>
+                                        <li>dos capas...</li>
+                                    </ul> 
+                                    <a href="/PIE_DE_MARACUYA" class="btn btn-block btn-primary agregar-carrito" data-id="12">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="bebidas">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="product-item" category="bebidas">
+                                <h4 class="my-0 font-weight-bold">ICED COFFEE</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\5.1 iced coffe.jpg" alt="" width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">3000</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Delicioso y refrescante</li>
+                                        <li> café con hielo...</li>
+                                    </ul> 
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="13">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div>
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="product-item" category="bebidas">
+                                <h4 class="my-0 font-weight-bold">MALTEADA</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\5.2 malteada chocolate.jpg" alt=""  width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">5500</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Deliciosa malteada con helado</li>
+                                        <li> y chispas de chocolate...</li>
+                                    </ul> 
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="14">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div>
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="product-item" category="bebidas">
+                                <h4 class="my-0 font-weight-bold">CHOCOLATE CALIENTE</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\5.3 chocolate-caliente.jpg" alt="" width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">3500</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Delicioso Chocolate caliente</li>
+                                        <li>con malvaviscos...</li>
+                                    </ul> 
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="15">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="combos">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="product-item" category="combos">
+                                <h4 class="my-0 font-weight-bold">COMBO DUKCHOCO</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\6.1 combo choco.jpg" alt="" width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">6500</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Donut de vainilla mas una </li>
+                                        <li>taza de Chocolate caliente...</li>
+                                    </ul> 
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="16">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div>
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="product-item" category="combos">
+                                <h4 class="my-0 font-weight-bold">COMBO DUKORANGE</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\6.2 donut+jugo naranja.jpg" alt="" width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">6000</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Donut de chocolate mas un</li>
+                                        <li>vaso de jugo de naranja pura...</li>
+                                    </ul> 
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="17">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div>
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="product-item" category="combos">
+                                <h4 class="my-0 font-weight-bold">COMBO DUKCOFFEE</h4>
+                                <div class="card-body">    
+                                    <img src="static\img\6.3 combo coffee.jpg" alt="" width="260" height="180" class="card-img-top">
+                                    <h1 class="card-title pricing-card-title precio">$ <span class="">6500</span></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Donut de chocolate mas una </li>
+                                        <li>taza de cafe con leche...</li>
+                                    </ul> 
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="18">Añadir a Lista de Deseos</a>
+                                </div> 
+                            </div> 
+                        </div>
+                    </div>    
                 </div>
-                <br>
-                <div id="Columna_2">
-                    <figure>
-                        <h2 id="T2_ice">ICE COFFEE</h2>
-                        <img src="/static/img/MENU/BEBIDAS_FRIAS/pexels-maksim-goncharenok-4422873.jpg" alt="" width="150" height="150">
-                        <p id="precio_j">$3.000</p>
-                    </figure>
-                    <pre id="Des_jugos">Delicioso y refrescante café con hielo</pre>
-                    <br><br>
-                    <figure>
-                        <h2 id="T2_Malteada">MALTEADA</h2>
-                        <img src="/static/img/MENU/BEBIDAS_FRIAS/pexels-rodnae-productions-6413700.jpg" alt="" width="150" height="150">
-                        <p id="precio_malteadas">$5.500</p>
-                    </figure>
-                    <pre id="Des_malteada">Deliciosa malteada con helado y chispas de chocolate</pre>
-                </div>
-            </section>
-            
-            <section>
-                <h1>BEBIAS CAIENTES</h1>
-                <div id="Columna_1">
-                    <figure>
-                        <br><br><br><br>
-                        <h2 id="T2_Cafe_leche">CAFE EN LECHE</h2>
-                        <img src="/static/img/MENU/BEBIDAS_CALIENTES/pexels-charlotte-may-5946623.jpg" alt="" width="150" height="150">
-                        <p id="precio_cafe_leche">$3.500</p><br>
-                    </figure>
-                    <pre id="Des_cafe_leche">Delicioso Cafe con Leche y Canela</pre>
-                    <br><br><br>
-                    <figure>
-                        <h2 id="T2_Te_manzanilla">TÉ DE MANZANILLA</h2>
-                        <img src="/static/img/MENU/BEBIDAS_CALIENTES/pexels-olia-danilevich-576018.jpg" alt="" width="150" height="150">
-                        <br><br>
-                        <p id="precio_te">$2.500</p>
-                    </figure>
-                    <pre id="Des_te">Deliciioso te de Manzanilla</pre>
-                </div>
-                <div id="Columna_2">
-                    <figure>
-                        <h2 id="T2_aromatica">AROMATICA</h2>
-                        <img src="/static/img/MENU/BEBIDAS_CALIENTES/pexels-olia-danilevich-5760189.jpg" alt="" width="150" height="150">
-                        <br><br>
-                        <p id="precio_aromatica">$2.000</p>
-                    </figure>
-                    <pre id="aromatica">Deliciosa aromtica de frutas</pre>
-                    <figure>
-                        <br><br>
-                        <h2 id="T2_chocolate">CHOCOLATE CALIENTE</h2>
-                        <img src="/static/img/MENU/BEBIDAS_CALIENTES/pexels-olia-danilevich-5760199.jpg" alt="" width="150" height="150">
-                        <p id="precio_chocolate">$3.500</p>
-                    </figure>
-                    <pre id="Des_chcolate">Delicioso Chocolate caliente con malvaviscos</pre>
-                </div>
-            </section>
+            </div>
         </main>
-        <footer>
-            <p id="footer">Universidad del Norte Grupo 17 Equipo 4</p>
-        </footer>
-    </body>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/sweetalert2.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/carrito.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/pedido.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.2.1.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
+
+
+    <footer>
+        <p>Grupo 17 Equipo 4 Universidad del Norte</p>
+    </footer>
+
+</body>
 </html>
