@@ -1,0 +1,339 @@
+header .barraNaranja{
+    background: #ff581a;
+    overflow: hidden;
+    display: block;
+    padding: 9px 0px 9px 0px;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+header .barraNaranja .de i, header .barraNaranja .de a{
+    color: black;
+    padding-left: 20px;
+    font-size: 25px;
+    float: right;
+    margin-right: 18px;
+
+}
+
+header .barraNaranja .iz i{
+    padding-right: 15px;
+}
+
+header .barraNaranja .iz i, header .barraNaranja .iz a{
+    color: black;
+    margin-left: 18px;
+    font-size: 25px;
+    float: left;
+}
+
+header .barraBlanca nav {
+    background: white;
+}
+
+header .barraBlanca nav ul{
+    list-style: none;
+    display: flex;
+    padding: 8px 0px 8px 0px;
+    margin: 0px;
+}
+
+header .barraBlanca nav ul li{
+    margin-left: 100px;
+    width: 150px;
+}
+
+header .barraBlanca nav ul li a{
+    color: black;
+    text-decoration: none;
+    padding: 8px 2px 8px 2px;
+}
+
+header .barraBlanca nav ul li a:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+section #fondo {
+	background-image: url(https://static9.depositphotos.com/1066655/1106/i/950/depositphotos_11062315-stock-photo-donuts.jpg);
+	padding: 50px 50px 50px 50px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+#fondo:before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.6);
+}
+
+#fondo .general{
+	color: #fff;
+	position: relative;
+    overflow: hidden;
+    
+}
+
+#fondo .general .contenido .imagen{
+    width: 400px;
+    border-radius: 100px;
+}
+
+#fondo .general .contenido {
+    margin: 0px 30px 30px 30px;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color: #ffeaca;
+    border-radius: 15px;
+}
+
+#fondo .general .contenido .descripcion p{
+    font-size: 25px;
+}
+
+#fondo .general  .contenido{
+    display: flex;
+}
+
+#fondo .general  .contenido .imagen, #fondo .general  .contenido .descripcion{
+    padding: 40px 40px 40px 40px;
+    
+}
+
+#fondo .general  .contenido .descripcion h1{
+    font-family: 'Raleway Heavy';
+}
+
+#fondo .general  .contenido .descripcion h1, #fondo .general  .contenido .descripcion p, 
+#fondo .general  .contenido .descripcion h2{
+    text-align: center;
+    
+}
+
+#fondo .general  .contenido .descripcion{
+    font-size: 28px;
+    padding: 0px 0px 0px 0px;
+}
+
+
+
+#fondo .general .contenido2{
+    margin-left: 20px;
+    display: flex;
+    
+}
+
+#fondo .general .contenido2 #publib{
+    margin-top: 10px;
+}
+
+
+#fondo .general .contenido2 .lizquierdo .anadir{
+    display: flex;
+    padding-left: 60px;
+} 
+
+
+#fondo .general .contenido2 .lizquierdo .anadir .agregar{
+    margin-left: 5px;
+    padding-left: 5px;
+    
+}
+
+#fondo .general .contenido2 .lizquierdo .anadir .agregar input{
+    width: 45px;
+    
+}
+
+#fondo .general .contenido2 .lizquierdo .anadir button i{
+    font-size: 18px;
+} 
+
+#fondo .general .contenido2 .lizquierdo #comentarios{
+    padding: 20px 50px 100px 20px;
+    border-color: black;
+    border-radius: 15px;
+}
+
+#fondo .general .contenido2 .lderecho{
+    padding-left: 150px;
+    overflow: hidden;
+    
+}
+
+#fondo .general .contenido2 .lderecho .pagar{
+    float: right; 
+    margin: 0px 20px 30px 10px;  
+
+}
+
+
+#fondo .general .contenido2 .lderecho #donaFresa{
+    width: 300px;
+    border-radius: 15px;
+    
+}
+
+#fondo .general .contenido2 .lderecho #donaVainilla{
+    width: 200px;
+    border-radius: 15px;
+    
+}
+
+
+#fondo .general .contenido2 .lderecho .publicidad h1{
+    text-align: center;
+}
+
+#fondo .general .contenido2 .lderecho .publicidad{
+    margin: 150px 50px 50px 50px;
+    display: flex;
+}
+
+#fondo .general .contenido2 .lderecho .publicidad .p1{
+    margin-right: 20px;
+}
+
+#fondo .general .contenido2 .lderecho .pagar button i{
+    font-size: 18px;
+}
+
+#fondo .general .contenido2 .lderecho .publicidad .p1 a h1{
+    color: white;
+}
+
+#fondo .general .contenido2 .lderecho .publicidad .p2 a h1{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+#fondo .general .producto1{
+    border-style: dotted;
+    border-color: #ff581a;
+    border-width: 8px;
+    display: flex;
+}
+
+#fondo .general .producto1{
+    padding: 10px 10px 10px 10px;
+    overflow: hidden;
+}
+
+#fondo .general .producto1 .tituloImagen{
+    width: min-content;
+}
+
+#fondo .general .producto1 .tituloImagen a p{
+    color: white;
+    font-size: larger;
+    margin-left: 15px;
+}
+
+#fondo .general .producto1 .tituloImagen a img{
+    width: 100px;
+}
+
+#fondo .general .producto1 .tituloImagen a{
+    display: flex;
+    padding-left: 20px;
+    padding-right: 320px;
+}
+
+#fondo .general .producto1 .cantidad{
+    display: flex;
+    margin-right: 10px;
+}
+
+#fondo .general .producto1 .cantidad .delete{
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    width: 90px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+#fondo .general .producto1 .cantidad .carritoComprasCantidadDelElemento{
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}
+
+#fondo .general .producto1 .carritoComprasPrecioDelElemento{
+    padding-left: 370px;
+}
+
+#fondo .general #bpagar{
+    float: right;
+}
+
+#fondo .tituloCarrito{
+    color: #ffeaca;
+    text-align: center;
+}
+
+#fondo .total{
+    overflow: hidden;
+}
+
+#fondo .total .total1{
+    float: left;
+    display: flex;
+}
+
+#fondo .total .total1 p{
+    padding-left: 20px;
+    padding-top: 6px;
+}
+
+#fondo .total button{
+    float: right;
+}
+
+#fondo .productosElegidos .hilera{
+    display: flex;
+    overflow: hidden;
+}
+
+#fondo .productosElegidos .hilera  .columna2{
+    padding-left: 450px;
+    
+}
+
+#fondo .productosElegidos .hilera  .columna1{
+    padding-left: 20px;
+    
+}
+
+#fondo .productosElegidos .hilera  .columna3{
+    padding-left: 370px;
+    
+}
+
+
+
+
+
+footer{
+    text-align: center;
+    background: #ff581a;
+    padding: 10px 0px 10px 0px;
+}

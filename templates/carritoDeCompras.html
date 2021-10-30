@@ -1,65 +1,568 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carritos de Compras</title>
-    <link rel="stylesheet" href={{ url_for('static', filename='css/estiloCarritoDeCompras.css') }}>
-    <link rel="stylesheet" href={{ url_for('static', filename='css/normalize.min.css') }}>
-    <link rel="stylesheet" href={{ url_for('static', filename='css/icon/fontsAwesome/css/all.css') }}>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de compras</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="static/css/estiloCarritoDecompras.css">
+  <link rel="stylesheet" href={{ url_for('static', filename='css/icon/fontsAwesome/css/all.css') }}>
 </head>
 <body>
-    <header>
-        <div class="barraNaranja">
-            <div class="iz">
-                <a href="/menu"><i class="fas fa-bars"></i> Menu</a>
-            </div>
+  <header class="">
 
-            <div class="de">
-                <a href="/login"><i class="fas fa-user-circle"></i> Ingresar</a>
-                <a href="/listaDeseos"><i class="far fa-heart"></i> Lista de deseos</a>
-                <a href="/carritoDecompras"><i class="fas fa-shopping-cart"></i> Carrito de compras</a>
-            </div>              
-        </div>
+    <div class="barraNaranja" style="border-bottom: solid;">
+            
+      <div class="iz">
+          <a href="/home2"><i class="fas fa-bars"></i> DONUTS</a>
+      </div>
 
-        <div class="barraBlanca">
-            <h1><span>Carrito de compras</span> <i class="fas fa-shopping-cart"></i> </h1>
-        </div>
-    </header>
+      <div class="de">
+          <a href="/perfinlUsuario"><i class="fas fa-user-circle"></i> Mi cuenta</a>
+      </div>
+              
+                
+    </div>
 
-    <section>
-        <div id="fondo">
+    <div>
+      <ul class="nav nav-pills bg-white mb-3 py-3 " id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+              <a class="nav-link " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                  type="button" role="tab" aria-controls="pills-home" aria-selected="true" style="color: black;">Producto Recomedado de la semana</a>
+          </li>
+          <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                  type="button" role="tab" aria-controls="pills-profile" aria-selected="false" style="color: black;">Productos</a>
+          </li>
+          <li class="nav-item" role="presentation">
+              <a class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                  type="button" role="tab" aria-controls="pills-contact" aria-selected="false" style="color: black;">Carrito</a>
+          </li>
+      </ul>
+  </div>
+
+   </header>
+
+   <div class="alert container position-sticky top-0 alert-primary hide " role="alert">
+    Producto añadido al carrito de compras!
+  </div>
+
+  <div class="alert container position-sticky top-0 alert-danger remover" role="alert">
+    Eliminado del carrito de compras!
+  </div>
+
+
+
+
+  <div class="tab-content" id="pills-tabContent">
+
+    <div class="tab-pane fade " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+      
+
+        <div id = "fondo" >
             <div class="general">
-                <div class="producto1">
-                    <a href="">
-                        <img src="static/img/donaOreo.jpg" alt="">
-                        <p>Donut de chocolate relleno de chocolate blanco, cubierta con chocolate negro y ...</p>
-                    </a>
-
-                    <div class="cantidad">
-                        <div class="agregar">
-                            <button>+</button>
-                            <input type="button" value="" size="1">
-                            <button>-</button>
-                        </div>
-                        <button>Eliminar</button>
+                <div class="contenido">
+                    
+                        <img class="imagen" src="static\img\donaOreo.jpg" alt="">
+                    
+    
+                    <div class="descripcion">
+                        <h1 class="titulo"><strong>Donut de chocolate</strong> </h1>
+                        <p>Donut relleno de chocolate blanco, cubierta
+                         con chocolate negro y trozos de galleta Oreo</p>
+                         <p>Nueva Oferta de Productos No promocional OREO:
+                        Donuts Premium con trozos de galleta Oreo por
+                        $4000, Iced Dunkalatte (16 Oz) con trozos de
+                        galleta Oreo por $6.000 y Dunkaccino (10 Oz) por 
+                        $6.000, precios con impuestos incluidos...</p>
+                        <h2 class="precioProducto"> $ 4000 </h2>
+    
                     </div>
-
-                    <h1>$4000</h1>     
+                </div>
+                
+                <div class="contenido2">
+                    <div class="lizquierdo">
+                        <h1><strong>Comentarios</strong></h1>
+                        <form method="POST" action="/comentario">
+                          <input type="text" size="35" id="comentarios" name="comentarios" placeholder="Ingrese un comentario"></input>
+                          <button id="publib" type="submit"  class="btn btn-success">Publicar</button>
+                      </form>
+                    </div>
+        
+                    <div class="lderecho">
+                      <form action="/compraDESCRIPCION_DEL_PRODUCTO" method="POST">
+                          <button class="btn btn-success comprarCarrito" type="submit" id="compraBoton">Comprar</button>
+                      </form>        
+                  </div>
                 </div>
 
-                <button id="bpagar"><h1>Pagar</h1></button>
+
+                
+            </div>    
+        </div>           
+    
+
+
+
+    </div>
+
+    <div class="tab-pane fade show active container" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+      <h2 class="h4 m4" style="color: orange;">PRODUCTOS</h2>
+      <div class="row row-cols-sm-1 row row-cols-md-2 row row-cols-lg-3 row row-cols-sxl-4">
+        <div class="col d-Flex justify-content-center mb-4">
+          <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center ">TORTA DE CHOCOLATE</h5>
+            <a href="/descripcionProducto/TORTA_DE_CHOCOLATE"><img src="./static/img/MENU/TORTAS/pexels-abhinav-goswami-291528.jpg" class="card-img-top" alt="..."></a>
+            
+            <div class="card-body ">
+              
+              <p class="card-text text-dark-50 description">Torta de Chocolate con dos capas
+                de torta de Vainilla.</p>
+              <h5 class="precio"> Precio <span class="Precio"> $ 5000</span></h5>
+              <div class="d-grid gap-2"  >
+                <button class="btn  button">Añadir al Carrito de Compras</button>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="col d-Flex justify-content-center mb-4">
+        <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center ">TORTA DE VAINILLA</h5>
+            <a href="/descripcionProducto/TORTA_DE_VAINILLA"><img src="./static/img/MENU/TORTAS/pexels-dmitry-zvolskiy-1721934.jpg" class="card-img-top" alt="..."></a>
+            
+            <div class="card-body ">
+              
+              <p class="card-text text-dark-50 description">Torta de vainilla en cuatro capas</p>
+              <h5 class="precio"> Precio <span class="Precio"> $ 6500</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn button">Añadir a Carrito de Compras</button>
+              </div>
+              
+              
+            </div>
+          </div>
+    </div>
+
+    <div class="col d-Flex justify-content-center mb-4">
+        <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center">TORTA ESPECIAL</h5>
+            <a href="/descripcionProducto/TORTA_ESPECIAL"><img src="./static/img/MENU/TORTAS/pexels-pixabay-265801.jpg" class="card-img-top" alt="..."></a>
+            
+            <div class="card-body ">
+              
+              <p class="card-text text-dark-50 description">Torta de San Valentine para 15 personas</p>
+              <h5 class="precio"> Precio <span class="Precio"> $ 30000</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn button">Añadir a Carrito de Compras</button>
+              </div>
+              
+              
+            </div>
+          </div>
+    </div>
+
+    <div class="col d-Flex justify-content-center mb-4">
+        <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center">PIE DE MARACUYA</h5>
+            <a href="/descripcionProducto/PIE_DE_MARACUYA">
+            <img src="./static/img/MENU/TORTAS/pexels-solodsha-7664402.jpg" class="card-img-top" alt="..."></a>
+            
+            <div class="card-body ">
+              
+              <p class="card-text text-dark-50 description">Delicioso Pie de Maracuya en salsa de maracuya</p>
+              <h5 class="precio"> Precio <span class="Precio"> $ 3500</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn button">Añadir a Carrito de Compras</button>
+              </div>
+              
+              
+            </div>
+          </div>
+    </div>
+
+
+    <div class="col d-Flex justify-content-center mb-4">
+        <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center ">PAN FRANCES</h5>
+            <a href="/descripcionProducto/PAN_FRANCES">
+              <img src="./static/img/MENU/PANADERIA/pexels-ivan-j-long-1387070.jpg" class="card-img-top" alt="...">
+            </a>
+            
+            <div class="card-body ">
+              
+              <p class="card-text text-dark-50 description">Pan frances relleno de queso</p>
+              <h5 class="precio"> Precio <span class="Precio"> $ 2500</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn button">Añadir a Carrito de Compras</button>
+              </div>
+              
+              
+            </div>
+          </div>
+    </div>
+
+    <div class="col d-Flex justify-content-center mb-4">
+        <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center">PAN ARTESANAL</h5>
+            <a href="/descripcionProducto/PAN_ARTESANAL">
+              <img src="./static/img/MENU/PANADERIA/pexels-marta-dzedyshko-7175448.jpg" class="card-img-top" alt="...">
+            </a>
+            
+            <div class="card-body ">
+              
+              <p class="card-text text-dark-50 description">Delicioso pan artesanal con unvas pasas</p>
+              <h5 class="precio"> Precio <span class="Precio"> $ 3000</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn button">Añadir a Carrito de Compras</button>
+              </div>
+              
+              
+            </div>
+          </div>
+    </div>
+
+    <div class="col d-Flex justify-content-center mb-4">
+      <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+          <h5 class="card-title pt-2 text-center">PONQUESITOS</h5>
+          <a href="/descripcionProducto/PONQUESITOS">
+            <img src="./static/img/MENU/REPOSTERIA/pexels-david-jakab-959079.jpg" class="card-img-top" alt="...">
+          </a>
+          
+          <div class="card-body ">
+            
+            <p class="card-text text-dark-50 description">Delicioso ponquesitos</p>
+            <h5 class="precio"> Precio <span class="Precio"> $ 2500</span></h5>
+            <div class="d-grid gap-2">
+              <button class="btn button">Añadir a Carrito de Compras</button>
+            </div>
+            
+            
+          </div>
+        </div>
+  </div>
+
+
+    <div class="col d-Flex justify-content-center mb-4">
+        <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center">MACARRONS</h5>
+            <a href="/descripcionProducto/MACARRONS">
+              <img src="./static/img/MENU/REPOSTERIA/pexels-valeria-boltneva-7474290.jpg" class="card-img-top" alt="...">
+            </a>
+            
+            <div class="card-body ">
+              
+              <p class="card-text text-dark-50 description">Deliciosos macarrons sabor a fresoa, chocolate y vanilla</p>
+              <h5 class="precio"> Precio <span class="Precio"> $ 2500</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn button">Añadir a Carrito de Compras</button>
+              </div>
+             
+              
+            </div>
+          </div>
+    </div>
+
+    <div class="col d-Flex justify-content-center mb-4">
+        <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center">PANQUEQUES</h5>
+            <a href="/descripcionProducto/PANQUEQUES">
+              <img src="./static/img/MENU/REPOSTERIA/pexels-vlada-karpovich-6947293.jpg" class="card-img-top" alt="...">
+            </a>
+            
+            <div class="card-body ">
+              
+              <p class="card-text text-dark-50 description">Deliciosos panqueque con fresa y salsa de chocolate</p>
+              <h5 class="precio"> Precio <span class="Precio"> $ 5000</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn button">Añadir a Carrito de Compras</button>
+              </div>
+              
+              
+            </div>
+          </div>
+    </div>
+
+    <div class="col d-Flex justify-content-center mb-4">
+        <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center">DONAS RELLENAS</h5>
+            <a href="/descripcionProducto/DONAS_RELLENAS">
+              <img src="./static/img/MENU/DONUTS/pexels-adam-kontor-420308.jpg" class="card-img-top" alt="...">
+            </a>
+            
+            <div class="card-body ">
+              
+              <p class="card-text text-dark-50 description">Deliciosas Donas Rellenas de salsa de vainilla, 
+                mora, fresa, entre otros.</p>
+              <h5 class="precio"> Precio <span class="Precio"> $ 4000</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn button">Añadir a Carrito de Compras</button>
+              </div>
+              
+              
+            </div>
+          </div>
+    </div>
+
+    <div class="col d-Flex justify-content-center mb-4">
+        <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center">DONA DE CHOCOLATE</h5>
+            <a href="/descripcionProducto/DONA_DE_CHOCOLATE">
+              <img src="./static/img/MENU/DONUTS/pexels-nishant-aneja-2955820.jpg" class="card-img-top" alt="...">
+            </a>
+            
+            <div class="card-body ">
+              
+              <p class="card-text text-dark-50 description">Deliciosa Dona de Cocolate</p>
+              <h5 class="precio"> Precio <span class="Precio"> $ 4500</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn button">Añadir a Carrito de Compras</button>
+              </div>
+              
+              
+            </div>
+          </div>
+    </div>
+
+    <div class="col d-Flex justify-content-center mb-4">
+      <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+          <h5 class="card-title pt-2 text-center">MOFFIN DE CHOCOLATE</h5>
+          <a href="/descripcionProducto/MOFFIN_DE_CHOCOLATE">
+            <img src="./static/img/MENU/REPOSTERIA/pexels-drake-nicolls-9291128.jpg" class="card-img-top" alt="...">
+          </a>
+          
+          <div class="card-body ">
+            
+            <p class="card-text text-dark-50 description">Deliciosos muffins relleno de chocolate</p>
+            <h5 class="precio"> Precio <span class="Precio"> $ 2500</span></h5>
+            <div class="d-grid gap-2">
+              <button class="btn button">Añadir a Carrito de Compras</button>
+            </div>
+           
+            
+          </div>
+        </div>
+  </div>
+
+    <div class="col d-Flex justify-content-center mb-4">
+        <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center">LIMONADA NATURAL</h5>
+            <a href="/descripcionProducto/LIMONADA_NATURAL">
+              <img src="./static/img/MENU/BEBIDAS_FRIAS/pexels-geraud-pfeiffer-6542749.jpg" class="card-img-top" alt="...">
+            </a>
+            
+            <div class="card-body ">
+              
+              <p class="card-text text-dark-50 description">Deliciosa limonada natural con hielo</p>
+              <h5 class="precio"> Precio <span class="Precio"> $ 2500</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn button">Añadir a Carrito de Compras</button>
+              </div>
+             
+              
+            </div>
+          </div>
+    </div>
+
+    <div class="col d-Flex justify-content-center mb-4">
+        <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center">JUGOS EN AGUA</h5>
+            <a href="/descripcionProducto/JUGOS_EN_AGUA">
+              <img src="./static/img/MENU/BEBIDAS_FRIAS/pexels-kindel-media-8181548.jpg" class="card-img-top" alt="...">
+            </a>
+            
+            <div class="card-body ">
+              
+              <p class="card-text text-dark-50 description">Deliciosos jugos de mora, 
+                lulo, naranja y guanabana en agua con leche</p>
+              <h5 class="precio"> Precio <span class="Precio"> $ 3500</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn button">Añadir a Carrito de Compras</button>
+              </div>
+              
+              
+            </div>
+          </div>
+    </div>
+
+    <div class="col d-Flex justify-content-center mb-4">
+        <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center">ICE COFFEE</h5>
+            <a href="/descripcionProducto/ICE_COFFEE">
+              <img src="./static/img/MENU/BEBIDAS_FRIAS/pexels-maksim-goncharenok-4422873.jpg" class="card-img-top" alt="...">
+            </a>
+            
+            <div class="card-body ">
+              
+              <p class="card-text text-dark-50 description">Delicioso y refrescante café con hieloe</p>
+              <h5 class="precio"> Precio <span class="Precio"> $ 3000</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn button">Añadir a Carrito de Compras</button>
+              </div>
+              
+              
+            </div>
+          </div>
+    </div>
+
+    <div class="col d-Flex justify-content-center mb-4">
+        <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center">MALTEADA</h5>
+            <a href="/descripcionProducto/MALTEADA">
+              <img src="./static/img/MENU/BEBIDAS_FRIAS/pexels-rodnae-productions-6413700.jpg" class="card-img-top" alt="...">
+            </a>
+            
+            <div class="card-body ">
+              
+              <p class="card-text text-dark-50 description">Deliciosa malteada con helado y chispas de chocolate</p>
+              <h5 class="precio"> Precio <span class="Precio"> $ 3500</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn button">Añadir a Carrito de Compras</button>
+              </div>
+              
+              
+            </div>
+          </div>
+    </div>
+
+    <div class="col d-Flex justify-content-center mb-4">
+        <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center">CAFE EN LECHE</h5>
+            <a href="/descripcionProducto/CAFE_EN_LECHE">
+              <img src="./static/img/MENU/BEBIDAS_CALIENTES/pexels-charlotte-may-5946623.jpg" class="card-img-top" alt="...">
+            </a>
+            
+            <div class="card-body ">
+              
+              <p class="card-text text-dark-50 description">Delicioso Cafe con Leche y Canela</p>
+              <h5 class="precio"> Precio <span class="Precio"> $ 3500</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn button">Añadir a Carrito de Compras</button>
+              </div>
+             
+              
+            </div>
+          </div>
+    </div>
+
+    <div class="col d-Flex justify-content-center mb-4">
+        <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center">TÉ DE MANZANILLA</h5>
+            <a href="/descripcionProducto/TE_DE_MANZANILLA">
+              <img src="./static/img/MENU/BEBIDAS_CALIENTES/pexels-olia-danilevich-576018.jpg" class="card-img-top" alt="...">
+            </a>
+            
+            <div class="card-body ">
+              
+              <p class="card-text text-dark-50 description">Deliciioso te de Manzanilla</p>
+              <h5 class="precio"> Precio <span class="Precio"> $ 2500</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn button">Añadir a Carrito de Compras</button>
+              </div>
+              
+              
+            </div>
+          </div>
+    </div>
+
+
+    <div class="col d-Flex justify-content-center mb-4">
+      <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+          <h5 class="card-title pt-2 text-center">AROMATICA</h5>
+          <a href="/descripcionProducto/AROMATICA">
+            <img src="./static/img/MENU/BEBIDAS_CALIENTES/pexels-olia-danilevich-5760189.jpg" class="card-img-top" alt="...">
+          </a>
+          
+          <div class="card-body ">
+            
+            <p class="card-text text-dark-50 description">Deliciosa aromtica de frutas</p>
+            <h5 class="precio"> Precio <span class="Precio"> $ 2000</span></h5>
+            <div class="d-grid gap-2">
+              <button class="btn button">Añadir a Carrito de Compras</button>
+            </div>
+            
+            
+          </div>
+        </div>
+  </div>              
+
+
+    <div class="col d-Flex justify-content-center mb-4">
+        <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center">CHOCOLATE CALIENTE</h5>
+            <a href="/descripcionProducto/CHOCOLATE_CALIENTE">
+              <img src="./static/img/MENU/BEBIDAS_CALIENTES/pexels-olia-danilevich-5760199.jpg" class="card-img-top" alt="...">
+            </a>
+            
+            <div class="card-body ">
+              
+              <p class="card-text text-dark-50 description">Delicioso Chocolate caliente con malvaviscos</p>
+              <h5 class="precio"> Precio <span class="Precio"> $ 3500</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn  button">Añadir a Carrito de Compras</button>
+              </div>
+             
+              
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+      <br>
+      <table class="table text-dark-50 table-striped">
+          <thead>
+            <tr class="">
+              <th scope="col">#</th>
+              <th scope="col">Productos</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody class="tboby">
+            
+          </tbody>
+        </table>
+        <br><br>
+        <div class="row mx-4">
+            <div class="col">
+                <h3 class="itemCarTotal text-dark-50">Total:0</h3>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <button class="btn btn-success comprarCarrito" onclick="mipago()">Comprar</button>
             </div>
         </div>
-    </section>
+  </div>
+      
+      
+    </div>
 
-    <footer>
+  </div>
 
-    </footer>
 
-    <footer>
-        <p><span>Grupo 17 equipo 4 Univesidad del norte</span></p>
-    </footer> 
+  <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+        <script src="static/js/carritoDeCompras.js"></script>
 </body>
 </html>
