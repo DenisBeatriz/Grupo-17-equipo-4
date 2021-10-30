@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedidos Admin</title>
+    <link rel="icon" type="image/png" href="../static/img/icon.png">
     <link rel="stylesheet" href={{ url_for('static', filename='css/estiloPagosAdmin.css') }}>
     <link rel="stylesheet" href={{ url_for('static', filename='css/normalize.min.css') }}>
     <link rel="stylesheet" href={{ url_for('static', filename='css/icon/fontsAwesome/css/all.css') }}>
@@ -23,23 +24,6 @@
             </a>
             
         </div>
-
-        <div class="blanca1">
-            <label for="numeroPedido">N°Pedido</label>
-            <input type="text">
-            <div class="lupa">
-                <button>
-                    <i class="fas fa-search"></i> Buscar
-                </button>
-            </div>
-            
-            <button class="exp">Exportar pedido</button>
-        </div>
-
-        <div class="blanca2">
-            <input type="date" name="inicio" id="finicio">
-            <input type="date" name="fin" id="ffin">
-        </div>
     </header>
     <section >
         <table>
@@ -47,21 +31,33 @@
                 <tr>
                     <td>FECHA</td>
                     <td>ID PEDIDO</td>
+                    <td>CEDULA USUARIO</td>
                     <td>PRODUCTO</td>
-                    <td>PAGO ELECTRONICO</td>
-                    <td>VALOR TOTAL</td>
+                    <td>TOTAL PAGO</td>
                     <td>VALOR CANCELADO</td>
                     <td>ESTADO</td>
                 </tr>
             </thead>
             <tbody>
-                
+                {% for pago in pagos%}
+                <tr>
+                    <td>{{ pago.0 }}</td>
+                    <td>{{ pago.1 }}</td>
+                    <td>{{ pago.2 }}</td>
+                    <td>{{ pago.3 }}</td>
+                    <td>{{ pago.4 }}</td>
+                    <td>{{ pago.5 }}</td>
+                    <td>{{ pago.6 }}</td>
+                </tr>
+                {%endfor%}
             </tbody>
         </table>
         
     </section>
     <footer>
-        <p><span>Grupo 17 equipo 4 Univesidad del norte</span></p>
-    </footer>    
+        <div class="footer">
+            <p>Grupo 17 Equipo 4 - Universidad del Norte</p>
+        </div>
+    </footer>   
 </body>
 </html>

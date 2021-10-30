@@ -104,10 +104,17 @@ section #fondo {
 	position: relative
 }
 
-
-
 footer{
     text-align: center;
     background: #ff581a;
     padding: 10px 0px 10px 0px;
+}
+table{
+    margin-top: 5px;
+    
+    margin-bottom: 5px;
+    text-align: left;
+}
+th, td{
+    border: solid 1px black;
 }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Perfil Usuario</title>
+        <link rel="icon" type="image/png" href="../static/img/icon.png">
+        <link rel="stylesheet" href="/static/css/style_desbloquear.css">
+    </head>
+    <body id="cuerpo">
+
+        <!--Parte Superior-->
+        <header id="encabezado">
+            <div id="DIV_CUENTA">
+                <h1 id="T_mi_cuenta">DESBLOQUEAR USUARIO</h1>
+            </div>
+            <br>
+            <br>
+            
+        </header>
+    {% with mensajes= get_flashed_messages() %}
+    {% if mensajes %}
+    {% for mensaje in mensajes %}
+        <p>{{ mensaje }}</p>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+ 
+        <!--Creacion Formato para visualizar y para editar la informacion del Usuario-->
+        <form action="/cambios_desbloq" id="cuerpo" method="POST">
+            <div id="parte1">
+                <label for="Nombre">
+                    <span>Nombre:</span>
+                    <input type="text" id="Nombre" placeholder="Pepito" name="Nombre" autocomplete="name" required>
+                </label>
+                <br>
+                <br>
+                <label for="Cedula">
+                    <span>Cedula:</span>
+                    <input type="text" id="Cedula12" placeholder="000058126" name="Cedula12">
+                </label>
+                <br>
+                <br>
+                <label for="contraseña">
+                    <span>Contraseña</span>
+                    <input type="password" id="contraseña1" name="contraseña1">
+                </label>
+                <br><br>
+            </div>
+            
+            <div id="parte2">
+                <label for="Email">
+                    <span>Email:</span>
+                    <input type="email" id="Email" placeholder="rperez844284611@prueba.com" name="Email" autocomplete="email" required>
+                </label>
+                <br>
+                <br>
+                <label for="confirm_contraseña">
+                    <span>Confirmar Contraseña</span>
+                    <input type="password" id="confirm_contraseña1" name="confirm_contraseña1">
+                </label>
+            </div>  
+            <br><br>
+            <div style="margin:0 auto; width: 55%; float: right;" >
+                <button type="button" onclick="verificar_datos_deblo()" id="Boton_guardar_cambios">Verificar Informacion</button><!--Poner la relacion con la base de datos-->
+            </div>
+            <script src="/static/js/desbloqueo.js"></script>
+            <button type="submit">Guardar cambios</button>
+        </form>
+        <br>
+        
+        <br>
+        <!--Parte Inferior-->
+        <br>
+        <footer>
+            <div class="footer">
+                <p>Grupo 17 Equipo 4 - Universidad del Norte</p>
+            </div>
+        </footer>
+    </body>
+</html>

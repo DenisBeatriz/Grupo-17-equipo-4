@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Perfil Usuario</title>
+        
         <link rel="stylesheet" href="/static/css/style_super_admin.css">
+       
     </head>
     <body id="cuerpo">
 
@@ -18,19 +20,28 @@
             
         </header>
 
-                
+        {% with mensajes= get_flashed_messages() %}
+        {% if mensajes %}
+        {% for mensaje in mensajes %}
+            <p>{{ mensaje }}</p>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        
+        
+
         <!--Creacion Formato para visualizar y para editar la informacion del Usuario-->
-        <form action="" id="cuerpo">
+        
+        <form action="/cambios_super" id="cuerpo" method="POST">
             <div id="columna1">
-                <label for="Nombre">
-                    <span>Nombre:</span>
+                <label for="Nombre">Nombre:
                     <input type="text" id="Nombre" placeholder="Pepito" name="Nombre" autocomplete="name" required>
                 </label>
                 <br>
                 <br>
                 <label for="Cedula">
                     <span>Cedula:</span>
-                    <input type="number" id="Cedula" placeholder="000058126" name="Cedula" required>
+                    <input type="text" id="Cedula" placeholder="000058126" name="Cedula" required>
                 </label>
 
                 <label for="Email">
@@ -66,13 +77,13 @@
                 <br>
                 <label for="celular">
                     <span>Celular:</span>
-                    <input type="number" id="celular" placeholder="000058916" name="celular" required>
+                    <input type="text" id="celular" placeholder="000058916" name="celular" required>
                 </label>
                 <br>
                 <br>
                 <label for="especificaciones">
                     <span>Especificaciones</span>
-                    <input type="text" id="especificaciones" placeholder="Casa de color magenta, con puertas blancas" name="Especificaciones" size="50px" required>
+                    <input type="text" id="Especificaciones" placeholder="Casa de color magenta, con puertas blancas" name="Especificaciones" size="50px" required>
                 </label>
                 <br>
                 <br>
@@ -80,26 +91,39 @@
                     <span>Confirmar Contraseña</span>
                     <input type="password" id="confirm_contraseña" name="confirm_contraseña">
                 </label>
-            </div>  
+            </div>
+            <button type="button" onclick="super_admin()">Verificar</button>
+            <div style="margin:0 auto; width: 55%; float: right;" >
+                <button type="submit" id="Boton_guardar_cambios">Guardar Información</button>
+            </div>
+            <script src="/static/js/super_admin.js"></script>
         </form>
         <br>
         <br>
         <!--Parte Inferior-->
-        <div style="margin:0 auto; width: 55%; float: right;" >
-            <button id="Boton_guardar_cambios">Guardar Información</button><!--Poner la relacion con la base de datos-->
-        </div>
+        
+        
         <footer id="PARTE_INFERIOR">
-            <nav id="creditos">
-                <p id="creditos_footer">Grupo 17 Equipo 4 Universdiad del Norte</p>
-            </nav>
-            <div id="eliminar_admin">
-                <h1>Eliminar Administrador</h1>
-                <label for="cedula">
-                    <span>Cedula:</span>
-                    <input type="number" id="cedular" placeholder="000058916" name="cedula" required>
-                </label>
-                <button id="eliminar">Eliminar</button>
-                <button id="desbloquear">Desbloquear</button>
+            <form action="/eliminar_admin" method="POST">
+                <div id="eliminar_admin">
+                    <h1>Eliminar Administrador</h1>
+                    <label for="cedula">
+                        <span>Cedula:</span>
+                        <input type="text" id="cedula_admin" placeholder="000058916" name="cedula_admin" required>
+                    </label>
+                    <button type="submit" id="eliminar">Eliminar</button>
+            </form>
+            <div class="footer">
+                <p>Grupo 17 Equipo 4 - Universidad del Norte</p>
+            </div>
+        <section>
+            <button>
+                <a href="/admin">VISTA ADMINISTRADOR</a>
+            </button>
+            <button>
+                <a href="/home2">VISTA USUARIO</a>
+            </button>
+        </section>
         </footer>
     </body>
 </html>

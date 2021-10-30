@@ -103,7 +103,16 @@ section .barra #c{
     padding-left: 300px;
 }
 
-
+table{
+    margin-top: 5px;
+    background-color: white;
+    margin-bottom: 5px;
+    text-align: left;
+    color: black;
+}
+th, td{
+    border: solid 1px black;
+}
 
 footer{
     text-align: center;

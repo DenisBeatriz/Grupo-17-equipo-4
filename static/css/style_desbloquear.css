@@ -1,0 +1,30 @@
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+input{
+    border-color: white;
+    border-radius: 15px;
+    border-width: 3px;
+    background-color: #F6DDCC;
+}
+button{
+    border-radius: 25px;
+    background-color: white;
+    border-color: #E59866 ;
+}
+footer{
+    text-align: center;
+    background: #ff581a;
+    padding: 10px 0px 10px 0px;
+    color: white;
+}
+body{
+    font-family:'Oswald', sans-serif; ;
+}
+#DIV_CUENTA{
+    background: #ff581a;
+    overflow: hidden;
+    display: block;
+    padding: 9px 0px 9px 0px;
+    color: white;
+}
