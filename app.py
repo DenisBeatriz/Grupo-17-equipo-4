@@ -25,7 +25,7 @@ def comentario():
     print(comentario)
     print(fecha)
     print(cedula)
-    return ("exito")
+    return render_template('home2.html')
 
 
 
@@ -81,7 +81,7 @@ def compraCAFEENLECHE():
     conexion.commit()
     conexion.close()
     print(email)
-    return ("exito2")
+    return render_template('CarritoDeCompras.html')
 
 
 @app.route("/compraCHOCOLATE_CALIENTE", methods=["POST"])
@@ -109,7 +109,7 @@ def compraCHOCOLATE_CALIENTE():
     conexion.commit()
     conexion.close()
     print(email)
-    return ("exito2")
+    return render_template('CarritoDeCompras.html')
 
 
 @app.route("/compraTORTA_DE_CHOCOLATE", methods=["POST"])
@@ -164,7 +164,7 @@ def compraTORTA_VAINILLA():
     conexion.commit()
     conexion.close()
     print(email)
-    return ("exito2")
+    return render_template('CarritoDeCompras.html')
 
 
 @app.route("/compraTORTA_ESPECIAL", methods=["POST"])
@@ -192,7 +192,422 @@ def compraTORTA_ESPECIAL():
     conexion.commit()
     conexion.close()
     print(email)
-    return ("exito2")
+    return render_template('CarritoDeCompras.html')
+
+@app.route("/compraDONA_DE_CHOCOLATE", methods=["POST"])
+def compraDONA_DE_CHCOLATE():
+    fecha = "20/10/2021"
+    cedula = random.randint(0,9999999999999999999999)
+    producto = "DONA DE CHOCOLATE"
+    precio = 4500
+    number_of_strings = 5
+    length_of_string = 25
+    for x in range(number_of_strings):
+        abc=''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
+
+
+
+    dominio=random.choice(["email", "gmail", "hotmail","Outlook","uninorte"])
+    dominio1=random.choice([".com", ".es", ".co",".or"])
+    email = abc+"@"+dominio+dominio1
+
+    conexion= db.conexion_base()
+    strsql= "INSERT INTO VENTAS (FECHA, CEDULA_USER, PRODUCTO, PRECIO, EMAIL) VALUES ('{}',{},'{}',{},'{}')".format(fecha, cedula, producto, precio, email)
+    
+    cursorObj= conexion.cursor()
+    cursorObj.execute(strsql)
+    conexion.commit()
+    conexion.close()
+    print(email)
+    return render_template('CarritoDeCompras.html')
+
+@app.route("/compraDONAS_RELLENAS", methods=["POST"])
+def compraDONAS_RELLENAS():
+    fecha = "20/10/2021"
+    cedula = random.randint(0,9999999999999999999999)
+    producto = "DONAS RELLENAS"
+    precio = 4000
+    number_of_strings = 5
+    length_of_string = 25
+    for x in range(number_of_strings):
+        abc=''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
+
+
+
+    dominio=random.choice(["email", "gmail", "hotmail","Outlook","uninorte"])
+    dominio1=random.choice([".com", ".es", ".co",".or"])
+    email = abc+"@"+dominio+dominio1
+
+    conexion= db.conexion_base()
+    strsql= "INSERT INTO VENTAS (FECHA, CEDULA_USER, PRODUCTO, PRECIO, EMAIL) VALUES ('{}',{},'{}',{},'{}')".format(fecha, cedula, producto, precio, email)
+    
+    cursorObj= conexion.cursor()
+    cursorObj.execute(strsql)
+    conexion.commit()
+    conexion.close()
+    print(email)
+    return render_template('CarritoDeCompras.html')
+
+
+@app.route("/compraICE_COFFE", methods=["POST"])
+def compra_ICE_COFFE():
+    fecha = "20/10/2021"
+    cedula = random.randint(0,9999999999999999999999)
+    producto = "ICE COFFE"
+    precio = 3000
+    number_of_strings = 5
+    length_of_string = 25
+    for x in range(number_of_strings):
+        abc=''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
+
+
+
+    dominio=random.choice(["email", "gmail", "hotmail","Outlook","uninorte"])
+    dominio1=random.choice([".com", ".es", ".co",".or"])
+    email = abc+"@"+dominio+dominio1
+
+    conexion= db.conexion_base()
+    strsql= "INSERT INTO VENTAS (FECHA, CEDULA_USER, PRODUCTO, PRECIO, EMAIL) VALUES ('{}',{},'{}',{},'{}')".format(fecha, cedula, producto, precio, email)
+    
+    cursorObj= conexion.cursor()
+    cursorObj.execute(strsql)
+    conexion.commit()
+    conexion.close()
+    print(email)
+    return render_template('CarritoDeCompras.html')
+
+
+@app.route("/compraJUGOS_EN_AGUA", methods=["POST"])
+def compra_JUGOS_EN_AGUA():
+    fecha = "20/10/2021"
+    cedula = random.randint(0,9999999999999999999999)
+    producto = "JUGOS EN AGUA"
+    precio = 3500
+    number_of_strings = 5
+    length_of_string = 25
+    for x in range(number_of_strings):
+        abc=''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
+
+
+
+    dominio=random.choice(["email", "gmail", "hotmail","Outlook","uninorte"])
+    dominio1=random.choice([".com", ".es", ".co",".or"])
+    email = abc+"@"+dominio+dominio1
+
+    conexion= db.conexion_base()
+    strsql= "INSERT INTO VENTAS (FECHA, CEDULA_USER, PRODUCTO, PRECIO, EMAIL) VALUES ('{}',{},'{}',{},'{}')".format(fecha, cedula, producto, precio, email)
+    
+    cursorObj= conexion.cursor()
+    cursorObj.execute(strsql)
+    conexion.commit()
+    conexion.close()
+    print(email)
+    return render_template('CarritoDeCompras.html')
+
+
+@app.route("/compraLIMONDA_NATURAL", methods=["POST"])
+def compra_LIMONDA_NATURAL():
+    fecha = "20/10/2021"
+    cedula = random.randint(0,9999999999999999999999)
+    producto = "LIMONDA NATURAL"
+    precio = 3500
+    number_of_strings = 5
+    length_of_string = 25
+    for x in range(number_of_strings):
+        abc=''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
+
+
+
+    dominio=random.choice(["email", "gmail", "hotmail","Outlook","uninorte"])
+    dominio1=random.choice([".com", ".es", ".co",".or"])
+    email = abc+"@"+dominio+dominio1
+
+    conexion= db.conexion_base()
+    strsql= "INSERT INTO VENTAS (FECHA, CEDULA_USER, PRODUCTO, PRECIO, EMAIL) VALUES ('{}',{},'{}',{},'{}')".format(fecha, cedula, producto, precio, email)
+    
+    cursorObj= conexion.cursor()
+    cursorObj.execute(strsql)
+    conexion.commit()
+    conexion.close()
+    print(email)
+    return render_template('CarritoDeCompras.html')
+
+@app.route("/compraMACARRONS", methods=["POST"])
+def compra_MACARRONS():
+    fecha = "20/10/2021"
+    cedula = random.randint(0,9999999999999999999999)
+    producto = "MACARRONS"
+    precio = 2500
+    number_of_strings = 5
+    length_of_string = 25
+    for x in range(number_of_strings):
+        abc=''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
+
+
+
+    dominio=random.choice(["email", "gmail", "hotmail","Outlook","uninorte"])
+    dominio1=random.choice([".com", ".es", ".co",".or"])
+    email = abc+"@"+dominio+dominio1
+
+    conexion= db.conexion_base()
+    strsql= "INSERT INTO VENTAS (FECHA, CEDULA_USER, PRODUCTO, PRECIO, EMAIL) VALUES ('{}',{},'{}',{},'{}')".format(fecha, cedula, producto, precio, email)
+    
+    cursorObj= conexion.cursor()
+    cursorObj.execute(strsql)
+    conexion.commit()
+    conexion.close()
+    print(email)
+    return render_template('CarritoDeCompras.html')
+
+@app.route("/compraMALTEADA", methods=["POST"])
+def compra_MALTEADA():
+    fecha = "20/10/2021"
+    cedula = random.randint(0,9999999999999999999999)
+    producto = "MALTEADA"
+    precio = 5500
+    number_of_strings = 5
+    length_of_string = 25
+    for x in range(number_of_strings):
+        abc=''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
+
+
+
+    dominio=random.choice(["email", "gmail", "hotmail","Outlook","uninorte"])
+    dominio1=random.choice([".com", ".es", ".co",".or"])
+    email = abc+"@"+dominio+dominio1
+
+    conexion= db.conexion_base()
+    strsql= "INSERT INTO VENTAS (FECHA, CEDULA_USER, PRODUCTO, PRECIO, EMAIL) VALUES ('{}',{},'{}',{},'{}')".format(fecha, cedula, producto, precio, email)
+    
+    cursorObj= conexion.cursor()
+    cursorObj.execute(strsql)
+    conexion.commit()
+    conexion.close()
+    print(email)
+    return render_template('CarritoDeCompras.html')
+
+@app.route("/compraMOFFIN_DE_CHOCOLATE", methods=["POST"])
+def compra_MOFFIN_DE_CHOCOLATE():
+    fecha = "20/10/2021"
+    cedula = random.randint(0,9999999999999999999999)
+    producto = "MOFFIN DE CHOCOLATE"
+    precio = 2500
+    number_of_strings = 5
+    length_of_string = 25
+    for x in range(number_of_strings):
+        abc=''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
+
+
+
+    dominio=random.choice(["email", "gmail", "hotmail","Outlook","uninorte"])
+    dominio1=random.choice([".com", ".es", ".co",".or"])
+    email = abc+"@"+dominio+dominio1
+
+    conexion= db.conexion_base()
+    strsql= "INSERT INTO VENTAS (FECHA, CEDULA_USER, PRODUCTO, PRECIO, EMAIL) VALUES ('{}',{},'{}',{},'{}')".format(fecha, cedula, producto, precio, email)
+    
+    cursorObj= conexion.cursor()
+    cursorObj.execute(strsql)
+    conexion.commit()
+    conexion.close()
+    print(email)
+    return render_template('CarritoDeCompras.html')
+
+
+@app.route("/compraPAN_ARTESANAL", methods=["POST"])
+def compra_PAN_ARTESANAL():
+    fecha = "20/10/2021"
+    cedula = random.randint(0,9999999999999999999999)
+    producto = "PAN ARTESANAL"
+    precio = 3000
+    number_of_strings = 5
+    length_of_string = 25
+    for x in range(number_of_strings):
+        abc=''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
+
+
+
+    dominio=random.choice(["email", "gmail", "hotmail","Outlook","uninorte"])
+    dominio1=random.choice([".com", ".es", ".co",".or"])
+    email = abc+"@"+dominio+dominio1
+
+    conexion= db.conexion_base()
+    strsql= "INSERT INTO VENTAS (FECHA, CEDULA_USER, PRODUCTO, PRECIO, EMAIL) VALUES ('{}',{},'{}',{},'{}')".format(fecha, cedula, producto, precio, email)
+    
+    cursorObj= conexion.cursor()
+    cursorObj.execute(strsql)
+    conexion.commit()
+    conexion.close()
+    print(email)
+    return render_template('CarritoDeCompras.html')
+
+@app.route("/compraPAN_FRANCES", methods=["POST"])
+def compra_PAN_FRANCES():
+    fecha = "20/10/2021"
+    cedula = random.randint(0,9999999999999999999999)
+    producto = "PAN FRANCES"
+    precio = 2500
+    number_of_strings = 5
+    length_of_string = 25
+    for x in range(number_of_strings):
+        abc=''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
+
+
+
+    dominio=random.choice(["email", "gmail", "hotmail","Outlook","uninorte"])
+    dominio1=random.choice([".com", ".es", ".co",".or"])
+    email = abc+"@"+dominio+dominio1
+
+    conexion= db.conexion_base()
+    strsql= "INSERT INTO VENTAS (FECHA, CEDULA_USER, PRODUCTO, PRECIO, EMAIL) VALUES ('{}',{},'{}',{},'{}')".format(fecha, cedula, producto, precio, email)
+    
+    cursorObj= conexion.cursor()
+    cursorObj.execute(strsql)
+    conexion.commit()
+    conexion.close()
+    print(email)
+    return render_template('CarritoDeCompras.html')
+
+
+@app.route("/compraDESCRIPCION_DEL_PRODUCTO", methods=["POST"])
+def compra_compraDESCRIPCION_DEL_PRODUCTO():
+    fecha = "20/10/2021"
+    cedula = random.randint(0,9999999999999999999999)
+    producto = "Donut de chocolate"
+    precio = 4000
+    number_of_strings = 5
+    length_of_string = 25
+    for x in range(number_of_strings):
+        abc=''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
+
+
+
+    dominio=random.choice(["email", "gmail", "hotmail","Outlook","uninorte"])
+    dominio1=random.choice([".com", ".es", ".co",".or"])
+    email = abc+"@"+dominio+dominio1
+
+    conexion= db.conexion_base()
+    strsql= "INSERT INTO VENTAS (FECHA, CEDULA_USER, PRODUCTO, PRECIO, EMAIL) VALUES ('{}',{},'{}',{},'{}')".format(fecha, cedula, producto, precio, email)
+    
+    cursorObj= conexion.cursor()
+    cursorObj.execute(strsql)
+    conexion.commit()
+    conexion.close()
+    print(email)
+    return render_template('CarritoDeCompras.html')
+
+
+@app.route("/compraPANQUEQUES", methods=["POST"])
+def compra_compraPANQUEQUES():
+    fecha = "20/10/2021"
+    cedula = random.randint(0,9999999999999999999999)
+    producto = "PANQUEQUES"
+    precio = 5000
+    number_of_strings = 5
+    length_of_string = 25
+    for x in range(number_of_strings):
+        abc=''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
+
+
+
+    dominio=random.choice(["email", "gmail", "hotmail","Outlook","uninorte"])
+    dominio1=random.choice([".com", ".es", ".co",".or"])
+    email = abc+"@"+dominio+dominio1
+
+    conexion= db.conexion_base()
+    strsql= "INSERT INTO VENTAS (FECHA, CEDULA_USER, PRODUCTO, PRECIO, EMAIL) VALUES ('{}',{},'{}',{},'{}')".format(fecha, cedula, producto, precio, email)
+    
+    cursorObj= conexion.cursor()
+    cursorObj.execute(strsql)
+    conexion.commit()
+    conexion.close()
+    print(email)
+    return render_template('CarritoDeCompras.html')
+
+@app.route("/compraPIE_DE_MARACUYA", methods=["POST"])
+def compra_compraPIE_DE_MARACUYA():
+    fecha = "20/10/2021"
+    cedula = random.randint(0,9999999999999999999999)
+    producto = "PIE DE MARACUYA"
+    precio = 3500
+    number_of_strings = 5
+    length_of_string = 25
+    for x in range(number_of_strings):
+        abc=''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
+
+
+
+    dominio=random.choice(["email", "gmail", "hotmail","Outlook","uninorte"])
+    dominio1=random.choice([".com", ".es", ".co",".or"])
+    email = abc+"@"+dominio+dominio1
+
+    conexion= db.conexion_base()
+    strsql= "INSERT INTO VENTAS (FECHA, CEDULA_USER, PRODUCTO, PRECIO, EMAIL) VALUES ('{}',{},'{}',{},'{}')".format(fecha, cedula, producto, precio, email)
+    
+    cursorObj= conexion.cursor()
+    cursorObj.execute(strsql)
+    conexion.commit()
+    conexion.close()
+    print(email)
+    return render_template('CarritoDeCompras.html')
+
+@app.route("/compraPONQUESITOS", methods=["POST"])
+def compra_compraPONQUESITOS():
+    fecha = "20/10/2021"
+    cedula = random.randint(0,9999999999999999999999)
+    producto = "PONQUESITOS"
+    precio = 2500
+    number_of_strings = 5
+    length_of_string = 25
+    for x in range(number_of_strings):
+        abc=''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
+
+
+
+    dominio=random.choice(["email", "gmail", "hotmail","Outlook","uninorte"])
+    dominio1=random.choice([".com", ".es", ".co",".or"])
+    email = abc+"@"+dominio+dominio1
+
+    conexion= db.conexion_base()
+    strsql= "INSERT INTO VENTAS (FECHA, CEDULA_USER, PRODUCTO, PRECIO, EMAIL) VALUES ('{}',{},'{}',{},'{}')".format(fecha, cedula, producto, precio, email)
+    
+    cursorObj= conexion.cursor()
+    cursorObj.execute(strsql)
+    conexion.commit()
+    conexion.close()
+    print(email)
+    return render_template('CarritoDeCompras.html')
+
+@app.route("/compraTE_DE_MANZANILLA", methods=["POST"])
+def compra_compraTE_DE_MANZANILLA():
+    fecha = "20/10/2021"
+    cedula = random.randint(0,9999999999999999999999)
+    producto = "TE DE MANZANILLA"
+    precio = 2500
+    number_of_strings = 5
+    length_of_string = 25
+    for x in range(number_of_strings):
+        abc=''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
+
+
+
+    dominio=random.choice(["email", "gmail", "hotmail","Outlook","uninorte"])
+    dominio1=random.choice([".com", ".es", ".co",".or"])
+    email = abc+"@"+dominio+dominio1
+
+    conexion= db.conexion_base()
+    strsql= "INSERT INTO VENTAS (FECHA, CEDULA_USER, PRODUCTO, PRECIO, EMAIL) VALUES ('{}',{},'{}',{},'{}')".format(fecha, cedula, producto, precio, email)
+    
+    cursorObj= conexion.cursor()
+    cursorObj.execute(strsql)
+    conexion.commit()
+    conexion.close()
+    print(email)
+    return render_template('CarritoDeCompras.html')
+
+
+
+
 
 
 
@@ -206,9 +621,6 @@ def funcion_home2():
 def funcion_login():
     return render_template('login.html')
 
-@app.route("/menu")
-def funcion_menu():
-    return render_template('menu.html')
 
 @app.route("/perfinlUsuario")
 def funcion_perfil():

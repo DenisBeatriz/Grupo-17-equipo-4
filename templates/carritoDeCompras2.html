@@ -35,7 +35,7 @@
             <ul class="nav nav-pills bg-white mb-3 py-3 " id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <a class="nav-link " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-                        type="button" role="tab" aria-controls="pills-home" aria-selected="true" style="color: black;">Lista de Deseos</a>
+                        type="button" role="tab" aria-controls="pills-home" aria-selected="true" style="color: black;">Producto Recomedado de la semana</a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
@@ -73,8 +73,50 @@
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
               <div class="titulo">
-                <h1>TU LISTA DE DESEOS</h1>
+                <h1>NO LO DEJES DE PROBAR!</h1>
               </div>
+
+              <div id = "fondo" >
+                <div class="general">
+                    <div class="contenido">
+                        
+                            <img class="imagen" src="static\img\donaOreo.jpg" alt="">
+                        
+        
+                        <div class="descripcion">
+                            <h1 class="titulo"><strong>Donut de chocolate</strong> </h1>
+                            <p>Donut relleno de chocolate blanco, cubierta
+                             con chocolate negro y trozos de galleta Oreo</p>
+                             <p>Nueva Oferta de Productos No promocional OREO:
+                            Donuts Premium con trozos de galleta Oreo por
+                            $4000, Iced Dunkalatte (16 Oz) con trozos de
+                            galleta Oreo por $6.000 y Dunkaccino (10 Oz) por 
+                            $6.000, precios con impuestos incluidos...</p>
+                            <h2 class="precioProducto"> $ 4000 </h2>
+        
+                        </div>
+                    </div>
+                    
+                    <div class="contenido2">
+                        <div class="lizquierdo">
+                            <h1><strong>Comentarios</strong></h1>
+                            <form  action="">
+                              <input type="text" size="35" id="comentarios" name="comentarios" placeholder="Ingrese un comentario"></input>
+                              <button id="publib" onclick="alert('Ingrese a su cuenta!')"  class="btn btn-success">Publicar</button>
+                          </form>
+                        </div>
+            
+                        <div class="lderecho">
+                          <form action="" >
+                              <button class="btn btn-success comprarCarrito" onclick="alert('Ingrese a su cuenta!')"  id="compraBoton">Comprar</button>
+                          </form>        
+                      </div>
+                    </div>
+    
+    
+                    
+                </div> 
+              </div> 
         </div>
 <!-- termina lista de deseos -->
 
@@ -86,7 +128,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                         <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                             <h5 class="card-title pt-2 text-center ">TORTA DE CHOCOLATE</h5>
-                            <a href="/descripcionProducto/TORTA_DE_CHOCOLATE"><img src="./static/img/MENU/TORTAS/pexels-abhinav-goswami-291528.jpg" class="card-img-top" alt="..."></a>
+                            <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')"><img src="./static/img/MENU/TORTAS/pexels-abhinav-goswami-291528.jpg" class="card-img-top" alt="..."></a>
                             
                             <div class="card-body ">
                               
@@ -96,9 +138,7 @@
                               <div class="d-grid gap-2"  >
                                 <button class="btn  button">Añadir al Carrito de Compras</button>
                               </div>
-                              <div class="d-grid gap-2">
-                                <button class="btn  listaDeDeseos">Añadir a Lista de Deseos</button>
-                              </div>
+                              
                               
                             </div>
                           </div>
@@ -107,7 +147,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                         <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                             <h5 class="card-title pt-2 text-center ">TORTA DE VAINILLA</h5>
-                            <a href="/descripcionProducto/TORTA_DE_VAINILLA"><img src="./static/img/MENU/TORTAS/pexels-dmitry-zvolskiy-1721934.jpg" class="card-img-top" alt="..."></a>
+                            <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')"><img src="./static/img/MENU/TORTAS/pexels-dmitry-zvolskiy-1721934.jpg" class="card-img-top" alt="..."></a>
                             
                             <div class="card-body ">
                               
@@ -116,9 +156,7 @@
                               <div class="d-grid gap-2">
                                 <button class="btn button">Añadir a Carrito de Compras</button>
                               </div>
-                              <div class="d-grid gap-2">
-                                <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                              </div>
+                              
                               
                             </div>
                           </div>
@@ -127,7 +165,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                         <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                             <h5 class="card-title pt-2 text-center">TORTA ESPECIAL</h5>
-                            <a href="/descripcionProducto/TORTA_ESPECIAL"><img src="./static/img/MENU/TORTAS/pexels-pixabay-265801.jpg" class="card-img-top" alt="..."></a>
+                            <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')"><img src="./static/img/MENU/TORTAS/pexels-pixabay-265801.jpg" class="card-img-top" alt="..."></a>
                             
                             <div class="card-body ">
                               
@@ -136,9 +174,7 @@
                               <div class="d-grid gap-2">
                                 <button class="btn button">Añadir a Carrito de Compras</button>
                               </div>
-                              <div class="d-grid gap-2">
-                                <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                              </div>
+                              
                               
                             </div>
                           </div>
@@ -147,7 +183,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                         <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                             <h5 class="card-title pt-2 text-center">PIE DE MARACUYA</h5>
-                            <a href="/descripcionProducto/PIE_DE_MARACUYA">
+                            <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')">
                             <img src="./static/img/MENU/TORTAS/pexels-solodsha-7664402.jpg" class="card-img-top" alt="..."></a>
                             
                             <div class="card-body ">
@@ -157,9 +193,7 @@
                               <div class="d-grid gap-2">
                                 <button class="btn button">Añadir a Carrito de Compras</button>
                               </div>
-                              <div class="d-grid gap-2">
-                                <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                              </div>
+                              
                               
                             </div>
                           </div>
@@ -169,7 +203,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                         <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                             <h5 class="card-title pt-2 text-center ">PAN FRANCES</h5>
-                            <a href="/descripcionProducto/PAN_FRANCES">
+                            <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')">
                               <img src="./static/img/MENU/PANADERIA/pexels-ivan-j-long-1387070.jpg" class="card-img-top" alt="...">
                             </a>
                             
@@ -180,9 +214,7 @@
                               <div class="d-grid gap-2">
                                 <button class="btn button">Añadir a Carrito de Compras</button>
                               </div>
-                              <div class="d-grid gap-2">
-                                <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                              </div>
+                              
                               
                             </div>
                           </div>
@@ -191,7 +223,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                         <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                             <h5 class="card-title pt-2 text-center">PAN ARTESANAL</h5>
-                            <a href="/descripcionProducto/PAN_ARTESANAL">
+                            <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')">
                               <img src="./static/img/MENU/PANADERIA/pexels-marta-dzedyshko-7175448.jpg" class="card-img-top" alt="...">
                             </a>
                             
@@ -202,9 +234,7 @@
                               <div class="d-grid gap-2">
                                 <button class="btn button">Añadir a Carrito de Compras</button>
                               </div>
-                              <div class="d-grid gap-2">
-                                <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                              </div>
+                              
                               
                             </div>
                           </div>
@@ -213,7 +243,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                       <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                           <h5 class="card-title pt-2 text-center">PONQUESITOS</h5>
-                          <a href="/descripcionProducto/PONQUESITOS">
+                          <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')">
                             <img src="./static/img/MENU/REPOSTERIA/pexels-david-jakab-959079.jpg" class="card-img-top" alt="...">
                           </a>
                           
@@ -224,9 +254,7 @@
                             <div class="d-grid gap-2">
                               <button class="btn button">Añadir a Carrito de Compras</button>
                             </div>
-                            <div class="d-grid gap-2">
-                              <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                            </div>
+                            
                             
                           </div>
                         </div>
@@ -236,7 +264,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                         <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                             <h5 class="card-title pt-2 text-center">MACARRONS</h5>
-                            <a href="/descripcionProducto/MACARRONS">
+                            <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')">
                               <img src="./static/img/MENU/REPOSTERIA/pexels-valeria-boltneva-7474290.jpg" class="card-img-top" alt="...">
                             </a>
                             
@@ -247,9 +275,7 @@
                               <div class="d-grid gap-2">
                                 <button class="btn button">Añadir a Carrito de Compras</button>
                               </div>
-                              <div class="d-grid gap-2">
-                                <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                              </div>
+                              
                               
                             </div>
                           </div>
@@ -258,7 +284,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                         <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                             <h5 class="card-title pt-2 text-center">PANQUEQUES</h5>
-                            <a href="/descripcionProducto/PANQUEQUES">
+                            <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')">
                               <img src="./static/img/MENU/REPOSTERIA/pexels-vlada-karpovich-6947293.jpg" class="card-img-top" alt="...">
                             </a>
                             
@@ -269,9 +295,7 @@
                               <div class="d-grid gap-2">
                                 <button class="btn button">Añadir a Carrito de Compras</button>
                               </div>
-                              <div class="d-grid gap-2">
-                                <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                              </div>
+                              
                               
                             </div>
                           </div>
@@ -280,7 +304,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                         <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                             <h5 class="card-title pt-2 text-center">DONAS RELLENAS</h5>
-                            <a href="/descripcionProducto/DONAS_RELLENAS">
+                            <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')">
                               <img src="./static/img/MENU/DONUTS/pexels-adam-kontor-420308.jpg" class="card-img-top" alt="...">
                             </a>
                             
@@ -292,9 +316,7 @@
                               <div class="d-grid gap-2">
                                 <button class="btn button">Añadir a Carrito de Compras</button>
                               </div>
-                              <div class="d-grid gap-2">
-                                <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                              </div>
+                              
                               
                             </div>
                           </div>
@@ -303,7 +325,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                         <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                             <h5 class="card-title pt-2 text-center">DONA DE CHOCOLATE</h5>
-                            <a href="/descripcionProducto/DONA_DE_CHOCOLATE">
+                            <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')">
                               <img src="./static/img/MENU/DONUTS/pexels-nishant-aneja-2955820.jpg" class="card-img-top" alt="...">
                             </a>
                             
@@ -314,9 +336,7 @@
                               <div class="d-grid gap-2">
                                 <button class="btn button">Añadir a Carrito de Compras</button>
                               </div>
-                              <div class="d-grid gap-2">
-                                <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                              </div>
+                              
                               
                             </div>
                           </div>
@@ -325,7 +345,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                       <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                           <h5 class="card-title pt-2 text-center">MOFFIN DE CHOCOLATE</h5>
-                          <a href="/descripcionProducto/MOFFIN_DE_CHOCOLATE">
+                          <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')">
                             <img src="./static/img/MENU/REPOSTERIA/pexels-drake-nicolls-9291128.jpg" class="card-img-top" alt="...">
                           </a>
                           
@@ -336,9 +356,7 @@
                             <div class="d-grid gap-2">
                               <button class="btn button">Añadir a Carrito de Compras</button>
                             </div>
-                            <div class="d-grid gap-2">
-                              <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                            </div>
+                            
                             
                           </div>
                         </div>
@@ -347,7 +365,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                         <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                             <h5 class="card-title pt-2 text-center">LIMONADA NATURAL</h5>
-                            <a href="/descripcionProducto/LIMONADA_NATURAL">
+                            <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')">
                               <img src="./static/img/MENU/BEBIDAS_FRIAS/pexels-geraud-pfeiffer-6542749.jpg" class="card-img-top" alt="...">
                             </a>
                             
@@ -358,9 +376,7 @@
                               <div class="d-grid gap-2">
                                 <button class="btn button">Añadir a Carrito de Compras</button>
                               </div>
-                              <div class="d-grid gap-2">
-                                <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                              </div>
+                              
                               
                             </div>
                           </div>
@@ -369,7 +385,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                         <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                             <h5 class="card-title pt-2 text-center">JUGOS EN AGUA</h5>
-                            <a href="/descripcionProducto/JUGOS_EN_AGUA">
+                            <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')">
                               <img src="./static/img/MENU/BEBIDAS_FRIAS/pexels-kindel-media-8181548.jpg" class="card-img-top" alt="...">
                             </a>
                             
@@ -381,9 +397,7 @@
                               <div class="d-grid gap-2">
                                 <button class="btn button">Añadir a Carrito de Compras</button>
                               </div>
-                              <div class="d-grid gap-2">
-                                <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                              </div>
+                              
                               
                             </div>
                           </div>
@@ -392,7 +406,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                         <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                             <h5 class="card-title pt-2 text-center">ICE COFFEE</h5>
-                            <a href="/descripcionProducto/ICE_COFFEE">
+                            <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')">
                               <img src="./static/img/MENU/BEBIDAS_FRIAS/pexels-maksim-goncharenok-4422873.jpg" class="card-img-top" alt="...">
                             </a>
                             
@@ -403,9 +417,7 @@
                               <div class="d-grid gap-2">
                                 <button class="btn button">Añadir a Carrito de Compras</button>
                               </div>
-                              <div class="d-grid gap-2">
-                                <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                              </div>
+                              
                               
                             </div>
                           </div>
@@ -414,7 +426,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                         <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                             <h5 class="card-title pt-2 text-center">MALTEADA</h5>
-                            <a href="/descripcionProducto/MALTEADA">
+                            <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')">
                               <img src="./static/img/MENU/BEBIDAS_FRIAS/pexels-rodnae-productions-6413700.jpg" class="card-img-top" alt="...">
                             </a>
                             
@@ -425,9 +437,7 @@
                               <div class="d-grid gap-2">
                                 <button class="btn button">Añadir a Carrito de Compras</button>
                               </div>
-                              <div class="d-grid gap-2">
-                                <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                              </div>
+                              
                               
                             </div>
                           </div>
@@ -436,7 +446,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                         <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                             <h5 class="card-title pt-2 text-center">CAFE EN LECHE</h5>
-                            <a href="/descripcionProducto/CAFE_EN_LECHE">
+                            <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')">
                               <img src="./static/img/MENU/BEBIDAS_CALIENTES/pexels-charlotte-may-5946623.jpg" class="card-img-top" alt="...">
                             </a>
                             
@@ -447,9 +457,7 @@
                               <div class="d-grid gap-2">
                                 <button class="btn button">Añadir a Carrito de Compras</button>
                               </div>
-                              <div class="d-grid gap-2">
-                                <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                              </div>
+                              
                               
                             </div>
                           </div>
@@ -458,7 +466,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                         <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                             <h5 class="card-title pt-2 text-center">TÉ DE MANZANILLA</h5>
-                            <a href="/descripcionProducto/TE_DE_MANZANILLA">
+                            <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')">
                               <img src="./static/img/MENU/BEBIDAS_CALIENTES/pexels-olia-danilevich-576018.jpg" class="card-img-top" alt="...">
                             </a>
                             
@@ -469,9 +477,7 @@
                               <div class="d-grid gap-2">
                                 <button class="btn button">Añadir a Carrito de Compras</button>
                               </div>
-                              <div class="d-grid gap-2">
-                                <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                              </div>
+                              
                               
                             </div>
                           </div>
@@ -481,7 +487,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                       <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                           <h5 class="card-title pt-2 text-center">AROMATICA</h5>
-                          <a href="/descripcionProducto/AROMATICA">
+                          <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')">
                             <img src="./static/img/MENU/BEBIDAS_CALIENTES/pexels-olia-danilevich-5760189.jpg" class="card-img-top" alt="...">
                           </a>
                           
@@ -492,9 +498,7 @@
                             <div class="d-grid gap-2">
                               <button class="btn button">Añadir a Carrito de Compras</button>
                             </div>
-                            <div class="d-grid gap-2">
-                              <button class="btn  listaDeDeseos">Añadir a Lista de Deseos</button>
-                            </div>
+                            
                             
                           </div>
                         </div>
@@ -504,7 +508,7 @@
                     <div class="col d-Flex justify-content-center mb-4">
                         <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
                             <h5 class="card-title pt-2 text-center">CHOCOLATE CALIENTE</h5>
-                            <a href="/descripcionProducto/CHOCOLATE_CALIENTE">
+                            <a href="/login" onclick="alert('Por favor ingrese a su cuenta!')">
                               <img src="./static/img/MENU/BEBIDAS_CALIENTES/pexels-olia-danilevich-5760199.jpg" class="card-img-top" alt="...">
                             </a>
                             
@@ -515,9 +519,7 @@
                               <div class="d-grid gap-2">
                                 <button class="btn  button">Añadir a Carrito de Compras</button>
                               </div>
-                              <div class="d-grid gap-2">
-                                <button class="btn listaDeDeseos">Añadir a Lista de Deseos</button>
-                              </div>
+                              
                               
                             </div>
                           </div>
@@ -553,7 +555,7 @@
                           <h3 class="itemCarTotal text-dark-50">Total:0</h3>
                       </div>
                       <div class="col d-flex justify-content-end">
-                          <button class="btn btn-success comprarCarrito" >Comprar</button>
+                          <button class="btn btn-success comprarCarrito" onclick="alert('Por favor ingrese a su cuenta!')">Comprar</button>
                       </div>
                   </div>
             </div>

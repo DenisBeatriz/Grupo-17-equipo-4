@@ -1,6 +1,7 @@
 const clickboton = document.querySelectorAll('.button')
 const tboby = document.querySelector('.tboby')
 let carrito = []
+console.log("hola")
 
 clickboton.forEach(btn => {
     btn.addEventListener('click', agregarAlCarritoItem)
@@ -143,6 +144,7 @@ pagos.addEventListener('click',miPago)
 
 function miPago() {
     alert('Su pago a sido realizado con exito!')
+    location.reload()
     localStorage.clear() 
   }
 
