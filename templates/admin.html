@@ -5,76 +5,76 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HOME ADMIN</title>
-        <link rel="stylesheet" href="static\css\style_admin.css">
+        <link rel="icon" type="image/png" href="../static/img/icon.png">
+        <link rel="stylesheet" href="/static/css/style_admin.css">
+
     </head>
     <body>
-        <nav>
+    {% with mensajes= get_flashed_messages() %}
+    {% if mensajes %}
+    {% for mensaje in mensajes %}
+        <p>{{ mensaje }}</p>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+        
+        <nav id="nav">
             <ul>
                 <li id="principal">
-                <img src="static\img\DISEÑO_PAGINA_WEB\menu copia.png" alt="" width="25" height="25">
+                <img src="/static/img/DISEÑO_PAGINA_WEB/menu copia.png" alt="" width="25" height="25">
                     TIPO DE VISTA ADMINISTRADOR
                 </li>
-                <li>REVISION COMENTARIOS</li>
-                <li>REVISION PAGOS</li>
+                <li>
+                    <a href="/revisionComentarios">Comentarios</a>
+                </li>
+                <li>
+                    <a href="/pagosAdmin">Pagos</a>
+                </li>
+                <li>
+                    <a href="/home2">Vista Usuario</a>
+                </li>
             </ul>
         </nav>
         <!--Creacion Calendarios que son usados como filtro para las graficas que se necesitan
         mostrar al Admin-->
-        <form action=""><!--Diagrama Parte Izquierda-->
-            <div id="primero">
-                <label for="Calendario_Pedidos">
-                    <span>Fecha Inicio</span>
-                    <input type="date" id="Calendario_Pedidos" name="Caledario_Pedidos">
-                </label>
-                <label for="Calendario_Pedidos_salida">
-                    <span>Fecha Fin</span>
-                    <input type="date" id="Calndario_Pedidos_salida" name="Calendario_Pedidos_salida">
-                </label>
-                <input type="submit">
-                <br><br>
-                <img src="static\img\DISEÑO_PAGINA_WEB\grafica_lineas.png" alt="" width="350" height="350">
-                <button id="primer_boton">GENERAR RESULTADOS</button>
+        <section id="parte1">
+            <form action="/eliminar_usuario" method="POST" id="Usuario_final" class="Usuario_final"><!--ACA SE ENERA EL PROBLEMA-->
+                <div id="eliminar_usuario">
+                    <h1>Usuario</h1>
+                    <label for="cedula">
+                        <span>Cedula:</span>
+                        <input type="text" name="cedula" id="cedula" placeholder="000058916" name="cedula" required>
+                    </label>
+    
+                    <button action="/eliminar_usuario" type="submit">Eliminar</button>
+                    <button> <a href="/desbloquear_usuario"> Desbloquear</a></button><!--falta hacer esta pestaña para quede mejor el desbloqueo actualizando la contraseña-->
+                </div>
+            </form>
+        </section>
+        <section id="parte2">
+            <form action="/eliminar_plato" method="POST" id="Edicion_Pla" class="Edicion_Pla">
+   
+                <div id="editar_plato">
+                    <h1>
+                        Editar Platos
+                    </h1>
+                        <label for="ID_PRODUCTO">
+                            <span>Id Producto</span>
+                            <input type="name" id="IDproducto1" name="IDproducto1" placeholder="125336" required>
+                        </label>
+                        <button type="submit">Eliminar</button> <!--CONEXION A BASE DE DATOS-->
+                        <button id="Modificar_Plato">
+                            <a href="/edicionPlatos">Modificar</a></button><!--ESTE ES PARA EDITAR PLATO-->
+                </div>
+                
+            </form>
+        </section>
+ 
+        <footer>
+            <div class="footer">
+                <p>Grupo 17 Equipo 4 - Universidad del Norte</p>
             </div>
-            <br>
-            <br><br><br>
-            <div id="segundo">
-                <label for="Calendario_Ventas"><!--Diagrama Parte Dercha-->
-                    <span>Fecha Inicio</span>
-                    <input type="date" id="Calendario_Ventas" name="Calendario_Ventas">
-                </label>
-                <label for="Calendario_Ventas_salida">
-                    <span>Fecha Fin</span>
-                    <input type="date" id="Calendario_Ventas_salida" name="Calendario_ventas_salida">
-                </label>
-                <input type="submit"><!--Sirve para enviar informacion a la base de datos-->
-                <br><br>
-                <img src="static\img\DISEÑO_PAGINA_WEB\grafica-de-barras.png" alt="" width="350" height="350">
-                <button id="segundo_boton">GENERAR RESULTADOS</button>
-            </div>
-            <div id="eliminar_usuario">
-                <h1>Eliminar Usuario</h1>
-                <label for="cedula">
-                    <span>Cedula:</span>
-                    <input type="number" id="cedular" placeholder="000058916" name="cedula" required>
-                </label>
-                <button>Eliminar</button>
-                <button>Desbloquear</button>
-            </div>
-            <div id="editar_plato">
-                <h1>Editar Plato</h1>
-                <label for="Nombre">
-                    <span>Nombre:</span>
-                    <input type="name" id="nombre" placeholder="Felipe" name="nombre" required>
-                </label>
-                <button>Eliminar</button>
-                <button>Modificar</button>
-                <button>Añadir</button>
-            </div>
-            <div id="descargar_info">
-                <h1>Descargar Información Lista de Deseos</h1>
-                <button>Descargar</button>
-            </div>
-        </form>
-
+        </footer>
+        
     </body>
 </html>

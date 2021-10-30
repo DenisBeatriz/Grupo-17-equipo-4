@@ -1,15 +1,30 @@
+nav{
+    background: #ff581a;
+    overflow: hidden;
+    display: block;
+    padding: 9px 0px 9px 0px;
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+#nav{
+    color: white;
+}
 li{
     display: inline;
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 80px;
+    margin-right: 80px;
     color: white;
 }
 #principal{
     margin-left: 25px;
 }
-nav{
-    background-color: #ff581a;
-}
+
 #primero{
     margin-left: 50px;
     width: 45%;
@@ -23,13 +38,50 @@ nav{
 
     
 }
-div{
-    border-style: dashed;
-    border-color: #ff581a;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+#parte1, #parte2{
+	background-image: url(https://static9.depositphotos.com/1066655/1106/i/950/depositphotos_11062315-stock-photo-donuts.jpg);
+	padding: 50px 50px 50px 50px;
+	background-position: center center;
+	background-size:contain;
+	background-repeat:repeat;
+	position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 5px;
 }
+
+#parte1:before{
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.6);
+}
+
+#parte2:before{
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.6);
+}
+
+#Usuario_final, #Edicion_Pla {
+	color: #fff;
+	position: relative
+}
+
+input{
+    border-color: white;
+    border-radius: 15px;
+    border-width: 3px;
+    background-color: #F6DDCC;
+}
+
 button{
     border-top: none;
     border-left: none;
@@ -40,4 +92,11 @@ button{
 #eliminar_usuario, #editar_plato, #descargar_info{
     margin-left: 50px;
     margin-right: 50px;
+}
+footer{
+    text-align: center;
+    background: #ff581a;
+    padding: 5px 0px 5px 0px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
 }

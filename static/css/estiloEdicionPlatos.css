@@ -1,8 +1,13 @@
+
 header .barraNaranja{
     background: #ff581a;
     overflow: hidden;
     display: block;
     padding: 9px 0px 9px 0px;
+}
+
+#color3, #color4{
+    color:#fff;
 }
 
 a:link, a:visited, a:active {
@@ -31,18 +36,23 @@ header .barraNaranja .iz i{
 
 header .barraBlanca h1{
     text-align: center;
+    margin-bottom: -9px;
+    margin-top: 0px;
 }
 
-section #fondo {
+section #parte1, section #parte2{
 	background-image: url(https://static9.depositphotos.com/1066655/1106/i/950/depositphotos_11062315-stock-photo-donuts.jpg);
 	padding: 50px 50px 50px 50px;
 	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	background-size:contain;
+	background-repeat:repeat;
 	position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 
-#fondo:before {
+#parte1:before{
 	content:'';
 	position: absolute;
     top: 0;
@@ -52,84 +62,115 @@ section #fondo {
 	background-color: rgba(0,0,0,0.6);
 }
 
-#fondo .contenido {
+#parte2:before{
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.6);
+}
+
+
+#fondo .contenido, #fondo .contenido2 {
 	color: #fff;
 	position: relative
 }
 
-#fondo .contenido #edicion{
+#fondo .contenido{
     margin-left: 10px
 }
 
-#fondo .contenido #edicion .añadirMenu{
-    display: flex;
-    border-bottom: dotted;
-    padding-bottom: 100px;
-    border-color: #ff581a;
-}
-
-#fondo .contenido #edicion .añadirMenu, section #edicion .modificarPlato{
+#añadirMenu, #modificarPlato{
     display: flex;
 }
 
-#fondo .contenido #edicion .añadirMenu .imagenPlato img{
+#imagen12{
     width: 250px;
     border-radius: 25px;
    
 }
 
-#fondo .contenido #edicion .añadirMenu .imagenPlato{
+#imagenPlato2, #imagen{
     margin-right: 100px;
 }
 
-#fondo .contenido #edicion .añadirMenu .añadir{
+#añadir, #añadir2{
     margin-left: 100px;
     padding-top: 100px;
 }
 
-#fondo .contenido #edicion .añadirMenu #nombrePlato, section #edicion .añadirMenu #descripcionPlato{
-    padding: 20px 50px 30px 20px;
-    border-color: black;
+#nombrePlato, #descripcionPlato, #nombrePlato2, #descripcionPlato2{
+    border-color: white;
     border-radius: 15px;
+    border-width: 3px;
+    background-color: #F6DDCC;
 }
 
+#precio{
+    
+    border-color: white;
+    border-width: 3px;
+    border-radius: 15px;
+    background-color: #F6DDCC;
+}
 
+#Id_Producto, #precio_mod2{
+    font-size: 15px;
+    border-color: white;
+    border-width: 3px;
+    border-radius: 15px;
+    background-color: #F6DDCC;
+}
 
-
-
-
-#fondo .contenido #edicion .modificarPlato{
+#titulo{
+    font-size: 50px;
+}
+#modificarPlato{
     padding-top: 20px;
     padding-bottom: 100px;
 }
-
-
-#fondo .contenido #edicion .modificarPlato .imagenPlato2 img{
-    width: 250px;
-    border-radius: 25px;
-   
+section{
+    font-family: 'Oswald', sans-serif;
+}
+h1{
+    font-size: 30px;
+}
+h2, label, button{
+    font-size: 20px;
+}
+#modificarPlato{
+    padding-left: 5px;
 }
 
-#fondo .contenido #edicion .modificarPlato .imagenPlato2{
+#imagen{
+    width: 250px;
+    border-radius: 25px;
+}
+#modificarPlato{
+    margin-left: 100px;
+}
+
+#imagen2{
     margin-right: 100px;
 }
 
-#fondo .contenido #edicion .modificarPlato .añadir2{
+#añadir2{
     margin-left: 100px;
     padding-top: 100px;
 }
 
-#fondo .contenido #edicion .modificarPlato #nombrePlato2, section #edicion .modificarPlato #descripcionPlato2{
-    padding: 20px 50px 30px 20px;
-    border-color: black;
-    border-radius: 15px;
+#ya{
+    padding-left: 100px;
 }
 
-
-
-
-
-
+#descripcionP{
+    margin-left: -100px;
+}
+button{
+    border-radius: 25px;
+}
 
 footer{
     text-align: center;

@@ -4,19 +4,19 @@ from sqlite3.dbapi2 import Cursor
 
 def obtener_conexion():
     try:
-        conexion = sqlite3.connect('db/base_datos.db')
+        conexion = sqlite3.connect('base_datos_general.db')
         return conexion
     except Error:
         print(Error)
 
-def obtener_registro(tabla, condicion):
+def obtener_registro(condicion):
     conexion = obtener_conexion()
     cursor = conexion.cursor()
 
     if condicion == None:
-        strsql = 'SELECT * FROM {}'.format(tabla)
+        strsql = 'SELECT * FROM USUARIO'
     else: 
-        strsql = 'SELECT * FROM {} WHERE {}'.format(tabla, condicion)
+        strsql = 'SELECT * FROM USUARIO WHERE {}'.format(condicion)
 
     cursor.execute(strsql)
 
@@ -29,7 +29,7 @@ def insertar_usuario(nombres, apellidos, cedula, email, celular, direccion, comp
     conexion = obtener_conexion()
     cursor = conexion.cursor()
 
-    strsql = "INSERT INTO usuario (nombres, apellidos, cedula, email, celular, direccion, complemento, contrasena) VALUES('{}','{}','{}','{}','{}','{}','{}','{}')".format(nombres, apellidos, cedula, email, celular, direccion, complemento, contrasena)
+    strsql = "INSERT INTO USUARIO (CEDULA_USER, EMAIL, NOMBRE_USER, APELLIDO_USER, DIRECCION, CELULAR, COMPLEMENTO, CONTRASENA) VALUES('{}','{}','{}','{}','{}','{}','{}','{}')".format(cedula, email, nombres, apellidos, direccion, celular, complemento, contrasena)
 
     cursor.execute(strsql)
     conexion.commit()
@@ -45,3 +45,11 @@ def insertar_contacto2(nombre, email, mensaje):
     conexion.commit()
     conexion.close()
 
+def conexion_base():
+    try:
+        
+        conexion = sqlite3.connect('base_datos_general.db')
+        print("Conexion Exitosa")
+        return conexion
+    except Error:
+        print(Error)

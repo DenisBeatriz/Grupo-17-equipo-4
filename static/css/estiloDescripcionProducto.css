@@ -81,10 +81,9 @@ section #fondo {
     
 }
 
-#fondo .general .contenido .imagen img{
+#fondo .general .contenido .imagen{
     width: 400px;
-    
-    border-radius: 20px;
+    border-radius: 100px;
 }
 
 #fondo .general .contenido {
@@ -145,10 +144,14 @@ section #fondo {
 
 
 #fondo .general .contenido2 .lizquierdo .anadir .agregar{
-    margin-left: 10px;
-    padding-left: 20px;
-    display: flex;
+    margin-left: 5px;
+    padding-left: 5px;
+    
+}
 
+#fondo .general .contenido2 .lizquierdo .anadir .agregar input{
+    width: 45px;
+    
 }
 
 #fondo .general .contenido2 .lizquierdo .anadir button i{
@@ -211,6 +214,123 @@ section #fondo {
 #fondo .general .contenido2 .lderecho .publicidad .p2 a h1{
     color: white;
 }
+
+
+
+
+
+
+
+
+
+#fondo .general .producto1{
+    border-style: dotted;
+    border-color: #ff581a;
+    border-width: 8px;
+    display: flex;
+}
+
+#fondo .general .producto1{
+    padding: 10px 10px 10px 10px;
+    overflow: hidden;
+}
+
+#fondo .general .producto1 .tituloImagen{
+    width: min-content;
+}
+
+#fondo .general .producto1 .tituloImagen a p{
+    color: white;
+    font-size: larger;
+    margin-left: 15px;
+}
+
+#fondo .general .producto1 .tituloImagen a img{
+    width: 100px;
+}
+
+#fondo .general .producto1 .tituloImagen a{
+    display: flex;
+    padding-left: 20px;
+    padding-right: 320px;
+}
+
+#fondo .general .producto1 .cantidad{
+    display: flex;
+    margin-right: 10px;
+}
+
+#fondo .general .producto1 .cantidad .delete{
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    width: 90px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+#fondo .general .producto1 .cantidad .carritoComprasCantidadDelElemento{
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}
+
+#fondo .general .producto1 .carritoComprasPrecioDelElemento{
+    padding-left: 370px;
+}
+
+#fondo .general #bpagar{
+    float: right;
+}
+
+#fondo .tituloCarrito{
+    color: #ffeaca;
+    text-align: center;
+}
+
+#fondo .total{
+    overflow: hidden;
+}
+
+#fondo .total .total1{
+    float: left;
+    display: flex;
+}
+
+#fondo .total .total1 p{
+    padding-left: 20px;
+    padding-top: 6px;
+}
+
+#fondo .total button{
+    float: right;
+}
+
+#fondo .productosElegidos .hilera{
+    display: flex;
+    overflow: hidden;
+}
+
+#fondo .productosElegidos .hilera  .columna2{
+    padding-left: 450px;
+    
+}
+
+#fondo .productosElegidos .hilera  .columna1{
+    padding-left: 20px;
+    
+}
+
+#fondo .productosElegidos .hilera  .columna3{
+    padding-left: 370px;
+    
+}
+
+
+
+
 
 footer{
     text-align: center;
