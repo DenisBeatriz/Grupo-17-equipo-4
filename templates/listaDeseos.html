@@ -1,74 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>listaDeseos</title>
-    <link rel="stylesheet" href={{ url_for('static', filename='css/estiloDeseos.css') }}>
-    <link rel="stylesheet" href={{ url_for('static', filename='css/normalize.min.css') }}>
-    <link rel="stylesheet" href={{ url_for('static', filename='css/icon/fontsAwesome/css/all.css') }}>
-<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>listaDeseos</title>
+        <link rel="stylesheet" href={{ url_for('static', filename='css/estiloDeseos.css') }}>
+        <link rel="stylesheet" href={{ url_for('static', filename='css/normalize.min.css') }}>
+        <link rel="stylesheet" href={{ url_for('static', filename='css/icon/fontsAwesome/css/all.css') }}>
+
+        </script>
+        <script src="{{ url_for('static', filename='js/jquery-3.2.1.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <head>
 
 <body>
 
-    <header>
-            <div class="encabezado">
+            <header>
                 <div class="menu">
-                    <a href=""><img src="static/img/menu.png" alt="">MENÚ</a>
+                    <a href="/menu"><i class="fas fa-bars"></i> Menú</a>
+                    </div>
+                <div class="login">
+                    <a href="/login" class="link_login">Ingresa <i class="fa fa-user-circle"
+                    aria-hidden="true"></i></a>
                 </div>
-                    <div class="login">
-                        <a href="">Ingresa<img src="static/img/login.png" alt=""></a>
-                    </div> 
-                    <div class="deseos">
-                        <a href="">Lista de deseos<img src="static/img/deseos.png" alt=""></a>
-                    </div>  
+                <div class="deseos">
+                    <a href="#lista_deseos" class="link_wish_list">Lista de deseos <i class="fa fa-heart"
+                    aria-hidden="true"></i></a>
+                </div>
                 <div class="carrito">
-                    <a href="">Carrito<img src="static/img/carrito.png" alt=""></a>
-                </div> 
-            </div>                    
-    </header>
+                    <a href="/carritoDecompras" class="link_shopping_cart">Carrito de compras <i
+                    class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                </div>            
+            </header>
 
-    <section>
-        <div class="titulo">
-            <h1>TU LISTA DE DESEOS</h1>
-        </div>                             
-            <div class="marco">           
-                <li><a href="#">Donuts de chocolate</a></li>
-                <li><a href="#">Donuts especial</a></li>
-                <li><a href="#">Donuts de vainilla</a></li>
-                <li><a href="#">Donuts super</a></li>
-                <li><a href="#">Donuts Donuts</a></li>
-                <li><a href="#">Mister Donuts</a></li>
+        <section>
+            <div class="titulo">
+                <h1>TU LISTA DE DESEOS</h1>
             </div>
-      
-            <div class="descripcion">
-                <img src="static/img/donaOreo.png" alt="">
-                <div class="nombre">
-                    </h1>Donuts de chocolate    $ 4.000</h1>
-                </div>
-                <div class="detalle">
-                    <p>Donut relleno de chocolate blanco, cubierta
-                    con chocolate negro y trozos de galleta Oreo</p>
+         
+	        <div class="store-wrapper"> 
+			    <div class="category_list">
+				    <li><a href="#" class="category_item" category="donuts">Donut de chocolate</a></li>
+				    <li><a href="#" class="category_item" category="macarrons">Macarrons</a></li>
+				    <li><a href="#" class="category_item" category="donas_rellenas">Donut de rellena</a></li>
+				    <li><a href="#" class="category_item" category="pan_artesanal">Pan artesanal</a></li>
+				    <li><a href="#" class="category_item" category="moffin_chocolate">Moffin de Chocolate</a></li>
+			    </div>
+		        <div class="products-list">
+		            <div class="product-item" category="donuts">
+			            <h2><strong>Donut de chocolate</strong> </h2>
+			            <img src="static\img\donaOreo.png" alt=""width="200" height="200">
+                        <p> Donut relleno de chocolate blanco, cubierta
+                        con chocolate negro y trozos de galleta Oreo</p>
+                        <h2> $ 4.000 </h2>
+		            </div>
+		            <div class="product-item" category="macarrons">
+			            <h2><strong>Macarrons</strong></h2>
+                        <img src="static\img\MENU\REPOSTERIA\pexels-valeria-boltneva-7474290.jpg" alt="" width="200" height="200">
+                        <p> Deliciosos macarrons sabor a fresa, chocolate y vanilla</p>
+                        <h2> $ 4.000 </h2>
+                    </div>
+		            <div class="product-item" category="donas_rellenas">
+			            <h2><strong>Donut de vainilla</strong> </h2>
+			            <img src="static\img\MENU\DONUTS\pexels-adam-kontor-420308.jpg" alt="" width="200" height="200">
+                        <p> Deliciosa Donut Rellena de salsa de vainilla</p>
+                        <h2> $ 4.000 </h2>
+		            </div>
+		            <div class="product-item" category="pan_artesanal">
+			            <h2><strong>Pan artesanal</strong> </h2>
+			            <img src="static\img\MENU\PANADERIA\pexels-marta-dzedyshko-7175448.jpg" alt=""width="200" height="200">
+                        <p> Delicioso pan artesanal con uvas pasas</p>
+                        <h2> $ 3.000 </h2>
+		            </div>
+		            <div class="product-item" category="moffin_chocolate">
+			            <h2 src="T2_moffin_chocolate">Mofin de chocolate</h2>
+                        <img src="static\img\MENU\REPOSTERIA\pexels-drake-nicolls-9291128.jpg" alt=""width="200" height="200">
+                        <p>Delicioso moffin de chocolate con una cereza</p>
+                        <h2> $ 2.500 </h2>
+		            </div>
                 </div>
             </div>
-        <div class="pagar">
-            <a href=""><img src="static/img/pagar.png"  alt=""></a>
-        </div> 
-        <div class="agregar">
-            <a href=""><img src="static/img/agregar.png"  alt=""></a>
-        </div>
+        <div class="compra">
+            <div class="pagar">
+                <a href=""><img src="static/img/pagar.png"  alt="Lleva a la opcion de pago"></a>
+            </div> 
+            <div class="agregar">
+                <a href=""><img src="static/img/agregar.png"  alt="Agrega producto al carrito"></a>
+            </div>
             <div class="cantidad"> 
                 <button>+ </button>
                 <input type="text" size="1" id="cantidad">
                 <button> -</button>
                 <div><button>Eliminar</button></div>
             </div> 
-        <div class="comentarios">
-            <div></h2><strong>Comentarios</strong></h2></div>
-            <textarea name="comentarios" rows="4" cols="52"></textarea>
-            <div><button id="publib">Enviar</button></div>
-        </div>                             
+            <div class="comentarios">
+                <div></h2><strong>Comentarios</strong></h2></div>
+                <textarea name="comentarios" rows="4" cols="52"></textarea>
+                <div><button id="publib">Enviar</button></div>
+            </div>                             
+        </div> 
 
     </section>
     <footer>
