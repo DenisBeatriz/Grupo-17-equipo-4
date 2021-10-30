@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/png" href="../static/img/icon.png">
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='img/icon.png')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/styles_home1.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles_home1.css')}}">
 </head>
 <body>
     <div class="container">
@@ -20,7 +20,10 @@
             <div>
                 <nav class="menu">
                     <div>
-                        <a href="/menu"><i class="fas fa-bars"></i>Menú</a>
+                        <a href="/login"><i class="fas fa-bars"></i>Menú</a>
+                    </div>
+                    <div class="titulo_div">
+                        <h1 class="titulo">DUNK DONUTS</h1>
                     </div>
                     <ul>
                         <li class="first_link">
@@ -28,37 +31,19 @@
                                     aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="/listaDeseos" class="link_wish_list">Lista de deseos<i class="fa fa-heart"
+                            <a href="/login" class="link_wish_list">Lista de deseos<i class="fa fa-heart"
                                     aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="/carritoDecompras" class="link_shopping_cart">Carrito de compras<i
+                            <a href="/login" class="link_shopping_cart">Carrito de compras<i
                                     class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </nav>
-                <hr>
+                <hr class="linea">
             </div>
         </header>
         <main>
-            <section>
-                <nav class="menu2">
-                    <ul>
-                        <li>
-                            <a href="#donas" class="link_donas">DONUTS</a>
-                        </li>
-                        <li>
-                            <a href="#panaderia" class="link_panaderia">PANADERIA</a>
-                        </li>
-                        <li>
-                            <a href="#reposteria" class="link_reposteria">REPOSTERIA</a>
-                        </li>
-                        <li>
-                            <a href="#ponques" class="link_ponques">PONQUÉS</a>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
             <section>
                 <div class="hero">
                     <div class="hero_image">
@@ -81,42 +66,42 @@
                 <div class="offer">
                     <div>
                         <figure class="offer_images">
-                            <img src="../static/img/matahambre1.jpg" alt="Matahambre1">
+                            <img src="{{url_for('static', filename='img/matahambre1.jpg')}}" alt="Matahambre1">
                         </figure>
                         <div class="offer_text">
                             <h3>Super Donut de Chocolate</h3>
                             <p>Deliciosa donut repleta de chocolate, maní y frutos rojos.</p>
-                            <a href="#">Lo quiero<i class="fas fa-angle-double-right"></i></a>
+                            <a href="/login">Lo quiero<i class="fas fa-angle-double-right"></i></a>
                         </div>
                     </div>
                     <div>
                         <figure class="offer_images">
-                            <img src="../static/img/matahambre2.jpg" alt="Matahambre2">
+                            <img src="{{url_for('static', filename='img/matahambre2.jpg')}}" alt="Matahambre2">
                         </figure>
                         <div class="offer_text">
                             <h3>Croissant recien salido del horno</h3>
                             <p>Delicioso Croissant con jamón y queso al mejor estilo francés.</p>
-                            <a href="#">Lo quiero<i class="fas fa-angle-double-right"></i></a>
+                            <a href="/login">Lo quiero<i class="fas fa-angle-double-right"></i></a>
                         </div>
                     </div>
                     <div>
                         <figure class="offer_images">
-                            <img src="../static/img/oferta1.jpg" alt="Oferta1">
+                            <img src="{{url_for('static', filename='img/oferta1.jpg')}}" alt="Oferta1">
                         </figure>
                         <div class="offer_text">
                             <h3>Mega combo de galletas</h3>
                             <p>Mega combo de 12 galletas rellenas de colores para cualquier ocasión.</p>
-                            <a href="#">Lo quiero<i class="fas fa-angle-double-right"></i></a>
+                            <a href="/login">Lo quiero<i class="fas fa-angle-double-right"></i></a>
                         </div>
                     </div>
                     <div>
                         <figure class="offer_images">
-                            <img src="../static/img/oferta2.jpg" alt="Oferta2">
+                            <img src="{{url_for('static', filename='img/oferta2.jpg')}}" alt="Oferta2">
                         </figure>
                         <div class="offer_text">
                             <h3>Para iniciar el día</h3>
                             <p>Empieza el día con este espectacular combo que te dará toda la energía.</p>
-                            <a href="#">Lo quiero<i class="fas fa-angle-double-right"></i></a>
+                            <a href="/login">Lo quiero<i class="fas fa-angle-double-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -136,20 +121,20 @@
                         </div>
                     </div>
                     <div class="contact_block">
-                        <form class="form">
-                            <input name="name" placeholder="Nombre" type="text" required class="input_name" /><br />
+                        <form class="form" action="" method="post">
+                            <input name="nombre" placeholder="Nombre" type="text" required class="input_name" /><br />
                             <input name="email" placeholder="Email" type="email" required class="input_email" /><br />
-                            <textarea name="message" placeholder="Mensaje" required class="textarea_message"></textarea>
+                            <textarea name="mensaje" placeholder="Mensaje" required class="textarea_message"></textarea>
                             <input type="submit" value="Enviar" class="submit" />
                         </form>
                         <div class="social">
-                            <a href="#" class="icon-twitter" target="_blank">
+                            <a href="https://www.facebook.com/Dunk-Donuts-101819065641159" class="icon-twitter" target="_blank">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="#" class="icon-facebook" target="_blank">
+                            <a href="https://twitter.com/dunkdonutscol" class="icon-facebook" target="_blank">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="#" class="icon-instagram" target="_blank">
+                            <a href="https://www.instagram.com/dunkdonutscol/" class="icon-instagram" target="_blank">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>

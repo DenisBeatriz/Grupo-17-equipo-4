@@ -1,56 +1,55 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <title>LOGIN USUARIO</title>
-        <meta charset="UTF-8">
-
-        <link rel="stylesheet" href="static\css\style_login.css">
-
-    </head>
-    <body id="cuerpo">
-        
-        <header>
-            <section>
-                <div id="T1_pagina_G">
-                    <h1>
-                        <pre>DUCK 
-DONUTS</pre> </h1>
-                </div>
-                <div id="T2_Login">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunk Donuts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='img/icon.png')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style_login.css')}}">
+</head>
+<body>
+    <div class="container">
+        <section class="left_section">
+            <div class="logo">
+                <figure>
+                    <a href="/">
+                        <img src="{{url_for('static', filename='img/logo.png')}}" alt="logo">
+                    </a>                    
+                </figure>
+            </div>
+            <div>
+                <form class="formulario" action="/login" method="post">
                     <h2>LOGIN</h2>
-                </div>
-            </section>
-        
-        </header>
-        <figure id="imagen">
-
-            <img src="static\img\DISEÑO_PAGINA_WEB\DONA.jpg" alt="fondo de pantalla" width="1000" height="850">
-
-        </figure>
-        <form action="" id="cuestionario_ingreso">
-            <label for="nickname">
-                <span>Nickname:</span>
-                <input type="text" id="nickname" placeholder="Raton_Peres65" required>
-            </label>
-            <br>
-            <label for="Contraseña">
-                <span>Contraseña</span>
-                <input type="password" id="Contraseña" required>
-            </label>
-        </form>
-        <br>
-        <button type="submit" id="Boton_ingreso">Ingresar</button>
-        <br>
-        <pre id="Mensaje_usuario">¿Aun no tienes usuario?
-Registrate con nosotros y has tus pedidos
-        </pre>
-        <button type="submit" id="Boton_Registro">Registrarse</button>
-
-        <footer id="parte_inferios">
-            <nav id="creditos">
-                <p id="cred_footer"> Grupo 17 Equipo 4</p>
-            </nav>
-        </footer>
-    </body>
-
+                    <div class="form_container">
+                        <div class="input_container">
+                            <i class="fa-solid fa-envelope icon"></i>
+                            <input type="text" placeholder="Correo electrónico" name="email" id="email">
+                        </div>
+                        <div class="input_container">
+                            <i class="fa-solid fa-key icon"></i>
+                            <input type="password" placeholder="Contraseña" name="contrasena" id="contrasena">
+                        </div>
+                        <div>
+                            <input type="submit" value="Ingresar" class="button">
+                            <p>Al iniciar sesion aceptas nuestras Condiciones de uso y Politica de privacidad.</p>
+                            <p>¿No tienes una cuenta? <a href="/registroUsuario" class="link_login">Regístrate</a></p>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+        </section>
+        <div class="imagen">
+            <figure>
+                <img src="{{url_for('static', filename='img/DONA.jpg')}}" alt="Imagen principal">
+            </figure>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='js/login.js')}}"></script>    
+</body>
 </html>

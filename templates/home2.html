@@ -20,45 +20,30 @@
             <div>
                 <nav class="menu">
                     <div>
-                        <a href="#"><i class="fas fa-bars"></i>Menú</a>
+                        <a href="/menu"><i class="fas fa-bars"></i>Menú</a>
+                    </div>
+                    <div class="titulo_div">
+                        <h1 class="titulo">DUNK DONUTS</h1>
                     </div>
                     <ul>
                         <li>
-                            <a href="#carrito_compras" class="link_shopping_cart">Carrito de compras<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                            <a href="/carritoDecompras" class="link_shopping_cart">Carrito de compras<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="#lista_deseos" class="link_wish_list">Lista de deseos<i class="fa fa-heart" aria-hidden="true"></i></a>
+                            <a href="/listaDeseos" class="link_wish_list">Lista de deseos<i class="fa fa-heart" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="#mi_cuenta" class="my_account">Mi cuenta<i class="fas fa-user-circle"></i></a>
+                            <a href="/perfilUsuario" class="my_account">Mi cuenta<i class="fas fa-user-circle"></i></a>
                         </li>
                         <li>
-                            <a href="#carrito_compras" class="link_shopping_cart">Salir<i class="fas fa-sign-in-alt"></i></a>
+                            <a class="link_shopping_cart">Salir<i class="fas fa-sign-in-alt" id="cerrar_sesion"></i></a>
                         </li>
                     </ul>
                 </nav>
-                <hr>
+                <hr class="linea">
             </div>
         </header>
         <main>
-            <section>
-                <nav class="menu2">
-                    <ul>
-                        <li>
-                            <a href="#donas" class="link_donas">DONUTS</a>
-                        </li>
-                        <li>
-                            <a href="#panaderia" class="link_panaderia">PANADERIA</a>
-                        </li>
-                        <li>
-                            <a href="#reposteria" class="link_reposteria">REPOSTERIA</a>
-                        </li>
-                        <li>
-                            <a href="#ponques" class="link_ponques">PONQUÉS</a>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
             <section>
                 <div class="hero">
                     <div class="hero_image">
@@ -136,20 +121,20 @@
                         </div>
                     </div>
                     <div class="contact_block">
-                        <form class="form">
+                        <form class="form" action="" method="post">
                             <input name="name" placeholder="Nombre" type="text" required class="input_name" /><br />
                             <input name="email" placeholder="Email" type="email" required class="input_email" /><br />
                             <textarea name="message" placeholder="Mensaje" required class="textarea_message"></textarea>
                             <input type="submit" value="Enviar" class="submit" />
                         </form>
                         <div class="social">
-                            <a href="#" class="icon-twitter" target="_blank">
+                            <a href="https://www.facebook.com/Dunk-Donuts-101819065641159" class="icon-twitter" target="_blank">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="#" class="icon-facebook" target="_blank">
+                            <a href="https://twitter.com/dunkdonutscol" class="icon-facebook" target="_blank">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="#" class="icon-instagram" target="_blank">
+                            <a href="https://www.instagram.com/dunkdonutscol/" class="icon-instagram" target="_blank">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>
@@ -163,5 +148,6 @@
             </div>
         </footer>
     </div>
+    <script src="{{url_for('static', filename='js/home2.js')}}"></script>  
 </body>
 </html>
